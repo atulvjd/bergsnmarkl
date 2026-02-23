@@ -2,9 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { CalendarDays, Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react"
 import { FadeInSection } from "@/components/motion-wrapper"
+import { ContactInviteForm } from "@/components/contact-invite-form"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 
 const faqs = [
   {
@@ -80,37 +79,7 @@ export default function ContactPage() {
             <div className="rounded-lg border border-border/50 bg-card p-8">
               <h2 className="mb-4 text-4xl font-black">Send an Invite</h2>
               <p className="mb-8 text-foreground/70">Invite us into your project with key details and we will reply with a structured next-step plan.</p>
-              <form className="space-y-5" aria-label="Send an invite form">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="mb-2 block text-sm font-semibold text-foreground/80">
-                      Name
-                    </label>
-                    <Input id="name" name="name" required placeholder="Your full name" className="h-11 border-border/50 focus-visible:ring-accent-beige/30" />
-                  </div>
-                  <div>
-                    <label htmlFor="mobile" className="mb-2 block text-sm font-semibold text-foreground/80">
-                      Mobile Number
-                    </label>
-                    <Input id="mobile" name="mobile" required placeholder="+1 (555) 123-4567" className="h-11 border-border/50 focus-visible:ring-accent-beige/30" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-semibold text-foreground/80">
-                    Email
-                  </label>
-                  <Input id="email" name="email" type="email" required placeholder="you@company.com" className="h-11 border-border/50 focus-visible:ring-accent-beige/30" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-semibold text-foreground/80">
-                    Message
-                  </label>
-                  <Textarea id="message" name="message" required placeholder="Tell us about your goals, current setup, and timeline." className="min-h-36 border-border/50 focus-visible:ring-accent-beige/30" />
-                </div>
-                <Button type="submit" className="h-auto rounded-lg bg-white px-8 py-4 font-bold text-black hover:bg-white/90">
-                  Send Invite
-                </Button>
-              </form>
+              <ContactInviteForm />
             </div>
           </FadeInSection>
 
