@@ -41,7 +41,7 @@ const articles = [
     readTime: "10 min read",
     takeaway: "Details how cluster planning, internal linking, and intent mapping improve qualified organic traffic.",
     image: "/growth-metrics-analytics.jpg",
-    href: "/contact",
+    href: "/insights/architecture-of-authority-seo-content-clusters",
   },
   {
     title: "Email Automation Flows That Increase LTV",

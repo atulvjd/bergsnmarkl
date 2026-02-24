@@ -11,6 +11,7 @@ const routes: Array<{ path: string; priority: number; changeFrequency: MetadataR
   { path: "/insights", priority: 0.85, changeFrequency: "weekly" },
   { path: "/insights/website-design-systems-that-lift-conversion-rates", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights/brand-positioning-hegemony-cac-efficiency", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/insights/architecture-of-authority-seo-content-clusters", priority: 0.8, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
 ]
