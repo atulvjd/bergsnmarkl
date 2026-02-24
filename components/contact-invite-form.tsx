@@ -7,9 +7,11 @@ import { Textarea } from "@/components/ui/textarea"
 
 type SubmitState = "idle" | "sending" | "success" | "error"
 
-const FORMSPREE_ENDPOINT =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
-  (process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}` : "")
+const DEFAULT_FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgwareo"
+const envFormspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim()
+const envFormspreeFormId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim()
+
+const FORMSPREE_ENDPOINT = envFormspreeEndpoint || (envFormspreeFormId ? `https://formspree.io/f/${envFormspreeFormId}` : DEFAULT_FORMSPREE_ENDPOINT)
 
 function getFormspreeErrorMessage(body: unknown) {
   if (!body || typeof body !== "object") {
@@ -63,18 +65,39 @@ export function ContactInviteForm() {
 
     try {
       const submitUrl = FORMSPREE_ENDPOINT || "/api/invite"
-      const response = await fetch(submitUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      })
+      const usingFormspree = Boolean(FORMSPREE_ENDPOINT)
+
+      const response = await fetch(
+        submitUrl,
+        usingFormspree
+          ? {
+              method: "POST",
+              headers: {
+                Accept: "application/json",
+              },
+              body: (() => {
+                const body = new FormData()
+                body.append("name", payload.name)
+                body.append("mobile", payload.mobile)
+                body.append("email", payload.email)
+                body.append("message", payload.message)
+                body.append("_subject", "New invite request")
+                return body
+              })(),
+            }
+          : {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(payload),
+            },
+      )
 
       if (!response.ok) {
         const body = await response.json().catch(() => null)
-        const errorFromService = FORMSPREE_ENDPOINT ? getFormspreeErrorMessage(body) : getApiErrorMessage(body)
+        const errorFromService = usingFormspree ? getFormspreeErrorMessage(body) : getApiErrorMessage(body)
         throw new Error(errorFromService ?? "Unable to send invite right now.")
       }
 
