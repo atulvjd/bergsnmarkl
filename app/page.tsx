@@ -8,31 +8,37 @@ import { Button } from "@/components/ui/button"
 const coreServices = [
   {
     title: "Website Design",
+    overview: "Build high-trust digital experiences that reflect your positioning and drive qualified inquiries.",
     image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
     benefits: ["Conversion-focused UX", "Mobile-first performance", "SEO-ready architecture", "CMS flexibility"],
   },
   {
     title: "Social Media",
+    overview: "Create consistent, channel-native communication that turns brand visibility into business conversations.",
     image: "/social-media-content-creation-team.jpg",
     benefits: ["Editorial calendars", "Brand-consistent content", "Community engagement", "Performance reporting"],
   },
   {
     title: "Paid Ads",
+    overview: "Scale predictable acquisition with audience-led campaigns and disciplined budget management.",
     image: "/paid-ads-campaign-google-meta-optimization.jpg",
     benefits: ["Audience segmentation", "Channel-specific creative", "Bid and budget optimization", "ROAS tracking"],
   },
   {
     title: "Email Marketing",
+    overview: "Strengthen retention and customer value with lifecycle sequences built around buying behavior.",
     image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
     benefits: ["Lifecycle automation", "List segmentation", "Revenue-driving campaigns", "A/B test framework"],
   },
   {
     title: "SEO",
+    overview: "Capture long-term demand with technical SEO, structured content systems, and authority-building.",
     image: "/growth-metrics-analytics.jpg",
     benefits: ["Keyword strategy", "Technical improvements", "Content optimization", "Authority building"],
   },
   {
     title: "Branding",
+    overview: "Clarify your message, visual identity, and category positioning across every customer touchpoint.",
     image: "/abstract-brand-concept.jpg",
     benefits: ["Positioning systems", "Visual identity design", "Messaging hierarchy", "Guidelines and rollout"],
   },
@@ -42,42 +48,78 @@ const process = [
   {
     title: "Audit",
     description: "We map your funnel, channels, and performance baseline to identify growth blockers and opportunities.",
+    output: "Output: baseline scorecard, priority bottlenecks, and quick-win actions.",
     icon: Target,
   },
   {
     title: "Strategy",
     description: "We define a prioritized roadmap with channel mix, KPIs, creative direction, and execution timelines.",
+    output: "Output: 90-day roadmap with measurable targets and ownership.",
     icon: Sparkles,
   },
   {
     title: "Execution",
     description: "Our team ships the work across design, media, content, and automation with clear weekly momentum.",
+    output: "Output: campaign assets, launches, and implementation milestones.",
     icon: Users,
   },
   {
     title: "Optimization",
     description: "We test, measure, and iterate continuously to improve performance and compounding outcomes.",
+    output: "Output: experiment backlog, learning loops, and efficiency gains.",
     icon: TrendingUp,
   },
   {
     title: "Creative Production",
     description: "We build platform-ready creative assets, messaging variations, and campaign materials for each channel.",
+    output: "Output: ad creatives, landing copy, and channel-specific content variants.",
     icon: PenTool,
   },
   {
     title: "Reporting & Alignment",
     description: "We share clear reporting dashboards and priority actions so your team always knows what happens next.",
+    output: "Output: executive summaries, KPI movement, and next-step plans.",
     icon: BarChart3,
   },
 ]
 
 const industries = [
-  { title: "Healthcare & Clinics", description: "Patient-focused outreach, trust building, and appointment growth.", icon: HeartPulse },
-  { title: "Legal Services", description: "Authority-led content and qualified lead generation for firms.", icon: Landmark },
-  { title: "Financial Advisory", description: "Compliance-aware campaigns that build credibility and demand.", icon: Globe },
-  { title: "Real Estate Services", description: "Local visibility, lead funnels, and conversion-focused campaigns.", icon: Building2 },
-  { title: "Coaches & Consultants", description: "Positioning, content systems, and inbound client acquisition.", icon: Smartphone },
-  { title: "Home & Local Services", description: "Location-based marketing to drive calls, bookings, and retention.", icon: ShoppingBag },
+  {
+    title: "Healthcare & Clinics",
+    description: "Patient-focused outreach, trust building, and appointment growth.",
+    example: "Includes multi-location clinics, specialty practices, and wellness providers.",
+    icon: HeartPulse,
+  },
+  {
+    title: "Legal Services",
+    description: "Authority-led content and qualified lead generation for firms.",
+    example: "Built for practice areas that depend on credibility and inquiry quality.",
+    icon: Landmark,
+  },
+  {
+    title: "Financial Advisory",
+    description: "Compliance-aware campaigns that build credibility and demand.",
+    example: "Supports advisors, consultants, and teams with regulated communication needs.",
+    icon: Globe,
+  },
+  {
+    title: "Real Estate Services",
+    description: "Local visibility, lead funnels, and conversion-focused campaigns.",
+    example: "Ideal for brokerages, developers, and high-intent property marketing.",
+    icon: Building2,
+  },
+  {
+    title: "Coaches & Consultants",
+    description: "Positioning, content systems, and inbound client acquisition.",
+    example: "For experts who need stronger thought leadership and consistent pipeline.",
+    icon: Smartphone,
+  },
+  {
+    title: "Home & Local Services",
+    description: "Location-based marketing to drive calls, bookings, and retention.",
+    example: "Designed for service businesses that rely on regional discoverability.",
+    icon: ShoppingBag,
+  },
 ]
 
 export default function Home() {
@@ -91,6 +133,9 @@ export default function Home() {
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Core Services</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Six focused service lines that work together as one centralized growth engine.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+                Each service is planned to support the others, so your website, social presence, paid channels, and lifecycle programs move in one commercial direction instead of competing priorities.
+              </p>
             </div>
           </FadeInSection>
 
@@ -102,6 +147,7 @@ export default function Home() {
                     <Image src={service.image} alt={service.title} fill className="object-cover" />
                   </div>
                   <h3 className="mb-4 text-2xl font-bold">{service.title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.overview}</p>
                   <ul className="space-y-2 text-sm text-foreground/75">
                     {service.benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
@@ -123,6 +169,9 @@ export default function Home() {
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">How We Work</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">A structured six-step methodology designed for clarity, speed, and measurable business impact.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+                Our operating model minimizes communication gaps and keeps teams aligned on weekly priorities, launch readiness, and measurable outcomes across every channel.
+              </p>
             </div>
           </FadeInSection>
 
@@ -136,6 +185,7 @@ export default function Home() {
                   </div>
                   <h3 className="mb-3 text-2xl font-bold">{step.title}</h3>
                   <p className="text-foreground/70">{step.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{step.output}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -158,12 +208,14 @@ export default function Home() {
                 title: "E-commerce Repositioning",
                 result: "+210% conversion rate",
                 description: "Unified website redesign, paid acquisition, and email automation for a premium retail brand.",
+                detail: "Aligned offer messaging, creative testing, and lifecycle timing to increase first-purchase rate and repeat behavior.",
                 image: "/fashion-ecommerce-website.png",
               },
               {
                 title: "B2B SaaS Expansion",
                 result: "3x pipeline velocity",
                 description: "Refined category messaging, content distribution, and demand generation sequencing.",
+                detail: "Reworked funnel stages and handoff criteria so sales and marketing moved against the same qualification model.",
                 image: "/saas-dashboard-design-interface.jpg",
               },
             ].map((study, index) => (
@@ -176,6 +228,7 @@ export default function Home() {
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">{study.result}</p>
                     <h3 className="mb-3 text-3xl font-bold">{study.title}</h3>
                     <p className="mb-6 text-foreground/70">{study.description}</p>
+                    <p className="mb-6 text-sm leading-relaxed text-foreground/65">{study.detail}</p>
                     <Link href="/work" className="mt-auto font-semibold text-accent-beige transition-opacity hover:opacity-80">
                       View Full Case Study
                     </Link>
@@ -193,6 +246,9 @@ export default function Home() {
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Three principles that keep work centralized, accountable, and commercially focused.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+                We are structured for long-term operating reliability, not one-off campaign bursts. That means stronger process control, cleaner reporting, and better performance continuity.
+              </p>
             </div>
           </FadeInSection>
 
@@ -201,20 +257,24 @@ export default function Home() {
               {
                 title: "Centralized Delivery",
                 description: "One integrated team manages strategy, production, and optimization across your channels.",
+                detail: "You get unified planning and fewer handoff failures between vendors, freelancers, and internal teams.",
               },
               {
                 title: "Commercial Focus",
                 description: "Every campaign and asset is tied to revenue outcomes, not vanity metrics.",
+                detail: "We prioritize lead quality, conversion value, retention health, and channel efficiency.",
               },
               {
                 title: "Structured Execution",
                 description: "Clear roadmaps, weekly priorities, and transparent reporting keep momentum consistent.",
+                detail: "Execution discipline helps your business scale without losing speed or message consistency.",
               },
             ].map((item, index) => (
               <FadeInSection key={item.title} delay={index * 0.08}>
                 <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-8 transition-colors hover:border-accent-beige/50">
                   <h3 className="mb-3 text-2xl font-bold">{item.title}</h3>
                   <p className="text-foreground/70">{item.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{item.detail}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -228,6 +288,9 @@ export default function Home() {
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Industries We Serve</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Sector expertise built around repeatable growth systems tailored to your market dynamics.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+                We focus on service-driven categories where trust, authority, and consistent lead generation matter as much as channel-level performance.
+              </p>
             </div>
           </FadeInSection>
 
@@ -238,6 +301,7 @@ export default function Home() {
                   <industry.icon className="mb-4 size-6 text-accent-beige" />
                   <h3 className="mb-2 text-2xl font-bold">{industry.title}</h3>
                   <p className="text-foreground/70">{industry.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{industry.example}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -250,6 +314,9 @@ export default function Home() {
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Centralize Your Growth?</h2>
             <p className="mb-10 text-lg text-foreground/70">Let’s align your website, content, media, and lifecycle marketing into one professional system.</p>
+            <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
+              We’ll review your current positioning, channel mix, and operational constraints, then recommend the most practical path to stronger lead quality and revenue consistency.
+            </p>
             <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
               <Link href="/contact">Book Your Strategy Call</Link>
             </Button>

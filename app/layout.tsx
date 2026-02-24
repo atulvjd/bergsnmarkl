@@ -13,12 +13,20 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Bergs & Mark — Complete Digital Growth Agency",
   description:
-    "Transform your online presence with complete digital marketing solutions. Website design, social media, paid advertising, and strategic campaigns.",
+    "Centralized digital growth services for service-focused brands. Website design, social media management, paid ads, SEO, lifecycle marketing, and structured reporting under one coordinated team.",
   generator: "v0.app",
-  keywords: ["digital marketing", "web design", "Instagram growth", "paid advertising", "digital agency"],
+  keywords: [
+    "digital growth agency",
+    "website design services",
+    "social media management",
+    "paid advertising agency",
+    "SEO services",
+    "email marketing automation",
+    "service business marketing",
+  ],
   openGraph: {
     title: "Bergs & Mark — Complete Digital Growth Agency",
-    description: "We deliver measurable results through integrated digital marketing strategies.",
+    description: "Integrated strategy, creative, media, and optimization for measurable growth outcomes.",
     type: "website",
   },
 }

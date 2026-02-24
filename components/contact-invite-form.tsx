@@ -88,6 +88,9 @@ export function ContactInviteForm() {
 
   return (
     <form className="space-y-5" aria-label="Send an invite form" onSubmit={onSubmit}>
+      <p className="text-sm leading-relaxed text-foreground/70">
+        Provide your current goals, challenges, and desired timeline so we can return a focused recommendation instead of a generic response.
+      </p>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-2 block text-sm font-semibold text-foreground/80">
@@ -121,6 +124,9 @@ export function ContactInviteForm() {
       >
         {submitState === "sending" ? "Sending..." : "Send Invite"}
       </Button>
+      <p className="text-xs leading-relaxed text-foreground/60">
+        By submitting this form, you agree to be contacted regarding your inquiry and recommended service options.
+      </p>
       {submitState === "success" ? <p className="text-sm text-green-400">Invite sent. We will reach out shortly.</p> : null}
       {submitState === "error" ? <p className="text-sm text-red-400">{errorMessage}</p> : null}
     </form>

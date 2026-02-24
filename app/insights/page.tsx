@@ -9,36 +9,48 @@ const articles = [
     title: "How to Centralize Marketing Ops for Faster Execution",
     excerpt: "A practical operating model to align strategy, content, media, and reporting under one workflow.",
     category: "Strategy",
+    readTime: "8 min read",
+    takeaway: "Learn how shared ownership, weekly planning rhythms, and aligned KPIs reduce execution friction.",
     image: "/team-collaboration-meeting-professional-environmen.jpg",
   },
   {
     title: "Website Design Systems That Lift Conversion Rates",
     excerpt: "Design and UX decisions that reduce friction and increase commercial outcomes.",
     category: "Website",
+    readTime: "7 min read",
+    takeaway: "Covers page structure, credibility signals, and conversion architecture for service-led sites.",
     image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
   },
   {
     title: "Paid Media Budget Allocation by Funnel Stage",
     excerpt: "How to distribute spend across prospecting, retargeting, and lifecycle campaigns.",
     category: "Paid Ads",
+    readTime: "9 min read",
+    takeaway: "Explains budget split logic that balances short-term efficiency with long-term demand building.",
     image: "/digital-marketing-analytics-dashboard-with-convers.jpg",
   },
   {
     title: "SEO Content Clusters for Sustainable Pipeline Growth",
     excerpt: "A structured framework for topic authority and demand capture.",
     category: "SEO",
+    readTime: "10 min read",
+    takeaway: "Details how cluster planning, internal linking, and intent mapping improve qualified organic traffic.",
     image: "/growth-metrics-analytics.jpg",
   },
   {
     title: "Email Automation Flows That Increase LTV",
     excerpt: "Foundational lifecycle sequences every growth-focused brand should implement.",
     category: "Email",
+    readTime: "6 min read",
+    takeaway: "Breaks down onboarding, nurture, and retention flows that improve repeat revenue and engagement.",
     image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
   },
   {
     title: "Brand Positioning Signals That Improve CAC Efficiency",
     excerpt: "Why clear differentiation makes every acquisition channel perform better.",
     category: "Branding",
+    readTime: "7 min read",
+    takeaway: "Shows how stronger market narrative reduces wasted spend and improves conversion consistency.",
     image: "/abstract-brand-concept.jpg",
   },
 ]
@@ -54,6 +66,9 @@ export default function InsightsPage() {
             </h1>
             <p className="mx-auto max-w-3xl text-lg text-foreground/70">
               Practical articles and frameworks on strategy, execution, and performance optimization.
+            </p>
+            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+              Built for operators, founders, and marketing teams that want applicable guidance on positioning, channel orchestration, and measurable growth systems.
             </p>
           </FadeInSection>
         </div>
@@ -72,6 +87,9 @@ export default function InsightsPage() {
                 </span>
               ))}
             </div>
+            <p className="mx-auto mb-12 max-w-4xl text-center text-sm leading-relaxed text-foreground/65">
+              Every insight focuses on practical implementation so you can apply the recommendations to real campaigns, workflows, and reporting structures.
+            </p>
           </FadeInSection>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -85,6 +103,8 @@ export default function InsightsPage() {
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent-beige">{article.category}</p>
                     <h2 className="mb-3 text-2xl font-bold">{article.title}</h2>
                     <p className="mb-6 text-foreground/70">{article.excerpt}</p>
+                    <p className="mb-5 text-sm leading-relaxed text-foreground/60">{article.takeaway}</p>
+                    <p className="mb-6 text-xs font-semibold uppercase tracking-[0.12em] text-foreground/50">{article.readTime}</p>
                     <Link href="/contact" className="mt-auto font-semibold text-accent-beige transition-opacity hover:opacity-80">
                       Read More
                     </Link>

@@ -9,6 +9,7 @@ const services = [
     category: "Design",
     title: "Website Design",
     description: "Conversion-focused websites that combine premium visual design with measurable performance.",
+    context: "Best for brands that need clearer positioning, stronger trust signals, and better lead capture from existing traffic.",
     features: [
       "Information architecture and UX mapping",
       "Responsive design system",
@@ -24,6 +25,7 @@ const services = [
     category: "Social",
     title: "Social Media Management",
     description: "Strategic social programs that strengthen brand presence and create qualified engagement.",
+    context: "Ideal when your channels need consistent publishing, stronger storytelling, and clearer performance accountability.",
     features: [
       "Content pillars and monthly calendars",
       "Channel-specific creative production",
@@ -39,6 +41,7 @@ const services = [
     category: "Performance",
     title: "Paid Ads",
     description: "Full-funnel acquisition campaigns across Google, Meta, and short-form video channels.",
+    context: "Built for teams that want predictable pipeline growth while improving CAC and channel efficiency.",
     features: [
       "Audience and intent segmentation",
       "Creative testing framework",
@@ -54,6 +57,7 @@ const services = [
     category: "Lifecycle",
     title: "Email Marketing",
     description: "Lifecycle automation and campaign systems that increase repeat revenue and retention.",
+    context: "Useful for businesses with existing leads or customers that are under-monetized after first conversion.",
     features: [
       "Segmentation and lifecycle strategy",
       "Automated flow architecture",
@@ -69,6 +73,7 @@ const services = [
     category: "Organic",
     title: "SEO",
     description: "Long-term organic growth through technical foundations, content strategy, and authority building.",
+    context: "Designed for brands that need compounding demand generation through search visibility and topical authority.",
     features: [
       "Keyword and topic mapping",
       "Technical and on-page optimization",
@@ -84,6 +89,7 @@ const services = [
     category: "Brand",
     title: "Branding",
     description: "Clear positioning and visual identity systems designed to differentiate your company.",
+    context: "Recommended when messaging is inconsistent, category fit is unclear, or market perception needs an upgrade.",
     features: [
       "Market and competitor analysis",
       "Positioning and messaging framework",
@@ -99,6 +105,7 @@ const services = [
     category: "Creative",
     title: "Video Production",
     description: "Performance-oriented video production for paid media, social, and brand storytelling.",
+    context: "Supports awareness and conversion goals with platform-specific creative made for modern attention spans.",
     features: [
       "Concepting and scripting",
       "Production planning",
@@ -114,6 +121,7 @@ const services = [
     category: "Content",
     title: "Content Marketing",
     description: "Editorial and campaign content programs designed to build authority and generate demand.",
+    context: "Works best for brands that want a repeatable publishing engine tied to business goals and search strategy.",
     features: [
       "Content strategy and planning",
       "Long-form and short-form production",
@@ -129,6 +137,7 @@ const services = [
     category: "Automation",
     title: "Marketing Automation",
     description: "Scalable automation systems for lead nurturing, handoffs, and lifecycle marketing efficiency.",
+    context: "Critical for sales cycles that need better follow-up timing, routing logic, and lifecycle progression.",
     features: [
       "Automation architecture design",
       "CRM and ESP integration",
@@ -144,6 +153,7 @@ const services = [
     category: "E-Commerce",
     title: "E-Commerce Growth",
     description: "Retention and acquisition systems tailored for online stores and product-led businesses.",
+    context: "Focused on increasing first-purchase conversion, repeat orders, and customer lifetime value.",
     features: [
       "Product page conversion optimization",
       "Cart abandonment recovery flows",
@@ -159,6 +169,7 @@ const services = [
     category: "Local",
     title: "Local SEO & Maps Growth",
     description: "Local search visibility programs for service businesses and multi-location brands.",
+    context: "Perfect for location-driven services where map ranking and local trust influence booking volume.",
     features: [
       "Google Business Profile optimization",
       "Local landing page structure",
@@ -174,6 +185,7 @@ const services = [
     category: "Analytics",
     title: "Analytics & Reporting",
     description: "Measurement systems that connect channel performance to business outcomes and decisions.",
+    context: "For teams that need cleaner visibility into what is driving qualified demand and where to reallocate spend.",
     features: [
       "GA4 and tracking implementation",
       "Attribution model setup",
@@ -189,6 +201,7 @@ const services = [
     category: "Trust",
     title: "Online Reputation Management",
     description: "Brand trust programs to monitor, improve, and protect public perception across channels.",
+    context: "Useful when brand sentiment, review quality, or public confidence directly impacts conversion rates.",
     features: [
       "Review and sentiment monitoring",
       "Response framework and guidelines",
@@ -213,6 +226,9 @@ export default function ServicesPage() {
             <p className="mx-auto max-w-3xl text-lg text-foreground/70">
               Every service is designed to plug into a centralized system so your brand, acquisition, and retention efforts stay aligned.
             </p>
+            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+              Instead of disconnected tactics, we plan execution around your business model, sales cycle, capacity, and commercial targets so each channel contributes to one shared growth objective.
+            </p>
           </FadeInSection>
         </div>
       </section>
@@ -223,6 +239,9 @@ export default function ServicesPage() {
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Service Categories</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Consistent delivery models across strategy, design, content, and performance.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+                Every engagement includes practical planning, transparent milestone tracking, and measurable reporting so you can see what was executed, why it was prioritized, and how it impacted outcomes.
+              </p>
             </div>
           </FadeInSection>
 
@@ -239,6 +258,7 @@ export default function ServicesPage() {
                     </span>
                     <h3 className="mb-3 text-3xl font-bold">{service.title}</h3>
                     <p className="mb-6 text-foreground/70">{service.description}</p>
+                    <p className="mb-6 text-sm leading-relaxed text-foreground/60">{service.context}</p>
                     <ul className="mb-8 space-y-2 text-sm text-foreground/75">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-2">
@@ -263,6 +283,9 @@ export default function ServicesPage() {
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Need a Tailored Service Mix?</h2>
             <p className="mb-10 text-lg text-foreground/70">We’ll map the right service stack based on your goals, current capabilities, and growth stage.</p>
+            <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
+              Our recommendations focus on delivery practicality, investment efficiency, and the fastest path to measurable progress in lead quality, conversion consistency, and retention strength.
+            </p>
             <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
               <Link href="/contact">Schedule Strategy Session</Link>
             </Button>

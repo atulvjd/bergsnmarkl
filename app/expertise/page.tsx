@@ -5,10 +5,26 @@ import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
 const process = [
-  { title: "Discovery", detail: "Business audit, customer analysis, and growth opportunity mapping." },
-  { title: "Planning", detail: "Roadmap creation with defined KPIs, channel roles, and execution cadence." },
-  { title: "Delivery", detail: "Cross-functional production and campaign deployment with weekly check-ins." },
-  { title: "Optimization", detail: "Testing, reporting, and iterative improvements based on performance data." },
+  {
+    title: "Discovery",
+    detail: "Business audit, customer analysis, and growth opportunity mapping.",
+    outcome: "Defines market context, conversion blockers, and opportunity priorities before planning starts.",
+  },
+  {
+    title: "Planning",
+    detail: "Roadmap creation with defined KPIs, channel roles, and execution cadence.",
+    outcome: "Translates strategy into practical delivery milestones with clear accountability.",
+  },
+  {
+    title: "Delivery",
+    detail: "Cross-functional production and campaign deployment with weekly check-ins.",
+    outcome: "Ships creative, channel, and lifecycle work in synchronized execution cycles.",
+  },
+  {
+    title: "Optimization",
+    detail: "Testing, reporting, and iterative improvements based on performance data.",
+    outcome: "Improves lead quality, conversion efficiency, and revenue contribution over time.",
+  },
 ]
 
 const team = [
@@ -16,24 +32,28 @@ const team = [
     name: "Sarah Johnson",
     role: "Founder & Strategy Lead",
     bio: "Leads growth strategy, market positioning, and executive planning sessions.",
+    specialty: "Owns commercial planning, market narrative clarity, and strategic prioritization.",
     image: "/professional-headshot-woman-ceo-founder.jpg",
   },
   {
     name: "Marcus Chen",
     role: "Creative Director",
     bio: "Oversees brand systems, design quality, and creative production standards.",
+    specialty: "Leads visual direction, messaging presentation, and creative quality assurance.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
   },
   {
     name: "Alex Martinez",
     role: "Performance Lead",
     bio: "Owns paid media, measurement frameworks, and budget optimization.",
+    specialty: "Manages paid acquisition systems, experimentation logic, and performance accountability.",
     image: "/professional-headshot-man-marketing-growth.jpg",
   },
   {
     name: "Emma Wilson",
     role: "Content & Social Lead",
     bio: "Builds editorial systems and platform-native social growth plans.",
+    specialty: "Develops content operations that support authority building and sustained demand generation.",
     image: "/professional-headshot-woman-entrepreneur.jpg",
   },
 ]
@@ -50,6 +70,9 @@ export default function ExpertisePage() {
             <p className="mx-auto max-w-3xl text-lg text-foreground/70">
               We combine strategic planning, specialized talent, and proven operating methods to deliver consistent growth outcomes.
             </p>
+            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+              Our expertise is built around repeatable systems that connect creative quality, channel execution, and commercial performance across complex service-oriented markets.
+            </p>
           </FadeInSection>
         </div>
       </section>
@@ -59,6 +82,9 @@ export default function ExpertisePage() {
           <FadeInSection>
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Our Process</h2>
+              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+                A practical operating model that keeps strategy, execution, and optimization connected from kickoff through scaling.
+              </p>
             </div>
           </FadeInSection>
 
@@ -69,6 +95,7 @@ export default function ExpertisePage() {
                   <p className="mb-3 text-4xl font-black text-accent-beige/40">0{index + 1}</p>
                   <h3 className="mb-2 text-2xl font-bold">{item.title}</h3>
                   <p className="text-foreground/70">{item.detail}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{item.outcome}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -81,6 +108,9 @@ export default function ExpertisePage() {
           <FadeInSection>
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Team</h2>
+              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+                Senior specialists across strategy, creative, performance, and content working as one delivery unit.
+              </p>
             </div>
           </FadeInSection>
 
@@ -94,7 +124,8 @@ export default function ExpertisePage() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold">{member.name}</h3>
                     <p className="mb-3 text-sm font-semibold text-accent-beige">{member.role}</p>
-                    <p className="text-sm text-foreground/70">{member.bio}</p>
+                    <p className="mb-3 text-sm text-foreground/70">{member.bio}</p>
+                    <p className="text-sm leading-relaxed text-foreground/60">{member.specialty}</p>
                   </div>
                 </article>
               </FadeInSection>
@@ -108,6 +139,9 @@ export default function ExpertisePage() {
           <FadeInSection>
             <div className="mb-16 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
+              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+                These values drive day-to-day decisions on prioritization, quality standards, and communication discipline.
+              </p>
             </div>
           </FadeInSection>
 
@@ -134,6 +168,9 @@ export default function ExpertisePage() {
           <FadeInSection>
             <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Certifications & Awards</h2>
+              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+                Our team maintains recognized certifications and industry standards to ensure execution quality across major marketing platforms.
+              </p>
             </div>
           </FadeInSection>
 
@@ -159,6 +196,9 @@ export default function ExpertisePage() {
           <FadeInSection>
             <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Methodologies</h2>
+              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+                Structured frameworks that help us move quickly while maintaining consistency in planning, delivery, and optimization.
+              </p>
             </div>
           </FadeInSection>
 

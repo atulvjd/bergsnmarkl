@@ -12,6 +12,7 @@ const caseStudies = [
     challenge: "Low trial-to-demo conversion despite steady traffic.",
     solution: "Reframed messaging, redesigned landing paths, and aligned paid + lifecycle nurture.",
     results: "3.2x qualified pipeline, 41% lower CAC",
+    scope: "Scope: messaging architecture, landing UX updates, ad journey alignment, and lifecycle email sequencing.",
     image: "/saas-dashboard-design-interface.jpg",
   },
   {
@@ -20,6 +21,7 @@ const caseStudies = [
     challenge: "High ad spend with inconsistent conversion rates.",
     solution: "Creative testing cadence, PDP redesign, and automated retention email sequences.",
     results: "+214% conversion rate, 4.8x blended ROAS",
+    scope: "Scope: product page CRO, paid creative matrix, audience segmentation, and retention automation.",
     image: "/fashion-ecommerce-website.png",
   },
   {
@@ -28,6 +30,7 @@ const caseStudies = [
     challenge: "Weak local visibility and fragmented acquisition channels.",
     solution: "Local SEO foundation, location pages, and intent-led paid search campaigns.",
     results: "289% growth in booked consultations",
+    scope: "Scope: local search structure, map listing optimization, provider page strategy, and conversion tracking.",
     image: "/consultation-meeting-planning.jpg",
   },
   {
@@ -36,6 +39,7 @@ const caseStudies = [
     challenge: "Premium product, unclear market positioning.",
     solution: "Positioning framework, conversion-led site update, and authority content program.",
     results: "2.6x inbound SQL volume in 5 months",
+    scope: "Scope: value proposition refinement, website narrative rewrite, and thought-leadership content planning.",
     image: "/strategy-planning-whiteboard.jpg",
   },
   {
@@ -44,6 +48,7 @@ const caseStudies = [
     challenge: "Strong product, low category visibility.",
     solution: "Integrated SEO-content system with paid amplification for priority assets.",
     results: "401% increase in organic non-brand traffic",
+    scope: "Scope: topic cluster architecture, strategic editorial calendar, and demand-capture distribution workflows.",
     image: "/results-analytics-dashboard.jpg",
   },
   {
@@ -52,6 +57,7 @@ const caseStudies = [
     challenge: "Growth stalled after initial launch momentum.",
     solution: "Full-funnel media plan, refreshed creative, and CRM-backed reactivation flow.",
     results: "+176% MQL growth, 34% better CPL efficiency",
+    scope: "Scope: audience expansion strategy, creative refresh cadence, and lifecycle reactivation automation.",
     image: "/hero-digital-marketing-agency.jpg",
   },
 ]
@@ -67,6 +73,9 @@ export default function WorkPage() {
             </h1>
             <p className="mx-auto max-w-3xl text-lg text-foreground/70">
               A portfolio of engagements across industries where centralized execution produced consistent, trackable growth.
+            </p>
+            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+              Each engagement highlights the same principle: strong outcomes come from coordinated planning, creative discipline, and continuous optimization across the full customer journey.
             </p>
           </FadeInSection>
         </div>
@@ -85,6 +94,9 @@ export default function WorkPage() {
                 </span>
               ))}
             </div>
+            <p className="mx-auto mb-12 max-w-4xl text-center text-sm leading-relaxed text-foreground/65">
+              These examples cover category positioning, acquisition efficiency, local visibility, and lifecycle retention programs delivered through one integrated operating model.
+            </p>
           </FadeInSection>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -113,6 +125,7 @@ export default function WorkPage() {
                         <p className="font-semibold text-accent-beige">{study.results}</p>
                       </div>
                     </div>
+                    <p className="mt-5 text-sm leading-relaxed text-foreground/65">{study.scope}</p>
 
                     <Link href="/contact" className="mt-6 font-semibold text-accent-beige transition-opacity hover:opacity-80">
                       View Full Case Study
@@ -130,6 +143,9 @@ export default function WorkPage() {
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Want Similar Results?</h2>
             <p className="mb-10 text-lg text-foreground/70">We can assess your current funnel and identify the highest-impact growth opportunities.</p>
+            <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
+              You will receive a practical recommendation set focused on positioning clarity, channel priorities, implementation order, and the metrics that matter most to your growth stage.
+            </p>
             <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
               <Link href="/contact">Discuss Your Project</Link>
             </Button>

@@ -45,9 +45,17 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-foreground/80"
+            className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-foreground/80"
           >
             We design websites, manage social channels, run paid media, and optimize full-funnel campaigns through one coordinated team.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.24, duration: 0.8 }}
+            className="mx-auto mb-12 max-w-3xl text-base leading-relaxed text-foreground/70"
+          >
+            From positioning and creative systems to media execution and reporting, every part of the growth engine is planned to move faster with stronger quality control and measurable business impact.
           </motion.p>
 
           <motion.div
@@ -76,13 +84,22 @@ export default function NewHeroSection() {
             </div>
             <div>
               <div className="mb-2 text-5xl font-black text-accent-beige">$6K</div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">Client Revenue Influenced</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">Revenue Influenced</p>
             </div>
             <div>
               <div className="mb-2 text-5xl font-black text-accent-beige">65%</div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">Client Retention</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-foreground/70">Retention Improvement</p>
             </div>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mx-auto mt-8 max-w-3xl text-sm leading-relaxed text-foreground/65"
+          >
+            Ideal for healthcare providers, legal and financial firms, consultants, real estate teams, and other service brands that need reliable lead flow without fragmented execution.
+          </motion.p>
         </div>
       </div>
     </section>

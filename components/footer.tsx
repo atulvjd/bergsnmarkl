@@ -9,7 +9,10 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <p className="mb-4 text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
-            <p className="text-sm text-foreground/70">Centralized digital growth systems for ambitious brands.</p>
+            <p className="mb-3 text-sm text-foreground/70">Centralized digital growth systems for ambitious brands.</p>
+            <p className="text-sm leading-relaxed text-foreground/65">
+              We combine strategy, design, media, and lifecycle execution so your brand message stays consistent and your growth decisions stay data-backed.
+            </p>
           </div>
 
           <div>
@@ -35,6 +38,7 @@ export default function Footer() {
               <li><Link href="/services#branding" className="transition-colors hover:text-accent-beige">Branding</Link></li>
               <li><Link href="/services#video-production" className="transition-colors hover:text-accent-beige">Video Production</Link></li>
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-foreground/60">Built for service-focused brands that need consistent pipeline, stronger retention, and clear reporting.</p>
           </div>
 
           <div>
@@ -43,17 +47,18 @@ export default function Footer() {
               <li>bergsnmark@gmail.com</li>
               <li>+91 93017 03738</li>
               <li>
-                <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent-beige">
-                  Book a Consultation
+                <Link href="/contact#send-invite" className="transition-colors hover:text-accent-beige">
+                  Send a Project Invite
                 </Link>
               </li>
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-foreground/60">Share your goals, timelines, and current setup. We will reply with practical next steps.</p>
           </div>
         </div>
 
         <div className="mt-14 border-t border-border/50 pt-6 text-sm text-foreground/60">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>© 2024 Bergs & Mark. All rights reserved.</p>
+            <p>© 2026 Bergs & Mark. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>
