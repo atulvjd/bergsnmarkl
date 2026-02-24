@@ -15,7 +15,6 @@ type InvitePayload = z.infer<typeof inviteSchema>
 type DeliveryResult = {
   ok: boolean
   error?: string
-  skipped?: boolean
 }
 
 function escapeHtml(value: string) {
@@ -38,24 +37,13 @@ function buildEmailHtml(payload: InvitePayload) {
   `
 }
 
-function buildWhatsAppBody(payload: InvitePayload) {
-  return [
-    "New Invite Request",
-    `Name: ${payload.name}`,
-    `Mobile: ${payload.mobile}`,
-    `Email: ${payload.email}`,
-    "Message:",
-    payload.message,
-  ].join("\n")
-}
-
 async function sendEmailInvite(payload: InvitePayload): Promise<DeliveryResult> {
   const apiKey = process.env.RESEND_API_KEY
   const from = process.env.INVITE_EMAIL_FROM
   const to = process.env.INVITE_EMAIL_TO
 
   if (!apiKey || !from || !to) {
-    return { ok: false, skipped: true, error: "Email service is not configured" }
+    return { ok: false, error: "Email service is not configured" }
   }
 
   try {
@@ -85,44 +73,6 @@ async function sendEmailInvite(payload: InvitePayload): Promise<DeliveryResult> 
   }
 }
 
-async function sendWhatsAppInvite(payload: InvitePayload): Promise<DeliveryResult> {
-  const accountSid = process.env.TWILIO_ACCOUNT_SID
-  const authToken = process.env.TWILIO_AUTH_TOKEN
-  const from = process.env.TWILIO_WHATSAPP_FROM
-  const to = process.env.TWILIO_WHATSAPP_TO
-
-  if (!accountSid || !authToken || !from || !to) {
-    return { ok: false, skipped: true, error: "WhatsApp service is not configured" }
-  }
-
-  const url = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`
-  const credentials = Buffer.from(`${accountSid}:${authToken}`).toString("base64")
-
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        Authorization: `Basic ${credentials}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-        From: from,
-        To: to,
-        Body: buildWhatsAppBody(payload),
-      }).toString(),
-    })
-
-    if (!response.ok) {
-      const details = await response.text()
-      return { ok: false, error: `WhatsApp failed: ${details}` }
-    }
-
-    return { ok: true }
-  } catch (error) {
-    return { ok: false, error: `WhatsApp failed: ${error instanceof Error ? error.message : "Unknown error"}` }
-  }
-}
-
 export async function POST(request: Request) {
   try {
     const body = await request.json()
@@ -132,34 +82,20 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Invalid form data" }, { status: 400 })
     }
 
-    const [emailResult, whatsappResult] = await Promise.all([sendEmailInvite(parsed.data), sendWhatsAppInvite(parsed.data)])
-    const results = { email: emailResult, whatsapp: whatsappResult }
-    const configuredDeliveries = [emailResult, whatsappResult].filter((result) => !result.skipped)
-    const hasSuccessfulDelivery = configuredDeliveries.some((result) => result.ok)
+    const emailResult = await sendEmailInvite(parsed.data)
 
-    if (configuredDeliveries.length === 0) {
-      console.error("Invite delivery error: no providers configured", results)
-      return NextResponse.json(
-        {
-          error: "Invite delivery is not configured.",
-          details: results,
-        },
-        { status: 503 },
-      )
-    }
-
-    if (!hasSuccessfulDelivery) {
-      console.error("Invite delivery error", results)
+    if (!emailResult.ok) {
+      console.error("Invite delivery error", { email: emailResult })
       return NextResponse.json(
         {
           error: "Invite delivery failed.",
-          details: results,
+          details: { email: emailResult },
         },
         { status: 502 },
       )
     }
 
-    return NextResponse.json({ ok: true, details: results })
+    return NextResponse.json({ ok: true })
   } catch (error) {
     console.error("Invite API unexpected error", error)
     return NextResponse.json({ error: "Unexpected server error." }, { status: 500 })
