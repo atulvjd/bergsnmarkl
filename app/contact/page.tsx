@@ -58,9 +58,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <Button asChild className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
-                <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer">
-                  Book Consultation
-                </Link>
+                <Link href="#send-invite">Send Project Invite</Link>
               </Button>
             </div>
           </FadeInSection>
@@ -73,7 +71,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-40">
+      <section id="send-invite" className="border-y border-border/50 bg-background px-6 py-40">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <FadeInSection>
             <div className="rounded-lg border border-border/50 bg-card p-8">
@@ -119,7 +117,7 @@ export default function ContactPage() {
 
               <div className="mt-10 rounded-lg border border-border/50 bg-background p-6">
                 <h4 className="mb-2 text-xl font-bold">Need Faster Support?</h4>
-                <p className="mb-4 text-foreground/70">Book directly and we will align quickly on your priorities and timeline.</p>
+                <p className="mb-4 text-foreground/70">Share details directly and we will align quickly on your priorities and timeline.</p>
                 <ul className="mb-5 space-y-2 text-sm text-foreground/75">
                   {[
                     "Quick response and scheduling",
@@ -133,9 +131,7 @@ export default function ContactPage() {
                   ))}
                 </ul>
                 <Button asChild className="rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
-                  <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer">
-                    Book a Call
-                  </Link>
+                  <Link href="#send-invite">Send an Invite</Link>
                 </Button>
               </div>
             </div>
@@ -164,9 +160,9 @@ export default function ContactPage() {
                 icon: Phone,
               },
               {
-                title: "Calendar",
-                detail: "calendly.com/bergsandmark",
-                note: "Direct strategy booking",
+                title: "Invite Form",
+                detail: "Share project details",
+                note: "Fast response with next steps",
                 icon: CalendarDays,
               },
             ].map((method, index) => (
@@ -208,9 +204,7 @@ export default function ContactPage() {
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Start?</h2>
             <p className="mb-10 text-lg text-foreground/70">We’ll help you prioritize the right next move for your growth stage.</p>
             <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
-              <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer">
-                Schedule Consultation
-              </Link>
+              <Link href="#send-invite">Send an Invite</Link>
             </Button>
           </FadeInSection>
         </div>

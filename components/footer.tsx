@@ -43,8 +43,8 @@ export default function Footer() {
               <li>hello@bergsandmark.com</li>
               <li>+1 (555) 234-5678</li>
               <li>
-                <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent-beige">
-                  Book a Consultation
+                <Link href="/contact#send-invite" className="transition-colors hover:text-accent-beige">
+                  Send an Invite
                 </Link>
               </li>
             </ul>
