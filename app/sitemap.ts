@@ -9,6 +9,7 @@ const routes: Array<{ path: string; priority: number; changeFrequency: MetadataR
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/expertise", priority: 0.85, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/insights/website-design-systems-that-lift-conversion-rates", priority: 0.8, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
 ]
@@ -22,4 +23,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route.priority,
   }))
 }
-

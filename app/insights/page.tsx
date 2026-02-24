@@ -14,6 +14,7 @@ const articles = [
     readTime: "8 min read",
     takeaway: "Learn how shared ownership, weekly planning rhythms, and aligned KPIs reduce execution friction.",
     image: "/team-collaboration-meeting-professional-environmen.jpg",
+    href: "/contact",
   },
   {
     title: "Website Design Systems That Lift Conversion Rates",
@@ -22,6 +23,7 @@ const articles = [
     readTime: "7 min read",
     takeaway: "Covers page structure, credibility signals, and conversion architecture for service-led sites.",
     image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
+    href: "/insights/website-design-systems-that-lift-conversion-rates",
   },
   {
     title: "Paid Media Budget Allocation by Funnel Stage",
@@ -30,6 +32,7 @@ const articles = [
     readTime: "9 min read",
     takeaway: "Explains budget split logic that balances short-term efficiency with long-term demand building.",
     image: "/digital-marketing-analytics-dashboard-with-convers.jpg",
+    href: "/contact",
   },
   {
     title: "SEO Content Clusters for Sustainable Pipeline Growth",
@@ -38,6 +41,7 @@ const articles = [
     readTime: "10 min read",
     takeaway: "Details how cluster planning, internal linking, and intent mapping improve qualified organic traffic.",
     image: "/growth-metrics-analytics.jpg",
+    href: "/contact",
   },
   {
     title: "Email Automation Flows That Increase LTV",
@@ -46,6 +50,7 @@ const articles = [
     readTime: "6 min read",
     takeaway: "Breaks down onboarding, nurture, and retention flows that improve repeat revenue and engagement.",
     image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
+    href: "/contact",
   },
   {
     title: "Brand Positioning Signals That Improve CAC Efficiency",
@@ -54,6 +59,7 @@ const articles = [
     readTime: "7 min read",
     takeaway: "Shows how stronger market narrative reduces wasted spend and improves conversion consistency.",
     image: "/abstract-brand-concept.jpg",
+    href: "/contact",
   },
 ]
 
@@ -69,7 +75,7 @@ const insightsPageSchema = {
     headline: article.title,
     description: article.excerpt,
     articleSection: article.category,
-    url: absoluteUrl("/insights"),
+    url: absoluteUrl(article.href || "/insights"),
   })),
 }
 
@@ -129,7 +135,7 @@ export default function InsightsPage() {
                     <p className="mb-6 text-foreground/70">{article.excerpt}</p>
                     <p className="mb-5 text-sm leading-relaxed text-foreground/60">{article.takeaway}</p>
                     <p className="mb-6 text-xs font-semibold uppercase tracking-[0.12em] text-foreground/50">{article.readTime}</p>
-                    <Link href="/contact" className="mt-auto font-semibold text-accent-beige transition-opacity hover:opacity-80">
+                    <Link href={article.href || "/contact"} className="mt-auto font-semibold text-accent-beige transition-opacity hover:opacity-80">
                       Read More
                     </Link>
                   </div>
