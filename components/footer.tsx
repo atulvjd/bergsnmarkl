@@ -40,11 +40,11 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-foreground/60">Contact</h3>
             <ul className="space-y-2 text-sm text-foreground/75">
-              <li>hello@bergsandmark.com</li>
-              <li>+1 (555) 234-5678</li>
+              <li>bergsnmark@gmail.com</li>
+              <li>+91 93017 03738</li>
               <li>
-                <Link href="/contact#send-invite" className="transition-colors hover:text-accent-beige">
-                  Send an Invite
+                <Link href="https://calendly.com/bergsandmark" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent-beige">
+                  Book a Consultation
                 </Link>
               </li>
             </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div className="mt-14 border-t border-border/50 pt-6 text-sm text-foreground/60">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Bergs & Mark. All rights reserved.</p>
+            <p>© 2024 Bergs & Mark. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>
