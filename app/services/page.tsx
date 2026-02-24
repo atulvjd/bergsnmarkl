@@ -1,5 +1,7 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -214,9 +216,51 @@ const services = [
   },
 ]
 
+const servicesPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${SITE_NAME} Services`,
+  url: absoluteUrl("/services"),
+  description:
+    "Explore digital marketing services including website design, social media management, paid ads, SEO, branding, automation, and analytics.",
+}
+
+const serviceItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Digital Marketing Agency Services",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.title,
+      description: service.description,
+      url: absoluteUrl(`/services#${service.id}`),
+      provider: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+      },
+    },
+  })),
+}
+
 export default function ServicesPage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesPageSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceItemListSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -296,8 +340,17 @@ export default function ServicesPage() {
   )
 }
 
-export const metadata = {
-  title: "Services — Bergs & Mark",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Digital Marketing Services",
   description:
-    "Explore website design, social media, paid ads, email marketing, SEO, branding, video production, automation, content marketing, and more.",
-}
+    "Explore Bergs & Mark digital marketing services: website design, social media management, paid ads, SEO, branding, automation, content, analytics, and reputation management.",
+  path: "/services",
+  keywords: [
+    "digital marketing services",
+    "website design services",
+    "social media marketing services",
+    "paid advertising services",
+    "search engine optimization services",
+    "email marketing services",
+  ],
+})

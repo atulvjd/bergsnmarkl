@@ -1,7 +1,9 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { BarChart3, Building2, Globe, HeartPulse, Landmark, PenTool, ShoppingBag, Smartphone, Sparkles, Target, TrendingUp, Users } from "lucide-react"
 import NewHeroSection from "@/components/new-hero-section"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -122,9 +124,43 @@ const industries = [
   },
 ]
 
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `${SITE_NAME} Digital Marketing Agency`,
+  url: absoluteUrl("/"),
+  description:
+    "Digital marketing agency services including website design, social media management, paid ads, SEO, branding, and lifecycle marketing for service-focused brands.",
+}
+
+const homeServiceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Digital Marketing Services",
+  itemListElement: coreServices.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: service.title,
+    description: service.overview,
+    url: absoluteUrl("/services"),
+  })),
+}
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homePageSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeServiceListSchema),
+        }}
+      />
       <NewHeroSection />
 
       <section className="bg-background px-6 py-40">
@@ -327,8 +363,17 @@ export default function Home() {
   )
 }
 
-export const metadata = {
-  title: "Bergs & Mark — Digital Growth Agency",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Digital Marketing Agency for Service Businesses",
   description:
-    "Centralized digital growth strategy for ambitious brands. Website design, social media, paid ads, email marketing, SEO, and branding under one coordinated team.",
-}
+    "Bergs & Mark is a digital marketing agency delivering website design, social media management, paid ads, SEO, branding, and lifecycle marketing for measurable growth.",
+  path: "/",
+  keywords: [
+    "marketing agency",
+    "digital marketing company",
+    "online marketing agency",
+    "growth marketing services",
+    "performance marketing",
+    "service business marketing agency",
+  ],
+})

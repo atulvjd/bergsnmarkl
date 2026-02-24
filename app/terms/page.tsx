@@ -1,3 +1,6 @@
+import type { Metadata } from "next"
+import { buildPageMetadata } from "@/lib/seo"
+
 const termSections = [
   {
     title: "Service Scope",
@@ -92,7 +95,10 @@ export default function TermsPage() {
   )
 }
 
-export const metadata = {
-  title: "Terms of Service — Bergs & Mark",
-  description: "Review service scope, payment terms, intellectual property, confidentiality, and engagement conditions for Bergs & Mark.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Terms of Service",
+  description:
+    "Review Bergs & Mark terms of service including scope, payment terms, confidentiality, intellectual property, and engagement conditions.",
+  path: "/terms",
+  keywords: ["terms of service", "marketing agency terms", "service agreement terms"],
+})

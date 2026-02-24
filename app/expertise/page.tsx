@@ -1,6 +1,8 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Award, CheckCircle2, Cog, ShieldCheck } from "lucide-react"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -58,9 +60,24 @@ const team = [
   },
 ]
 
+const expertisePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `${SITE_NAME} Marketing Expertise`,
+  url: absoluteUrl("/expertise"),
+  description:
+    "Explore Bergs & Mark expertise in strategy, creative production, paid media, SEO, analytics, and disciplined growth execution.",
+}
+
 export default function ExpertisePage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(expertisePageSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -232,7 +249,16 @@ export default function ExpertisePage() {
   )
 }
 
-export const metadata = {
-  title: "Expertise — Bergs & Mark",
-  description: "Meet our team, process, methodologies, and operating principles for consistent digital growth execution.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Digital Marketing Expertise and Process",
+  description:
+    "Review Bergs & Mark expertise, team capabilities, operating methodology, and delivery framework for consistent digital marketing performance.",
+  path: "/expertise",
+  keywords: [
+    "digital marketing expertise",
+    "marketing strategy process",
+    "performance marketing methodology",
+    "agency operating model",
+    "growth marketing framework",
+  ],
+})

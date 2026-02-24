@@ -1,5 +1,7 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -52,9 +54,24 @@ const team = [
   },
 ]
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: `About ${SITE_NAME}`,
+  url: absoluteUrl("/about"),
+  description:
+    "Learn about Bergs & Mark, a digital marketing agency focused on service business growth through integrated strategy, creative, media, and optimization.",
+}
+
 export default function AboutPage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -202,7 +219,16 @@ export default function AboutPage() {
   )
 }
 
-export const metadata = {
-  title: "About — Bergs & Mark",
-  description: "Learn our story, mission, values, and team behind our centralized digital growth model.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "About Bergs & Mark Marketing Agency",
+  description:
+    "Learn the Bergs & Mark agency story, mission, values, and team behind our structured digital marketing execution model.",
+  path: "/about",
+  keywords: [
+    "about marketing agency",
+    "digital marketing experts",
+    "growth marketing team",
+    "performance marketing specialists",
+    "service business marketing partner",
+  ],
+})

@@ -1,6 +1,8 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { CalendarDays, Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { ContactInviteForm } from "@/components/contact-invite-form"
 import { Button } from "@/components/ui/button"
@@ -24,9 +26,43 @@ const faqs = [
   },
 ]
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: `Contact ${SITE_NAME}`,
+  url: absoluteUrl("/contact"),
+  description:
+    "Contact Bergs & Mark for digital marketing services, including website design, SEO, paid ads, social media management, and lifecycle marketing.",
+}
+
+const contactFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+}
+
 export default function ContactPage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactPageSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactFaqSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -241,7 +277,17 @@ export default function ContactPage() {
   )
 }
 
-export const metadata = {
-  title: "Contact — Bergs & Mark",
-  description: "Book a consultation, connect by phone or email, and review common questions before kickoff.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact Digital Marketing Agency Team",
+  description:
+    "Contact Bergs & Mark to discuss website design, SEO, social media management, paid ads, and growth strategy. Send your project brief for a structured plan.",
+  path: "/contact",
+  keywords: [
+    "contact marketing agency",
+    "digital marketing consultation",
+    "hire marketing agency",
+    "marketing strategy consultation",
+    "service business marketing support",
+    "Bergs and Mark contact",
+  ],
+})

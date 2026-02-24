@@ -1,5 +1,7 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -62,9 +64,47 @@ const caseStudies = [
   },
 ]
 
+const workPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${SITE_NAME} Case Studies`,
+  url: absoluteUrl("/work"),
+  description:
+    "Digital marketing case studies with measurable outcomes across healthcare, SaaS, e-commerce, and professional service categories.",
+}
+
+const caseStudyItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Marketing Agency Case Studies",
+  itemListElement: caseStudies.map((study, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: `${study.company} case study`,
+      description: `${study.challenge} ${study.solution} ${study.results}`,
+      url: absoluteUrl("/work"),
+      about: study.industry,
+    },
+  })),
+}
+
 export default function WorkPage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(workPageSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(caseStudyItemListSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -156,7 +196,17 @@ export default function WorkPage() {
   )
 }
 
-export const metadata = {
-  title: "Work — Bergs & Mark",
-  description: "Explore case studies across SaaS, e-commerce, healthcare, and professional services with measurable outcomes.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Marketing Case Studies and Results",
+  description:
+    "Review Bergs & Mark marketing case studies showing measurable outcomes in lead generation, conversion improvement, SEO growth, and paid media performance.",
+  path: "/work",
+  keywords: [
+    "marketing agency case studies",
+    "digital marketing results",
+    "lead generation case studies",
+    "seo case studies",
+    "paid ads case studies",
+    "service business growth results",
+  ],
+})

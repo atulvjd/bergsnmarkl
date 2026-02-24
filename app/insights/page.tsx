@@ -1,5 +1,7 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 
 const categories = ["All", "Strategy", "Website", "Paid Ads", "SEO", "Email", "Branding"]
@@ -55,9 +57,31 @@ const articles = [
   },
 ]
 
+const insightsPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: `${SITE_NAME} Marketing Insights`,
+  url: absoluteUrl("/insights"),
+  description:
+    "Marketing insights on website design, paid ads, SEO, social media management, email automation, and growth strategy.",
+  blogPost: articles.map((article) => ({
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.excerpt,
+    articleSection: article.category,
+    url: absoluteUrl("/insights"),
+  })),
+}
+
 export default function InsightsPage() {
   return (
     <main className="pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(insightsPageSchema),
+        }}
+      />
       <section className="border-b border-border/50 bg-background px-6 py-40">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
@@ -119,7 +143,17 @@ export default function InsightsPage() {
   )
 }
 
-export const metadata = {
-  title: "Insights — Bergs & Mark",
-  description: "Read practical resources on website design, paid ads, SEO, email marketing, and growth strategy.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Marketing Insights and Growth Guides",
+  description:
+    "Read practical digital marketing insights on SEO, website design, paid advertising, social media strategy, branding, and lifecycle growth.",
+  path: "/insights",
+  keywords: [
+    "digital marketing blog",
+    "marketing strategy insights",
+    "seo insights",
+    "paid ads strategy guides",
+    "website conversion insights",
+    "growth marketing resources",
+  ],
+})
