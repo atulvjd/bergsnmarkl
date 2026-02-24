@@ -72,12 +72,12 @@ const process = [
 ]
 
 const industries = [
-  { title: "SaaS", description: "Pipeline growth and activation systems.", icon: Globe },
-  { title: "E-commerce", description: "Acquisition and retention programs.", icon: ShoppingBag },
-  { title: "Healthcare", description: "Trust-first digital patient journeys.", icon: HeartPulse },
-  { title: "Financial Services", description: "Compliance-aware growth strategy.", icon: Landmark },
-  { title: "Professional Services", description: "Lead generation and authority building.", icon: Building2 },
-  { title: "Mobile Apps", description: "Install-to-retention lifecycle marketing.", icon: Smartphone },
+  { title: "Healthcare & Clinics", description: "Patient-focused outreach, trust building, and appointment growth.", icon: HeartPulse },
+  { title: "Legal Services", description: "Authority-led content and qualified lead generation for firms.", icon: Landmark },
+  { title: "Financial Advisory", description: "Compliance-aware campaigns that build credibility and demand.", icon: Globe },
+  { title: "Real Estate Services", description: "Local visibility, lead funnels, and conversion-focused campaigns.", icon: Building2 },
+  { title: "Coaches & Consultants", description: "Positioning, content systems, and inbound client acquisition.", icon: Smartphone },
+  { title: "Home & Local Services", description: "Location-based marketing to drive calls, bookings, and retention.", icon: ShoppingBag },
 ]
 
 export default function Home() {
