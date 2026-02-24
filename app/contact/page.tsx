@@ -89,7 +89,7 @@ export default function ContactPage() {
               <p className="mb-8 text-foreground/70">Follow and message us directly on social channels.</p>
               <div className="mt-2 flex flex-wrap gap-4">
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/bergsnmark/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   <Facebook className="size-5" />
                 </Link>
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/bergsnmark/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -153,13 +153,13 @@ export default function ContactPage() {
             {[
               {
                 title: "Email",
-                detail: "hello@bergsandmark.com",
+                detail: "bergsnmark@gmail.com",
                 note: "Best for project details",
                 icon: Mail,
               },
               {
                 title: "Phone",
-                detail: "+1 (555) 234-5678",
+                detail: "+91 93017 03738",
                 note: "Business hours support",
                 icon: Phone,
               },
