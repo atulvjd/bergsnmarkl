@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "The Brand Positioning Hegemony: Leveraging Market Narrative Signals to Solve the Customer Acquisition Cost Crisis"
 
@@ -222,7 +223,7 @@ export default function BrandPositioningHegemonyInsightPage() {
       <section className="bg-secondary/50 px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">{articleBody}</p>
+            <InsightArticleContent content={articleBody} />
           </article>
         </div>
       </section>

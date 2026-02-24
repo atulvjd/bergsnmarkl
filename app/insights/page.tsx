@@ -14,7 +14,7 @@ const articles = [
     readTime: "8 min read",
     takeaway: "Learn how shared ownership, weekly planning rhythms, and aligned KPIs reduce execution friction.",
     image: "/team-collaboration-meeting-professional-environmen.jpg",
-    href: "/contact",
+    href: "/insights/architecture-of-modern-marketing-operations-centralized-execution",
   },
   {
     title: "Website Design Systems That Lift Conversion Rates",

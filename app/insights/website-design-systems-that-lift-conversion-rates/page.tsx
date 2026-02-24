@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "Website Design Systems That Lift Conversion Rates: The Definitive Guide to UX, Architecture, and Credibility"
 
@@ -346,7 +347,7 @@ export default function WebsiteDesignSystemsInsightPage() {
       <section className="bg-secondary/50 px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/80">{articleBody}</p>
+            <InsightArticleContent content={articleBody} />
           </article>
         </div>
       </section>
@@ -368,4 +369,3 @@ export const metadata: Metadata = buildPageMetadata({
     "credibility signals",
   ],
 })
-
