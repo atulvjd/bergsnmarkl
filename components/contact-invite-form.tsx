@@ -7,6 +7,42 @@ import { Textarea } from "@/components/ui/textarea"
 
 type SubmitState = "idle" | "sending" | "success" | "error"
 
+const FORMSPREE_ENDPOINT =
+  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
+  (process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}` : "")
+
+function getFormspreeErrorMessage(body: unknown) {
+  if (!body || typeof body !== "object") {
+    return null
+  }
+
+  const payload = body as { error?: unknown; errors?: Array<{ message?: unknown }> }
+  const errorList = payload.errors
+
+  if (Array.isArray(errorList) && typeof errorList[0]?.message === "string" && errorList[0].message.trim().length > 0) {
+    return errorList[0].message
+  }
+
+  if (typeof payload.error === "string" && payload.error.trim().length > 0) {
+    return payload.error
+  }
+
+  return null
+}
+
+function getApiErrorMessage(body: unknown) {
+  if (!body || typeof body !== "object") {
+    return null
+  }
+
+  const payload = body as { error?: unknown }
+  if (typeof payload.error === "string" && payload.error.trim().length > 0) {
+    return payload.error
+  }
+
+  return null
+}
+
 export function ContactInviteForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle")
   const [errorMessage, setErrorMessage] = useState("")
@@ -26,17 +62,20 @@ export function ContactInviteForm() {
     }
 
     try {
-      const response = await fetch("/api/invite", {
+      const submitUrl = FORMSPREE_ENDPOINT || "/api/invite"
+      const response = await fetch(submitUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(payload),
       })
 
       if (!response.ok) {
         const body = await response.json().catch(() => null)
-        throw new Error(body?.error ?? "Unable to send invite right now.")
+        const errorFromService = FORMSPREE_ENDPOINT ? getFormspreeErrorMessage(body) : getApiErrorMessage(body)
+        throw new Error(errorFromService ?? "Unable to send invite right now.")
       }
 
       form.reset()

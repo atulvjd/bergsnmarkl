@@ -29,29 +29,23 @@ Continue building your app on:
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
 
-## Contact invite backend setup
+## Contact invite form setup (Formspree)
 
-The `Send an Invite` form now submits to `POST /api/invite`, which sends:
+The `Send an Invite` form uses Formspree when configured and falls back to `POST /api/invite` if Formspree env vars are missing.
 
-- Email using Resend
-- WhatsApp message using Twilio WhatsApp API
-
-Create a `.env.local` file with:
+Create a `.env.local` file with either:
 
 ```bash
-RESEND_API_KEY=your_resend_api_key
-INVITE_EMAIL_FROM=Agency <no-reply@yourdomain.com>
-INVITE_EMAIL_TO=your-inbox@company.com
+NEXT_PUBLIC_FORMSPREE_FORM_ID=your_form_id
+```
 
-TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_AUTH_TOKEN=your_twilio_auth_token
-TWILIO_WHATSAPP_FROM=whatsapp:+14155238886
-TWILIO_WHATSAPP_TO=whatsapp:+1xxxxxxxxxx
+or
+
+```bash
+NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your_form_id
 ```
 
 Notes:
 
-- `TWILIO_WHATSAPP_FROM` must be your approved Twilio WhatsApp sender.
-- Use E.164 phone format (for example, `+14155551234`).
-- You only need one delivery channel configured (`Resend` or `Twilio WhatsApp`) for invites to be sent.
-- If neither channel is configured, the API returns a configuration error response.
+- If both are set, `NEXT_PUBLIC_FORMSPREE_ENDPOINT` is used.
+- Because these vars are `NEXT_PUBLIC_*`, restart `pnpm dev` after updating `.env.local`.
