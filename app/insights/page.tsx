@@ -32,7 +32,7 @@ const articles = [
     readTime: "9 min read",
     takeaway: "Explains budget split logic that balances short-term efficiency with long-term demand building.",
     image: "/digital-marketing-analytics-dashboard-with-convers.jpg",
-    href: "/contact",
+    href: "/insights/strategic-frameworks-paid-media-budget-allocation",
   },
   {
     title: "SEO Content Clusters for Sustainable Pipeline Growth",
@@ -50,7 +50,7 @@ const articles = [
     readTime: "6 min read",
     takeaway: "Breaks down onboarding, nurture, and retention flows that improve repeat revenue and engagement.",
     image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
-    href: "/contact",
+    href: "/insights/architectural-frameworks-ltv-lifecycle-email-automation",
   },
   {
     title: "Brand Positioning Signals That Improve CAC Efficiency",
