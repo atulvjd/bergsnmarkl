@@ -80,27 +80,6 @@ const industries = [
   { title: "Mobile Apps", description: "Install-to-retention lifecycle marketing.", icon: Smartphone },
 ]
 
-const testimonials = [
-  {
-    name: "Priya Mehta",
-    role: "CMO, NovaSuite",
-    image: "/professional-headshot-woman-ceo-founder.jpg",
-    quote: "Bergs & Mark gave us a clear growth system. In six months, pipeline quality and conversion rates both materially improved.",
-  },
-  {
-    name: "Daniel Ross",
-    role: "Founder, Atelier Commerce",
-    image: "/professional-headshot-man-business.jpg",
-    quote: "They aligned brand, site, and paid media into one strategy. The consistency lifted revenue and made decision-making faster.",
-  },
-  {
-    name: "Elena Cruz",
-    role: "Director, HealthBridge",
-    image: "/professional-headshot-woman-entrepreneur.jpg",
-    quote: "Execution quality is high and communication is direct. We always know priorities, performance, and next actions.",
-  },
-]
-
 export default function Home() {
   return (
     <main>
@@ -259,36 +238,6 @@ export default function Home() {
                   <industry.icon className="mb-4 size-6 text-accent-beige" />
                   <h3 className="mb-2 text-2xl font-bold">{industry.title}</h3>
                   <p className="text-foreground/70">{industry.description}</p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background px-6 py-40">
-        <div className="mx-auto max-w-7xl">
-          <FadeInSection>
-            <div className="mb-16 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Client Testimonials</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">What partners say about our process quality, communication, and results.</p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <FadeInSection key={testimonial.name} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-7 transition-colors hover:border-accent-beige/50">
-                  <div className="mb-5 flex items-center gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-full border border-border/50">
-                      <Image src={testimonial.image} alt={testimonial.name} fill className="object-cover" />
-                    </div>
-                    <div>
-                      <p className="font-bold">{testimonial.name}</p>
-                      <p className="text-sm text-foreground/60">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-foreground/75">"{testimonial.quote}"</p>
                 </div>
               </FadeInSection>
             ))}
