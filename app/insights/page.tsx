@@ -59,7 +59,7 @@ const articles = [
     readTime: "7 min read",
     takeaway: "Shows how stronger market narrative reduces wasted spend and improves conversion consistency.",
     image: "/abstract-brand-concept.jpg",
-    href: "/contact",
+    href: "/insights/brand-positioning-hegemony-cac-efficiency",
   },
 ]
 
