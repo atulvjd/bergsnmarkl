@@ -125,21 +125,6 @@ const services = [
     image: "/team-collaboration-meeting-professional-environmen.jpg",
   },
   {
-    id: "conversion-rate-optimization",
-    category: "Optimization",
-    title: "Conversion Rate Optimization",
-    description: "Data-led testing and optimization to improve conversion across key customer journey steps.",
-    features: [
-      "Funnel and heatmap analysis",
-      "A/B and multivariate testing",
-      "Landing page experimentation",
-      "Checkout and form optimization",
-      "Behavioral insight reporting",
-      "Continuous testing roadmap",
-    ],
-    image: "/results-analytics-dashboard.jpg",
-  },
-  {
     id: "marketing-automation",
     category: "Automation",
     title: "Marketing Automation",
@@ -153,21 +138,6 @@ const services = [
       "Operational dashboard setup",
     ],
     image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
-  },
-  {
-    id: "funnel-strategy",
-    category: "Strategy",
-    title: "Sales Funnel Strategy",
-    description: "End-to-end funnel planning to align messaging, channel mix, and conversion actions.",
-    features: [
-      "Offer and value proposition mapping",
-      "Channel and touchpoint planning",
-      "Funnel stage messaging frameworks",
-      "Lead capture flow design",
-      "Nurture and follow-up sequences",
-      "Pipeline performance analysis",
-    ],
-    image: "/strategy-planning-whiteboard.jpg",
   },
   {
     id: "ecommerce-growth",
@@ -306,5 +276,5 @@ export default function ServicesPage() {
 export const metadata = {
   title: "Services — Bergs & Mark",
   description:
-    "Explore website design, social media, paid ads, email marketing, SEO, branding, video production, CRO, automation, content marketing, and more.",
+    "Explore website design, social media, paid ads, email marketing, SEO, branding, video production, automation, content marketing, and more.",
 }
