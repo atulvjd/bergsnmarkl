@@ -59,7 +59,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-24">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-4xl space-y-10">
           {privacySections.map((section) => (
             <article key={section.title} className="rounded-lg border border-border/50 bg-background p-8">

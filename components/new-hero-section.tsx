@@ -24,7 +24,7 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="mb-8"
+            className="mb-4"
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-accent-beige/40 bg-accent-beige/15 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-accent-beige" />
@@ -36,7 +36,7 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="mb-8 text-6xl font-black leading-tight tracking-tighter md:text-7xl"
+            className="mb-6 text-6xl font-black leading-tight tracking-tighter md:text-7xl"
           >
             Build a Stronger <span className="text-accent-beige">Digital System</span> for Growth
           </motion.h1>
@@ -45,7 +45,7 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-foreground/80"
+            className="mx-auto mb-3 max-w-2xl text-lg leading-relaxed text-foreground/80"
           >
             We design websites, manage social channels, run paid media, and optimize full-funnel campaigns through one coordinated team.
           </motion.p>
@@ -53,7 +53,7 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.24, duration: 0.8 }}
-            className="mx-auto mb-12 max-w-3xl text-base leading-relaxed text-foreground/70"
+            className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-foreground/70"
           >
             From positioning and creative systems to media execution and reporting, every part of the growth engine is planned to move faster with stronger quality control and measurable business impact.
           </motion.p>
@@ -62,9 +62,9 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mb-16 flex flex-col justify-center gap-4 sm:flex-row"
+            className="mb-10 flex flex-col justify-center gap-4 sm:flex-row"
           >
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-8 py-6 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto rounded-lg bg-foreground px-8 py-6 text-lg font-bold text-background hover:bg-foreground/90">
               <Link href="/contact">Start a Consultation</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-auto border-accent-beige/40 bg-background/30 px-8 py-6 text-lg hover:border-accent-beige/60 hover:bg-background/50">

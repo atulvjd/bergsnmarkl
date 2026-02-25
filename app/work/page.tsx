@@ -105,7 +105,7 @@ export default function WorkPage() {
           __html: JSON.stringify(caseStudyItemListSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-40">
+      <section className="border-b border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
@@ -121,7 +121,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-32">
+      <section className="bg-secondary/50 px-6 py-8">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
@@ -178,7 +178,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-32">
+      <section className="border-y border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Want Similar Results?</h2>

@@ -261,7 +261,7 @@ export default function ServicesPage() {
           __html: JSON.stringify(serviceItemListSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-40">
+      <section className="border-b border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
@@ -277,10 +277,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-40">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Service Categories</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Consistent delivery models across strategy, design, content, and performance.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -322,7 +322,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-32">
+      <section className="border-y border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Need a Tailored Service Mix?</h2>

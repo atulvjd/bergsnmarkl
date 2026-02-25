@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="border-t border-border/50 bg-secondary/50">
-      <div className="mx-auto max-w-7xl px-6 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <p className="mb-4 text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-border/50 pt-6 text-sm text-foreground/60">
+        <div className="mt-6 border-t border-border/50 pt-6 text-sm text-foreground/60">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <p>© 2024 Bergs & Mark. All rights reserved.</p>
             <div className="flex gap-6">

@@ -72,7 +72,7 @@ export default function AboutPage() {
           __html: JSON.stringify(aboutPageSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-40">
+      <section className="border-b border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
@@ -86,7 +86,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-40">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <FadeInSection>
             <div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-32">
+      <section className="border-y border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Mission & Vision</h2>
@@ -124,11 +124,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-40">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-16 text-center text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
-            <p className="mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
+            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
+            <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               Our values directly shape planning priorities, communication cadence, and delivery standards across every engagement.
             </p>
           </FadeInSection>
@@ -147,11 +147,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-40">
+      <section className="border-y border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-16 text-center text-5xl font-black leading-tight md:text-6xl">Team</h2>
-            <p className="mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
+            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Team</h2>
+            <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               A cross-functional team built around strategic planning, creative execution, performance optimization, and transparent reporting.
             </p>
           </FadeInSection>
@@ -176,11 +176,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-40">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-16 text-center text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
-            <p className="mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
+            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
+            <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               We are designed to function like an extension of your core team, with clear ownership, proactive communication, and measurable delivery.
             </p>
           </FadeInSection>
@@ -201,7 +201,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-32">
+      <section className="border-y border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Let’s Build What’s Next</h2>

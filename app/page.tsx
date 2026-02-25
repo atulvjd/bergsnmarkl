@@ -163,10 +163,10 @@ export default function Home() {
       />
       <NewHeroSection />
 
-      <section className="bg-background px-6 py-40">
+      <section className="bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Core Services</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Six focused service lines that work together as one centralized growth engine.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -199,10 +199,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-40">
+      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">How We Work</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">A structured six-step methodology designed for clarity, speed, and measurable business impact.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -229,10 +229,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-40">
+      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Featured Case Studies</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Representative engagements showing how we solve specific growth challenges.</p>
             </div>
@@ -276,10 +276,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-40">
+      <section className="bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Three principles that keep work centralized, accountable, and commercially focused.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -318,10 +318,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-40">
+      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Industries We Serve</h2>
               <p className="mx-auto max-w-3xl text-lg text-foreground/70">Sector expertise built around repeatable growth systems tailored to your market dynamics.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -345,7 +345,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-border/50 bg-secondary/50 px-6 py-32">
+      <section className="border-t border-border/50 bg-secondary/50 px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Centralize Your Growth?</h2>

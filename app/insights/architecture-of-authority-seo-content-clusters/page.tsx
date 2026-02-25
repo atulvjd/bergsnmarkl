@@ -256,7 +256,7 @@ export default function SeoContentClustersInsightPage() {
         }}
       />
 
-      <section className="border-b border-border/50 bg-background px-6 py-32">
+      <section className="border-b border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / SEO</p>
           <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
@@ -266,7 +266,7 @@ export default function SeoContentClustersInsightPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-20">
+      <section className="bg-secondary/50 px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
             <InsightArticleContent content={articleBody} />
