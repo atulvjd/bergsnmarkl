@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div className="mt-14 border-t border-border/50 pt-6 text-sm text-foreground/60">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Bergs & Mark. All rights reserved.</p>
+            <p>© 2024 Bergs & Mark. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>
