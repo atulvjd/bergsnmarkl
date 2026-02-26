@@ -39,6 +39,14 @@ const caseStudies = [
     image: "/fashion-ecommerce-website.png",
   },
   {
+    company: "Prime Ledger",
+    industry: "Financial Technology",
+    description:
+      "A high-performance financial management platform for modern businesses, featuring real-time transaction tracking, automated bookkeeping, and a secure, intuitive interface to streamline enterprise-grade accounting.",
+    url: "https://prime-ledger-2-t2cb.vercel.app/",
+    image: "/saas-dashboard-design-interface.jpg",
+  },
+  {
     company: "NovaSuite",
     industry: "SaaS",
     description:
@@ -61,14 +69,6 @@ const caseStudies = [
       "Implementing a local SEO foundation and intent-led paid search campaigns to establish HealthBridge Clinics as a leader in their regional market.",
     url: "#",
     image: "/consultation-meeting-planning.jpg",
-  },
-  {
-    company: "PrimeLedger",
-    industry: "Financial Services",
-    description:
-      "Refining the value proposition and narrative for PrimeLedger, coupled with a thought-leadership content program to drive high-quality inbound SQLs.",
-    url: "#",
-    image: "/strategy-planning-whiteboard.jpg",
   },
   {
     company: "CloudAnchor",

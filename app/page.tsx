@@ -264,6 +264,14 @@ export default function Home() {
                 image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
                 url: "https://cafe-website-mu-neon.vercel.app/",
               },
+              {
+                title: "Prime Ledger",
+                result: "Financial Technology",
+                description: "High-performance financial management platform for modern businesses with real-time tracking.",
+                detail: "Featuring automated bookkeeping and a secure, intuitive interface designed to streamline enterprise-grade accounting.",
+                image: "/saas-dashboard-design-interface.jpg",
+                url: "https://prime-ledger-2-t2cb.vercel.app/",
+              },
             ].map((study, index) => (
               <FadeInSection key={study.title} delay={index * 0.08}>
                 <div className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
