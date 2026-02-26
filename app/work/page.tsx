@@ -31,6 +31,14 @@ const caseStudies = [
     image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
   },
   {
+    company: "Cen Paris Apparels",
+    industry: "Luxury Fashion",
+    description:
+      "A sophisticated digital storefront for Cen Paris Apparels, capturing Parisian elegance through high-end visual storytelling, curated collections, and a premium shopping experience.",
+    url: "https://v0-cenparis.vercel.app/",
+    image: "/fashion-ecommerce-website.png",
+  },
+  {
     company: "NovaSuite",
     industry: "SaaS",
     description:
