@@ -87,39 +87,39 @@ const process = [
 
 const industries = [
   {
-    title: "Healthcare & Clinics",
-    description: "Patient-focused outreach, trust building, and appointment growth.",
-    example: "Includes multi-location clinics, specialty practices, and wellness providers.",
-    icon: HeartPulse,
-  },
-  {
-    title: "Legal Services",
-    description: "Authority-led content and qualified lead generation for firms.",
-    example: "Built for practice areas that depend on credibility and inquiry quality.",
-    icon: Landmark,
-  },
-  {
-    title: "Financial Advisory",
-    description: "Compliance-aware campaigns that build credibility and demand.",
-    example: "Supports advisors, consultants, and teams with regulated communication needs.",
-    icon: Globe,
-  },
-  {
-    title: "Real Estate Services",
-    description: "Local visibility, lead funnels, and conversion-focused campaigns.",
-    example: "Ideal for brokerages, developers, and high-intent property marketing.",
-    icon: Building2,
-  },
-  {
-    title: "Coaches & Consultants",
-    description: "Positioning, content systems, and inbound client acquisition.",
-    example: "For experts who need stronger thought leadership and consistent pipeline.",
+    title: "SaaS & Tech Startups",
+    description: "Growth-led marketing and technical solution alignment for scaling software platforms.",
+    example: "Focused on trial-to-paid conversion, user retention, and platform authority.",
     icon: Smartphone,
   },
   {
-    title: "Home & Local Services",
-    description: "Location-based marketing to drive calls, bookings, and retention.",
-    example: "Designed for service businesses that rely on regional discoverability.",
+    title: "B2B Technology",
+    description: "Enhancing market presence for firms providing complex technical solutions and infrastructure.",
+    example: "Built for companies that depend on technical credibility and long-cycle lead quality.",
+    icon: Globe,
+  },
+  {
+    title: "Digital Agencies",
+    description: "Helping other service providers grow through better systems and marketing execution.",
+    example: "Scaling operations for creative, dev, and consulting firms through technical marketing.",
+    icon: Users,
+  },
+  {
+    title: "Professional Services",
+    description: "Authority-led content and lead generation for specialized service firms.",
+    example: "Supports legal, financial, and architectural firms with regulated communication needs.",
+    icon: Landmark,
+  },
+  {
+    title: "Coaches & Consultants",
+    description: "Positioning, content systems, and automated systems to help people grow.",
+    example: "For experts who need stronger thought leadership and consistent inbound pipelines.",
+    icon: TrendingUp,
+  },
+  {
+    title: "E-commerce & D2C",
+    description: "Technical optimization and performance marketing for digital-first brands.",
+    example: "Ideal for brands that rely on conversion-led UX and data-driven acquisition.",
     icon: ShoppingBag,
   },
 ]
