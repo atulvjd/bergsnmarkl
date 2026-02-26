@@ -238,21 +238,31 @@ export default function Home() {
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "E-commerce Repositioning",
-                result: "+210% conversion rate",
-                description: "Unified website redesign, paid acquisition, and email automation for a premium retail brand.",
-                detail: "Aligned offer messaging, creative testing, and lifecycle timing to increase first-purchase rate and repeat behavior.",
-                image: "/fashion-ecommerce-website.png",
+                title: "Elite Core Gym",
+                result: "Digital Transformation",
+                description: "High-performance digital platform with streamlined class scheduling and membership management.",
+                detail: "Designed to drive athlete engagement and retention through a dynamic, user-centric interface.",
+                image: "/professional-service-provider-website.jpg",
+                url: "https://elitecoregym.vercel.app/",
               },
               {
-                title: "B2B SaaS Expansion",
-                result: "3x pipeline velocity",
-                description: "Refined category messaging, content distribution, and demand generation sequencing.",
-                detail: "Reworked funnel stages and handoff criteria so sales and marketing moved against the same qualification model.",
-                image: "/saas-dashboard-design-interface.jpg",
+                title: "Vellora Fashion",
+                result: "E-commerce Excellence",
+                description: "Premium e-commerce experience with minimalist design and seamless product discovery.",
+                detail: "Optimized for the modern shopper with a focus on visual storytelling and conversion-led checkout flows.",
+                image: "/luxury-e-commerce-storefront.jpg",
+                url: "https://vellora-nrev.vercel.app/",
+              },
+              {
+                title: "Filter Kaapi Co.",
+                result: "Brand Identity & UX",
+                description: "Inviting digital presence for a specialty coffee cafe with an integrated menu and ordering system.",
+                detail: "Focused on driving local foot traffic through a warm, accessible interface and clear location-based CTAs.",
+                image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
+                url: "https://cafe-website-mu-neon.vercel.app/",
               },
             ].map((study, index) => (
               <FadeInSection key={study.title} delay={index * 0.08}>
@@ -265,8 +275,31 @@ export default function Home() {
                     <h3 className="mb-3 text-3xl font-bold">{study.title}</h3>
                     <p className="mb-6 text-foreground/70">{study.description}</p>
                     <p className="mb-6 text-sm leading-relaxed text-foreground/65">{study.detail}</p>
-                    <Link href="/work" className="mt-auto font-semibold text-accent-beige transition-opacity hover:opacity-80">
-                      View Full Case Study
+                    <Link
+                      href={study.url}
+                      target={study.url.startsWith("http") ? "_blank" : undefined}
+                      rel={study.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="mt-auto inline-flex items-center font-semibold text-accent-beige transition-opacity hover:opacity-80"
+                    >
+                      Visit Project
+                      {study.url.startsWith("http") && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="ml-1"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      )}
                     </Link>
                   </div>
                 </div>

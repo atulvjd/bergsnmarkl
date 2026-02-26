@@ -5,62 +5,70 @@ import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
-const filters = ["All", "SaaS", "E-commerce", "Healthcare", "Paid Ads", "SEO", "Branding"]
-
 const caseStudies = [
+  {
+    company: "Elite Core Gym",
+    industry: "Fitness & Wellness",
+    description:
+      "A high-performance digital platform for Elite Core Gym, featuring streamlined class scheduling, membership management, and a dynamic interface designed to drive athlete engagement and retention.",
+    url: "https://elitecoregym.vercel.app/",
+    image: "/professional-service-provider-website.jpg",
+  },
+  {
+    company: "Vellora",
+    industry: "E-commerce & Fashion",
+    description:
+      "A premium e-commerce experience for Vellora, a contemporary clothing brand. The platform features a minimalist design, seamless product discovery, and an optimized checkout flow to enhance the digital shopping journey.",
+    url: "https://vellora-nrev.vercel.app/",
+    image: "/luxury-e-commerce-storefront.jpg",
+  },
+  {
+    company: "Filter Kaapi Co.",
+    industry: "Food & Beverage",
+    description:
+      "A warm and inviting digital presence for a specialty coffee cafe, featuring an integrated menu, location details, and a seamless online ordering system to drive local foot traffic.",
+    url: "https://cafe-website-mu-neon.vercel.app/",
+    image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
+  },
   {
     company: "NovaSuite",
     industry: "SaaS",
-    challenge: "Low trial-to-demo conversion despite steady traffic.",
-    solution: "Reframed messaging, redesigned landing paths, and aligned paid + lifecycle nurture.",
-    results: "3.2x qualified pipeline, 41% lower CAC",
-    scope: "Scope: messaging architecture, landing UX updates, ad journey alignment, and lifecycle email sequencing.",
+    description:
+      "A complete overhaul of NovaSuite's acquisition funnel, focusing on messaging architecture and landing UX updates to significantly improve trial-to-demo conversion rates.",
+    url: "#",
     image: "/saas-dashboard-design-interface.jpg",
   },
   {
     company: "Atelier Commerce",
     industry: "E-commerce",
-    challenge: "High ad spend with inconsistent conversion rates.",
-    solution: "Creative testing cadence, PDP redesign, and automated retention email sequences.",
-    results: "+214% conversion rate, 4.8x blended ROAS",
-    scope: "Scope: product page CRO, paid creative matrix, audience segmentation, and retention automation.",
+    description:
+      "Strategic creative testing and product page optimization for Atelier Commerce, resulting in a dramatic increase in conversion rates and blended ROAS.",
+    url: "#",
     image: "/fashion-ecommerce-website.png",
   },
   {
     company: "HealthBridge Clinics",
     industry: "Healthcare",
-    challenge: "Weak local visibility and fragmented acquisition channels.",
-    solution: "Local SEO foundation, location pages, and intent-led paid search campaigns.",
-    results: "289% growth in booked consultations",
-    scope: "Scope: local search structure, map listing optimization, provider page strategy, and conversion tracking.",
+    description:
+      "Implementing a local SEO foundation and intent-led paid search campaigns to establish HealthBridge Clinics as a leader in their regional market.",
+    url: "#",
     image: "/consultation-meeting-planning.jpg",
   },
   {
     company: "PrimeLedger",
     industry: "Financial Services",
-    challenge: "Premium product, unclear market positioning.",
-    solution: "Positioning framework, conversion-led site update, and authority content program.",
-    results: "2.6x inbound SQL volume in 5 months",
-    scope: "Scope: value proposition refinement, website narrative rewrite, and thought-leadership content planning.",
+    description:
+      "Refining the value proposition and narrative for PrimeLedger, coupled with a thought-leadership content program to drive high-quality inbound SQLs.",
+    url: "#",
     image: "/strategy-planning-whiteboard.jpg",
   },
   {
     company: "CloudAnchor",
     industry: "B2B Infrastructure",
-    challenge: "Strong product, low category visibility.",
-    solution: "Integrated SEO-content system with paid amplification for priority assets.",
-    results: "401% increase in organic non-brand traffic",
-    scope: "Scope: topic cluster architecture, strategic editorial calendar, and demand-capture distribution workflows.",
+    description:
+      "An integrated SEO-content system designed for CloudAnchor to capture market demand and increase organic non-brand traffic through strategic topic clusters.",
+    url: "#",
     image: "/results-analytics-dashboard.jpg",
-  },
-  {
-    company: "MediPulse",
-    industry: "Healthcare Tech",
-    challenge: "Growth stalled after initial launch momentum.",
-    solution: "Full-funnel media plan, refreshed creative, and CRM-backed reactivation flow.",
-    results: "+176% MQL growth, 34% better CPL efficiency",
-    scope: "Scope: audience expansion strategy, creative refresh cadence, and lifecycle reactivation automation.",
-    image: "/hero-digital-marketing-agency.jpg",
   },
 ]
 
@@ -83,8 +91,8 @@ const caseStudyItemListSchema = {
     item: {
       "@type": "CreativeWork",
       name: `${study.company} case study`,
-      description: `${study.challenge} ${study.solution} ${study.results}`,
-      url: absoluteUrl("/work"),
+      description: study.description,
+      url: study.url,
       about: study.industry,
     },
   })),
@@ -121,24 +129,8 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-6 py-12">
         <div className="mx-auto max-w-7xl">
-          <FadeInSection>
-            <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
-              {filters.map((filter, index) => (
-                <span
-                  key={filter}
-                  className={`rounded-full border px-4 py-2 text-sm font-semibold ${index === 0 ? "border-accent-beige/50 bg-accent-beige/10 text-accent-beige" : "border-border/50 text-foreground/70"}`}
-                >
-                  {filter}
-                </span>
-              ))}
-            </div>
-            <p className="mx-auto mb-12 max-w-4xl text-center text-sm leading-relaxed text-foreground/65">
-              These examples cover category positioning, acquisition efficiency, local visibility, and lifecycle retention programs delivered through one integrated operating model.
-            </p>
-          </FadeInSection>
-
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study, index) => (
               <FadeInSection key={study.company} delay={index * 0.05}>
@@ -149,26 +141,35 @@ export default function WorkPage() {
 
                   <div className="flex flex-1 flex-col p-7">
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent-beige">{study.industry}</p>
-                    <h2 className="mb-5 text-2xl font-bold">{study.company}</h2>
+                    <h2 className="mb-4 text-2xl font-bold">{study.company}</h2>
 
-                    <div className="space-y-4 text-sm text-foreground/75">
-                      <div>
-                        <p className="mb-1 text-xs font-bold uppercase tracking-[0.14em] text-foreground/50">Challenge</p>
-                        <p>{study.challenge}</p>
-                      </div>
-                      <div>
-                        <p className="mb-1 text-xs font-bold uppercase tracking-[0.14em] text-foreground/50">Solution</p>
-                        <p>{study.solution}</p>
-                      </div>
-                      <div>
-                        <p className="mb-1 text-xs font-bold uppercase tracking-[0.14em] text-foreground/50">Results</p>
-                        <p className="font-semibold text-accent-beige">{study.results}</p>
-                      </div>
-                    </div>
-                    <p className="mt-5 text-sm leading-relaxed text-foreground/65">{study.scope}</p>
+                    <p className="flex-1 text-sm leading-relaxed text-foreground/75">{study.description}</p>
 
-                    <Link href="/contact" className="mt-6 font-semibold text-accent-beige transition-opacity hover:opacity-80">
-                      View Full Case Study
+                    <Link
+                      href={study.url}
+                      target={study.url.startsWith("http") ? "_blank" : undefined}
+                      rel={study.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="mt-6 inline-flex items-center font-semibold text-accent-beige transition-opacity hover:opacity-80"
+                    >
+                      Visit Project
+                      {study.url.startsWith("http") && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="ml-1"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      )}
                     </Link>
                   </div>
                 </article>
