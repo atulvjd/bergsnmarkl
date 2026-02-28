@@ -144,15 +144,6 @@ export default function ContactPage() {
                   <Instagram className="size-5" />
                 </Link>
                 <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-border/50 bg-background transition-colors hover:border-accent-beige/60 hover:text-accent-beige"
-                >
-                  <Facebook className="size-5" />
-                </Link>
-                <Link
                   href="https://www.linkedin.com/company/bergsnmark/"
                   target="_blank"
                   rel="noopener noreferrer"
