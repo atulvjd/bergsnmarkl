@@ -38,7 +38,7 @@ export default function NewHeroSection() {
             transition={{ delay: 0.1, duration: 0.8 }}
             className="mb-6 text-6xl font-black leading-tight tracking-tighter md:text-7xl"
           >
-            Build a Stronger <span className="text-accent-beige">Digital System</span> for Growth
+            Marketing Architecture & <span className="text-accent-beige">Growth Systems</span> Agency
           </motion.h1>
 
           <motion.p
@@ -47,7 +47,7 @@ export default function NewHeroSection() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="mx-auto mb-3 max-w-2xl text-lg leading-relaxed text-foreground/80"
           >
-            We design websites, manage social channels, run paid media, and optimize full-funnel campaigns through one coordinated team.
+            Welcome to Bergs & Mark. As a premier partner for digital growth, bergs and mark designs websites, manages social channels, runs paid media, and optimizes full-funnel campaigns through one coordinated team.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function NewHeroSection() {
             transition={{ delay: 0.24, duration: 0.8 }}
             className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-foreground/70"
           >
-            From positioning and creative systems to media execution and reporting, every part of the growth engine is planned to move faster with stronger quality control and measurable business impact.
+            Whether you search for us as bergsandmark or berg sand mark, our mission remains the same: from positioning and creative systems to media execution and reporting, every part of the growth engine is planned to move faster with stronger quality control and measurable business impact.
           </motion.p>
 
           <motion.div
