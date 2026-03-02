@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next"
-import { absoluteUrl } from "@/lib/seo"
+import { getAbsoluteUrl } from "@/lib/seo/seo-builder"
 
 const routes: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
-  { path: "/", priority: 1, changeFrequency: "weekly" },
-  { path: "/services", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/services", priority: 0.9, changeFrequency: "weekly" },
   { path: "/work", priority: 0.9, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.9, changeFrequency: "weekly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/expertise", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/insights", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/expertise", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/insights", priority: 0.8, changeFrequency: "weekly" },
   { path: "/insights/architecture-of-modern-marketing-operations-centralized-execution", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights/website-design-systems-that-lift-conversion-rates", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights/brand-positioning-hegemony-cac-efficiency", priority: 0.8, changeFrequency: "monthly" },
@@ -22,7 +22,7 @@ const routes: Array<{ path: string; priority: number; changeFrequency: MetadataR
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
   return routes.map((route) => ({
-    url: absoluteUrl(route.path),
+    url: getAbsoluteUrl(route.path),
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
