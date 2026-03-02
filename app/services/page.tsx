@@ -341,8 +341,8 @@ export default function ServicesPage() {
 }
 
 export const metadata: Metadata = generateMeta({
-  pageType: "general",
-  title: "Digital Marketing Services",
+  pageType: "service",
+  title: "Services",
   description:
     "Explore Bergs & Mark digital marketing services: website design, social media management, paid ads, SEO, branding, automation, content, analytics, and reputation management.",
   path: "/services",
