@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const articleTitle = "The Brand Positioning Hegemony: Leveraging Market Narrative Signals to Solve the Customer Acquisition Cost Crisis"
 
@@ -212,6 +213,8 @@ export default function BrandPositioningHegemonyInsightPage() {
 
       <section className="border-b border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-5xl">
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "The Brand Positioning Hegemony: Leveragi...", path: "/insights/brand-positioning-hegemony-cac-efficiency" }]} />
+
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Branding</p>
           <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const articleTitle =
   "Strategic Frameworks for Paid Media Budget Allocation: Harmonizing Demand Creation and Intent Capture for Sustainable Scalability"
@@ -205,6 +206,8 @@ export default function PaidMediaBudgetAllocationInsightPage() {
 
       <section className="border-b border-border/50 bg-background px-6 py-8">
         <div className="mx-auto max-w-5xl">
+          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "Strategic Frameworks for Paid Media Budg...", path: "/insights/strategic-frameworks-paid-media-budget-allocation" }]} />
+
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Paid Ads</p>
           <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
