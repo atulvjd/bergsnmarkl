@@ -163,7 +163,7 @@ export default function Home() {
       />
       <NewHeroSection />
 
-      <section className="bg-background px-6 py-12">
+      <section className="bg-background px-6 pb-12 pt-4">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -263,14 +263,6 @@ export default function Home() {
                 detail: "Focused on driving local foot traffic through a warm, accessible interface and clear location-based CTAs.",
                 image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
                 url: "https://cafe-website-mu-neon.vercel.app/",
-              },
-              {
-                title: "Prime Ledger",
-                result: "Financial Technology",
-                description: "High-performance financial management platform for modern businesses with real-time tracking.",
-                detail: "Featuring automated bookkeeping and a secure, intuitive interface designed to streamline enterprise-grade accounting.",
-                image: "/saas-dashboard-design-interface.jpg",
-                url: "https://prime-ledger-2-t2cb.vercel.app/",
               },
             ].map((study, index) => (
               <FadeInSection key={study.title} delay={index * 0.08}>

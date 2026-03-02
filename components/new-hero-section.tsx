@@ -7,7 +7,7 @@ import { Button } from "./ui/button"
 
 export default function NewHeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden pb-12 pt-32">
       <Image
         src="/hero-digital-marketing-agency.jpg"
         alt="Digital growth team planning strategy"
