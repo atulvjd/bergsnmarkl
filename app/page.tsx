@@ -396,17 +396,9 @@ export default function Home() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Digital Marketing Agency for Service Businesses",
-  description:
-    "Bergs & Mark is a digital marketing agency delivering website design, social media management, paid ads, SEO, branding, and lifecycle marketing for measurable growth.",
+import { generateMeta } from "@/lib/seo/seo-builder"
+
+export const metadata: Metadata = generateMeta({
+  pageType: "home",
   path: "/",
-  keywords: [
-    "marketing agency",
-    "digital marketing company",
-    "online marketing agency",
-    "growth marketing services",
-    "performance marketing",
-    "service business marketing agency",
-  ],
 })
