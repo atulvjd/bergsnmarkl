@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Award, CheckCircle2, Cog, ShieldCheck } from "lucide-react"
+import { CheckCircle2, Cog, ShieldCheck } from "lucide-react"
 import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
@@ -187,34 +187,6 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-8">
-        <div className="mx-auto max-w-7xl">
-          <FadeInSection>
-            <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Certifications & Awards</h2>
-              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
-                Our team maintains recognized certifications and industry standards to ensure execution quality across major marketing platforms.
-              </p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {[
-              "Google Ads Certified Team",
-              "Meta Blueprint Certified",
-              "Top 100 Growth Agency Recognition",
-            ].map((item, index) => (
-              <FadeInSection key={item} delay={index * 0.08}>
-                <div className="flex h-full items-center gap-3 rounded-lg border border-border/50 bg-card p-6 transition-colors hover:border-accent-beige/50">
-                  <Award className="size-5 text-accent-beige" />
-                  <p className="font-semibold">{item}</p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-secondary/50 px-6 py-8">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
@@ -228,12 +200,12 @@ export default function ExpertisePage() {
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              "Full-Funnel Growth Model",
-              "90-Day Experimentation Sprints",
-              "Message-Market Fit Framework",
-              "Conversion Rate Optimization Loop",
-              "Lifecycle Value Expansion",
-              "Integrated Reporting Cadence",
+              "Content-Led Authority Systems",
+              "90-Day Performance Sprints",
+              "High-Trust Positioning Framework",
+              "Conversion-First Design Systems",
+              "Lifecycle Revenue Automation",
+              "Centralized Reporting Cadence",
             ].map((method, index) => (
               <FadeInSection key={method} delay={index * 0.05}>
                 <div className="rounded-lg border border-border/50 bg-card p-6 text-center transition-colors hover:border-accent-beige/50">
