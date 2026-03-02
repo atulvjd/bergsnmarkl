@@ -261,6 +261,15 @@ export default function ServicesPage() {
           __html: JSON.stringify(serviceItemListSchema),
         }}
       />
+      {services.map(service => (
+        <script
+          key={service.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateServiceSchema(service.title, service.description, `/services#${service.id}`)),
+          }}
+        />
+      ))}
       <section className="border-b border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
