@@ -396,8 +396,6 @@ export default function Home() {
   )
 }
 
-import { generateMeta } from "@/lib/seo/seo-builder"
-
 export const metadata: Metadata = generateMeta({
   pageType: "home",
   path: "/",
