@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { CalendarDays, Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { ContactInviteForm } from "@/components/contact-invite-form"
 import { Button } from "@/components/ui/button"
@@ -29,8 +29,8 @@ const faqs = [
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: `Contact ${SITE_NAME}`,
-  url: absoluteUrl("/contact"),
+  name: `Contact ${SEO_CONFIG.brandName}`,
+  url: getAbsoluteUrl("/contact"),
   description:
     "Contact Bergs & Mark for digital marketing services, including website design, SEO, paid ads, social media management, and lifecycle marketing.",
 }
@@ -268,7 +268,8 @@ export default function ContactPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Contact Digital Marketing Agency Team",
   description:
     "Contact Bergs & Mark to discuss website design, SEO, social media management, paid ads, and growth strategy. Send your project brief for a structured plan.",

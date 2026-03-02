@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "The Architecture of Authority: Leveraging SEO Content Clusters for Sustainable Sales Pipeline Growth in the Generative Era"
@@ -233,14 +233,14 @@ const articleSchema = {
   headline: articleTitle,
   description:
     "A long-form guide on SEO content clusters, topical authority, GEO, and sustainable sales pipeline growth in the generative search era.",
-  url: absoluteUrl("/insights/architecture-of-authority-seo-content-clusters"),
+  url: getAbsoluteUrl("/insights/architecture-of-authority-seo-content-clusters"),
   author: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   publisher: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   datePublished: "2026-02-24",
   dateModified: "2026-02-24",
@@ -277,7 +277,8 @@ export default function SeoContentClustersInsightPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "insight",
   title: "Architecture of Authority SEO Content Clusters",
   description:
     "Definitive guide to SEO content cluster architecture, topical authority, internal linking silos, GEO optimization, and sustainable pipeline growth.",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "Architectural Frameworks for Maximizing Customer Lifetime Value through Lifecycle Email Automation"
@@ -154,14 +154,14 @@ const articleSchema = {
   headline: articleTitle,
   description:
     "A long-form guide on lifecycle email automation architecture for onboarding, nurture, retention, and customer lifetime value growth.",
-  url: absoluteUrl("/insights/architectural-frameworks-ltv-lifecycle-email-automation"),
+  url: getAbsoluteUrl("/insights/architectural-frameworks-ltv-lifecycle-email-automation"),
   author: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   publisher: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   datePublished: "2026-02-24",
   dateModified: "2026-02-24",
@@ -198,7 +198,8 @@ export default function LifecycleEmailAutomationInsightPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "insight",
   title: "Lifecycle Email Automation Frameworks for LTV",
   description:
     "Definitive guide to lifecycle email automation for onboarding, nurture, retention, RFM segmentation, AI personalization, and customer lifetime value optimization.",

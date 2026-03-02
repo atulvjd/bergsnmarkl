@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 
 const categories = ["All", "Strategy", "Website", "Paid Ads", "SEO", "Email", "Branding"]
@@ -66,8 +66,8 @@ const articles = [
 const insightsPageSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: `${SITE_NAME} Marketing Insights`,
-  url: absoluteUrl("/insights"),
+  name: `${SEO_CONFIG.brandName} Marketing Insights`,
+  url: getAbsoluteUrl("/insights"),
   description:
     "Marketing insights on website design, paid ads, SEO, social media management, email automation, and growth strategy.",
   blogPost: articles.map((article) => ({
@@ -75,7 +75,7 @@ const insightsPageSchema = {
     headline: article.title,
     description: article.excerpt,
     articleSection: article.category,
-    url: absoluteUrl(article.href || "/insights"),
+    url: getAbsoluteUrl(article.href || "/insights"),
   })),
 }
 
@@ -149,7 +149,8 @@ export default function InsightsPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Marketing Insights and Growth Guides",
   description:
     "Read practical digital marketing insights on SEO, website design, paid advertising, social media strategy, branding, and lifecycle growth.",

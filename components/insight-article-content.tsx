@@ -139,6 +139,34 @@ function renderListItem(item: string) {
   )
 }
 
+
+import Link from "next/link";
+
+function renderText(text: string) {
+  const parts = [];
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    parts.push(
+      <Link href={match[2]} key={match.index} className="text-accent-beige underline decoration-accent-beige/30 underline-offset-4 hover:decoration-accent-beige">
+        {match[1]}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export function InsightArticleContent({ content }: { content: string }) {
   const blocks = parseContent(content)
 
@@ -148,7 +176,7 @@ export function InsightArticleContent({ content }: { content: string }) {
         if (block.type === "heading") {
           return (
             <h2 key={`heading-${index}`} className="pt-3 text-xl font-bold leading-tight text-foreground md:text-2xl">
-              {block.text}
+              {renderText(block.text)}
             </h2>
           )
         }

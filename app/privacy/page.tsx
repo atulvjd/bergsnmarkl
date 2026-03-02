@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { buildPageMetadata } from "@/lib/seo"
+import { generateMeta } from "@/lib/seo"
 
 const privacySections = [
   {
@@ -87,7 +87,8 @@ export default function PrivacyPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Privacy Policy",
   description: "Review how Bergs & Mark collects, uses, stores, and protects personal data from website inquiries and service interactions.",
   path: "/privacy",

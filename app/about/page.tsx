@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -57,8 +57,8 @@ const team = [
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: `About ${SITE_NAME}`,
-  url: absoluteUrl("/about"),
+  name: `About ${SEO_CONFIG.brandName}`,
+  url: getAbsoluteUrl("/about"),
   description:
     "Learn about Bergs & Mark, a digital marketing agency focused on service business growth through integrated strategy, creative, media, and optimization.",
 }
@@ -219,7 +219,8 @@ export default function AboutPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "About Bergs & Mark Marketing Agency",
   description:
     "Learn the Bergs & Mark agency story, mission, values, and team behind our structured digital marketing execution model.",

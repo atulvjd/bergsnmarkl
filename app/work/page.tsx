@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -83,8 +83,8 @@ const caseStudies = [
 const workPageSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: `${SITE_NAME} Case Studies`,
-  url: absoluteUrl("/work"),
+  name: `${SEO_CONFIG.brandName} Case Studies`,
+  url: getAbsoluteUrl("/work"),
   description:
     "Digital marketing case studies with measurable outcomes across healthcare, SaaS, e-commerce, and professional service categories.",
 }
@@ -205,7 +205,8 @@ export default function WorkPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Marketing Case Studies and Results",
   description:
     "Review Bergs & Mark marketing case studies showing measurable outcomes in lead generation, conversion improvement, SEO growth, and paid media performance.",

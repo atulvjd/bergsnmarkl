@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { BarChart3, Building2, Globe, HeartPulse, Landmark, PenTool, ShoppingBag, Smartphone, Sparkles, Target, TrendingUp, Users } from "lucide-react"
 import NewHeroSection from "@/components/new-hero-section"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -127,8 +127,8 @@ const industries = [
 const homePageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: `${SITE_NAME} Digital Marketing Agency`,
-  url: absoluteUrl("/"),
+  name: `${SEO_CONFIG.brandName} Digital Marketing Agency`,
+  url: getAbsoluteUrl("/"),
   description:
     "Digital marketing agency services including website design, social media management, paid ads, SEO, branding, and lifecycle marketing for service-focused brands.",
 }
@@ -142,7 +142,7 @@ const homeServiceListSchema = {
     position: index + 1,
     name: service.title,
     description: service.overview,
-    url: absoluteUrl("/services"),
+    url: getAbsoluteUrl("/services"),
   })),
 }
 

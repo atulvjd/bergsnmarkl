@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { buildPageMetadata } from "@/lib/seo"
+import { generateMeta } from "@/lib/seo"
 
 const termSections = [
   {
@@ -95,7 +95,8 @@ export default function TermsPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Terms of Service",
   description:
     "Review Bergs & Mark terms of service including scope, payment terms, confidentiality, intellectual property, and engagement conditions.",

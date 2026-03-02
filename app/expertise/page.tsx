@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { CheckCircle2, Cog, ShieldCheck } from "lucide-react"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -70,8 +70,8 @@ const team = [
 const expertisePageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: `${SITE_NAME} Marketing Expertise`,
-  url: absoluteUrl("/expertise"),
+  name: `${SEO_CONFIG.brandName} Marketing Expertise`,
+  url: getAbsoluteUrl("/expertise"),
   description:
     "Explore Bergs & Mark expertise in strategy, creative production, paid media, SEO, analytics, and disciplined growth execution.",
 }
@@ -228,7 +228,8 @@ export default function ExpertisePage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Digital Marketing Expertise and Process",
   description:
     "Review Bergs & Mark expertise, team capabilities, operating methodology, and delivery framework for consistent digital marketing performance.",

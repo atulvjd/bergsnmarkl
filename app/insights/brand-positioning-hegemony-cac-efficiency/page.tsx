@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "The Brand Positioning Hegemony: Leveraging Market Narrative Signals to Solve the Customer Acquisition Cost Crisis"
@@ -187,14 +187,14 @@ const articleSchema = {
   headline: articleTitle,
   description:
     "A long-form guide on brand positioning, market narrative signals, and acquisition efficiency for reducing customer acquisition costs.",
-  url: absoluteUrl("/insights/brand-positioning-hegemony-cac-efficiency"),
+  url: getAbsoluteUrl("/insights/brand-positioning-hegemony-cac-efficiency"),
   author: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   publisher: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   datePublished: "2026-02-24",
   dateModified: "2026-02-24",
@@ -231,7 +231,8 @@ export default function BrandPositioningHegemonyInsightPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "insight",
   title: "Brand Positioning Hegemony and CAC Efficiency",
   description:
     "Definitive guide to brand positioning signals, market narrative strategy, and CAC efficiency optimization for high-growth digital acquisition systems.",

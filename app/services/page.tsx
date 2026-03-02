@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 
@@ -219,8 +219,8 @@ const services = [
 const servicesPageSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: `${SITE_NAME} Services`,
-  url: absoluteUrl("/services"),
+  name: `${SEO_CONFIG.brandName} Services`,
+  url: getAbsoluteUrl("/services"),
   description:
     "Explore digital marketing services including website design, social media management, paid ads, SEO, branding, automation, and analytics.",
 }
@@ -236,11 +236,11 @@ const serviceItemListSchema = {
       "@type": "Service",
       name: service.title,
       description: service.description,
-      url: absoluteUrl(`/services#${service.id}`),
+      url: getAbsoluteUrl(`/services#${service.id}`),
       provider: {
         "@type": "Organization",
-        name: SITE_NAME,
-        url: absoluteUrl("/"),
+        name: SEO_CONFIG.brandName,
+        url: getAbsoluteUrl("/"),
       },
     },
   })),
@@ -340,7 +340,8 @@ export default function ServicesPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "general",
   title: "Digital Marketing Services",
   description:
     "Explore Bergs & Mark digital marketing services: website design, social media management, paid ads, SEO, branding, automation, content, analytics, and reputation management.",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle = "Website Design Systems That Lift Conversion Rates: The Definitive Guide to UX, Architecture, and Credibility"
@@ -311,14 +311,14 @@ const articleSchema = {
   headline: articleTitle,
   description:
     "A long-form guide on website design systems, UX decision architecture, friction reduction, trust signals, and conversion-centered design for service-led growth.",
-  url: absoluteUrl("/insights/website-design-systems-that-lift-conversion-rates"),
+  url: getAbsoluteUrl("/insights/website-design-systems-that-lift-conversion-rates"),
   author: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   publisher: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   datePublished: "2026-02-24",
   dateModified: "2026-02-24",
@@ -355,7 +355,8 @@ export default function WebsiteDesignSystemsInsightPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "insight",
   title: "Website Design Systems That Lift Conversion Rates",
   description:
     "Definitive guide to website UX architecture, conversion-centered design, friction reduction, credibility signals, and commercial performance for service-led platforms.",

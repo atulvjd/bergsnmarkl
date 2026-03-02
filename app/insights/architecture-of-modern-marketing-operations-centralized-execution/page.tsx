@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { absoluteUrl, buildPageMetadata, SITE_NAME } from "@/lib/seo"
+import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
 import { InsightArticleContent } from "@/components/insight-article-content"
 
 const articleTitle =
@@ -150,14 +150,14 @@ const articleSchema = {
   headline: articleTitle,
   description:
     "A long-form guide on centralized marketing operations frameworks for strategy alignment, execution velocity, and scalable cross-functional growth.",
-  url: absoluteUrl("/insights/architecture-of-modern-marketing-operations-centralized-execution"),
+  url: getAbsoluteUrl("/insights/architecture-of-modern-marketing-operations-centralized-execution"),
   author: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   publisher: {
     "@type": "Organization",
-    name: SITE_NAME,
+    name: SEO_CONFIG.brandName,
   },
   datePublished: "2026-02-24",
   dateModified: "2026-02-24",
@@ -194,7 +194,8 @@ export default function ModernMarketingOperationsInsightPage() {
   )
 }
 
-export const metadata: Metadata = buildPageMetadata({
+export const metadata: Metadata = generateMeta({
+  pageType: "insight",
   title: "How to Centralize Marketing Ops for Faster Execution",
   description:
     "Definitive guide to centralized marketing operations, CoE design, RACI ownership, agile planning rhythms, and reporting systems for faster execution.",
