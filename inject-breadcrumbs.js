@@ -12,8 +12,7 @@ function injectBreadcrumbs(filePath, folderName) {
   if (!content.includes('import { Breadcrumbs }')) {
     content = content.replace(
       'import { InsightArticleContent } from "@/components/insight-article-content"',
-      'import { InsightArticleContent } from "@/components/insight-article-content"
-import { Breadcrumbs } from "@/components/breadcrumbs"'
+      'import { InsightArticleContent } from "@/components/insight-article-content"\nimport { Breadcrumbs } from "@/components/breadcrumbs"'
     );
   }
 
@@ -21,8 +20,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"'
   const sectionRegex = /(<section className="[^"]+ px-6 py-8">[\s\S]*?<div className="mx-auto max-w-5xl">)/;
   
   // Try to extract the title variable
-  let titleMatch = content.match(/const articleTitle =[\s
-]*"([^"]+)"/);
+  let titleMatch = content.match(/const articleTitle =[\s\n]*"([^"]+)"/);
   let titleMatch2 = content.match(/const articleTitle = "([^"]+)"/);
   let title = "Article";
   if (titleMatch) title = titleMatch[1];
@@ -31,9 +29,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"'
   // We'll truncate long titles
   if (title.length > 40) title = title.substring(0, 40) + '...';
 
-  const breadcrumbsStr = `
-          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "${title.replace(/"/g, '"')}", path: "/insights/${folderName}" }]} />
-`;
+  const breadcrumbsStr = `\n          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "${title.replace(/"/g, '\\"')}", path: "/insights/${folderName}" }]} />\n`;
 
   content = content.replace(sectionRegex, `$1${breadcrumbsStr}`);
 
