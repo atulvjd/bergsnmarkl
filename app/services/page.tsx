@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { getAbsoluteUrl, generateMeta, SEO_CONFIG, generateServiceSchema } from "@/lib/seo"
+import { generateMeta } from "@/lib/seo/seo-builder"
+import { generateServiceSchema } from "@/lib/seo/structured-data"
+import { getAbsoluteUrl, SEO_CONFIG } from "@/lib/seo/seo-config"
 import { FadeInSection } from "@/components/motion-wrapper"
 import { Button } from "@/components/ui/button"
 

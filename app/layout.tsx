@@ -7,7 +7,8 @@ import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import SmoothScrollProvider from "@/components/smooth-scroll-provider"
-import { generateOrganizationSchema, generateWebSiteSchema, generateLocalBusinessSchema, generateMeta } from "@/lib/seo/seo-builder"
+import { generateMeta } from "@/lib/seo/seo-builder"
+import { generateOrganizationSchema, generateWebSiteSchema, generateLocalBusinessSchema } from "@/lib/seo/structured-data"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })

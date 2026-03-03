@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { getAbsoluteUrl } from "@/lib/seo/seo-builder"
+import { getAbsoluteUrl } from "@/lib/seo/seo-config"
 
 const routes: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },

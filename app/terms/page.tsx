@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { generateMeta } from "@/lib/seo"
+import { generateMeta } from "@/lib/seo/seo-builder"
 
 const termSections = [
   {

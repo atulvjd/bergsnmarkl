@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { SEO_CONFIG, getAbsoluteUrl } from "@/lib/seo/seo-builder"
+import { SEO_CONFIG, getAbsoluteUrl } from "@/lib/seo/seo-config"
 
 export default function robots(): MetadataRoute.Robots {
   return {

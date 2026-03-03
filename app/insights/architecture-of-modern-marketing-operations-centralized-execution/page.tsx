@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { getAbsoluteUrl, generateMeta, SEO_CONFIG } from "@/lib/seo"
+import { generateMeta } from "@/lib/seo/seo-builder"
+import { getAbsoluteUrl, SEO_CONFIG } from "@/lib/seo/seo-config"
 import { InsightArticleContent } from "@/components/insight-article-content"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 

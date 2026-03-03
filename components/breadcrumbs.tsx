@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
-import { generateBreadcrumbSchema, BreadcrumbItem as SchemaBreadcrumbItem } from "@/lib/seo/seo-builder"
+import { generateBreadcrumbSchema, BreadcrumbItem as SchemaBreadcrumbItem } from "@/lib/seo/structured-data"
 
 interface BreadcrumbItem {
   name: string
