@@ -1,5 +1,5 @@
 export const SEO_CONFIG = {
-  brandName: "Bergs & Co",
+  brandName: "Bergs & Mark",
   alternateNames: ["Bergs & Mark", "Bergs and Mark", "bergsandmark", "berg sand mark"],
   siteUrl: "https://www.bergsandmark.in",
   logoUrl: "https://www.bergsandmark.in/icon.svg",
