@@ -31,6 +31,11 @@ export function generateMeta({
     alternates: {
       canonical: finalUrl,
     },
+    icons: {
+      icon: '/icon.png',
+      shortcut: '/icon.png',
+      apple: '/icon.png',
+    },
     openGraph: {
       title: finalTitle,
       description: finalDescription,
