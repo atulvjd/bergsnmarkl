@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -9,7 +10,10 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <div className="mb-4">
-              <p className="text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
+              <div className="flex items-center gap-2 mb-1">
+                <Image src="/brand-logo.png" alt="Bergs & Mark Logo" width={40} height={40} className="h-10 w-auto object-contain" />
+                <p className="text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
+              </div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">A Bergs & Co Agency</p>
             </div>
             <p className="mb-3 text-sm text-foreground/70">Centralized digital growth systems for ambitious brands.</p>
@@ -61,7 +65,10 @@ export default function Footer() {
 
         <div className="mt-6 border-t border-border/50 pt-6 text-[10px] font-medium tracking-wide uppercase text-foreground/40">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
+            <div className="flex items-center gap-2">
+              <Image src="/brand-logo.png" alt="Logo" width={16} height={16} className="h-4 w-auto opacity-60" />
+              <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
+            </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>

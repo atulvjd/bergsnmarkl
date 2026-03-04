@@ -76,8 +76,11 @@ export default function AboutPage() {
       <section className="border-b border-border/50 bg-background px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
-              About <span className="text-accent-beige">Bergs & Mark</span>
+            <h1 className="mb-6 flex items-center justify-center gap-4 text-6xl font-black leading-tight md:text-7xl">
+              About <span className="flex items-center gap-3 text-accent-beige">
+                <Image src="/brand-logo.png" alt="Logo" width={64} height={64} className="h-16 w-auto object-contain md:h-20" />
+                Bergs & Mark
+              </span>
             </h1>
             <p className="mx-auto max-w-3xl text-lg text-foreground/70">We help ambitious brands centralize their marketing and scale through structured, integrated execution.</p>
             <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -92,7 +95,10 @@ export default function AboutPage() {
           <FadeInSection>
             <div>
               <h2 className="mb-6 text-5xl font-black leading-tight">Our Story</h2>
-              <p className="mb-4 text-foreground/70">Bergs & Mark was founded to solve a common problem: fragmented marketing execution. Too many businesses work with disconnected vendors, resulting in inconsistent messaging and uneven performance.</p>
+              <p className="mb-4 text-foreground/70 flex items-center gap-2 flex-wrap">
+                <Image src="/brand-logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto inline-block" />
+                Bergs & Mark was founded to solve a common problem: fragmented marketing execution. Too many businesses work with disconnected vendors, resulting in inconsistent messaging and uneven performance.
+              </p>
               <p className="mb-4 text-foreground/70">We built a model where strategy, creative, media, and optimization live in one coordinated system. The result is faster execution, clearer decision-making, and stronger growth outcomes.</p>
               <p className="text-foreground/70">
                 Today, we partner with healthcare teams, consultants, legal and financial firms, and other growth-minded service brands that value discipline, transparency, and long-term performance.

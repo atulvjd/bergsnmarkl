@@ -45,9 +45,12 @@ export default function NewHeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mx-auto mb-3 max-w-2xl text-lg leading-relaxed text-foreground/80"
+            className="mx-auto mb-3 max-w-2xl text-lg leading-relaxed text-foreground/80 flex items-center justify-center gap-2 flex-wrap"
           >
-            Welcome to Bergs & Mark. As a premier partner for digital growth, bergs and mark designs websites, manages social channels, runs paid media, and optimizes full-funnel campaigns through one coordinated team.
+            Welcome to <span className="inline-flex items-center gap-2 font-bold text-accent-beige">
+              <Image src="/brand-logo.png" alt="Logo" width={36} height={36} className="h-9 w-auto" />
+              Bergs & Mark
+            </span>. As a premier partner for digital growth, bergs and mark designs websites, manages social channels, runs paid media, and optimizes full-funnel campaigns through one coordinated team.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
