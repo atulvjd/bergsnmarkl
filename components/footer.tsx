@@ -8,7 +8,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
-            <p className="mb-4 text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
+            <div className="mb-4">
+              <p className="text-2xl font-black tracking-tight text-accent-beige">Bergs & Mark</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">A Bergs & Co Agency</p>
+            </div>
             <p className="mb-3 text-sm text-foreground/70">Centralized digital growth systems for ambitious brands.</p>
             <p className="text-sm leading-relaxed text-foreground/65">
               We combine strategy, design, media, and lifecycle execution so your brand message stays consistent and your growth decisions stay data-backed.
@@ -56,9 +59,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-border/50 pt-6 text-sm text-foreground/60">
+        <div className="mt-6 border-t border-border/50 pt-6 text-[10px] font-medium tracking-wide uppercase text-foreground/40">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <p>© 2024 Bergs & Mark. All rights reserved.</p>
+            <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>

@@ -28,7 +28,7 @@ export default function NewHeroSection() {
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-accent-beige/40 bg-accent-beige/15 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-accent-beige" />
-              <span className="text-sm font-bold uppercase tracking-wide">Integrated Growth Partner</span>
+              <span className="text-sm font-bold uppercase tracking-wide">A Bergs & Co Company</span>
             </div>
           </motion.div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -24,7 +25,8 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link href="/" className="text-2xl font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
+        <Link href="/" className="flex items-center gap-3 text-2xl font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
+          <Image src="/nav-logo.png" alt="Bergs & Mark Logo" width={32} height={32} className="h-8 w-auto object-contain" />
           Bergs & Mark
         </Link>
 
@@ -55,7 +57,10 @@ export default function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent className="border-l border-border/50 bg-background">
-              <SheetTitle className="text-xl font-black tracking-tight text-accent-beige">Bergs & Mark</SheetTitle>
+              <SheetTitle className="flex items-center gap-2 text-xl font-black tracking-tight text-accent-beige">
+                <Image src="/nav-logo.png" alt="Bergs & Mark Logo" width={24} height={24} className="h-6 w-auto object-contain" />
+                Bergs & Mark
+              </SheetTitle>
               <div className="mt-6 space-y-4">
                 {topLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
