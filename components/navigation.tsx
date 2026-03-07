@@ -24,9 +24,9 @@ const topLinks = [
 export default function Navigation() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link href="/" className="flex items-center gap-3 text-2xl font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
-          <Image src="/brand-logo.png" alt="Bergs & Mark Logo" width={40} height={40} className="h-10 w-auto object-contain" />
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
+        <Link href="/" className="flex items-center gap-1.5 text-sm font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
+          <Image src="/icon-dark-32x32.png" alt="Bergs & Mark Logo" width={16} height={16} className="h-4 w-auto object-contain" />
           Bergs & Mark
         </Link>
 
@@ -35,7 +35,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold uppercase tracking-wide text-foreground/70 transition-colors hover:text-accent-beige"
+              className="text-xs font-semibold uppercase tracking-wide text-foreground/70 transition-colors hover:text-accent-beige"
             >
               {link.label}
             </Link>
@@ -43,7 +43,7 @@ export default function Navigation() {
         </div>
 
         <div className="hidden lg:block">
-          <Button asChild className="rounded-lg bg-accent-beige px-6 py-2 font-bold text-background hover:bg-accent-beige/90">
+          <Button asChild size="sm" className="rounded bg-accent-beige px-4 py-1 text-xs font-bold text-background hover:bg-accent-beige/90">
             <Link href="/contact">Book Consultation</Link>
           </Button>
         </div>
@@ -51,14 +51,14 @@ export default function Navigation() {
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="border-border/50 bg-transparent hover:border-accent-beige/50 hover:bg-accent-beige/10">
-                <Menu className="size-5" />
+              <Button variant="outline" size="icon" className="size-8 border-border/50 bg-transparent hover:border-accent-beige/50 hover:bg-accent-beige/10">
+                <Menu className="size-4" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent className="border-l border-border/50 bg-background">
-              <SheetTitle className="flex items-center gap-2 text-xl font-black tracking-tight text-accent-beige">
-                <Image src="/brand-logo.png" alt="Bergs & Mark Logo" width={32} height={32} className="h-8 w-auto object-contain" />
+              <SheetTitle className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige">
+                <Image src="/icon-dark-32x32.png" alt="Bergs & Mark Logo" width={10} height={10} className="h-4 w-auto object-contain" />
                 Bergs & Mark
               </SheetTitle>
               <div className="mt-6 space-y-4">
@@ -66,7 +66,7 @@ export default function Navigation() {
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
-                      className="block rounded-lg border border-border/50 px-4 py-3 text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:border-accent-beige/50 hover:text-accent-beige"
+                      className="block rounded-lg border border-border/50 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:border-accent-beige/50 hover:text-accent-beige"
                     >
                       {link.label}
                     </Link>

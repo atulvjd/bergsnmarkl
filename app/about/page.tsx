@@ -77,8 +77,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 flex items-center justify-center gap-4 text-6xl font-black leading-tight md:text-7xl">
-              About <span className="flex items-center gap-3 text-accent-beige">
-                <Image src="/brand-logo.png" alt="Logo" width={64} height={64} className="h-16 w-auto object-contain md:h-20" />
+              About <span className="flex items-center gap-2 text-accent-beige">
+                <Image src="/apple-icon.png" alt="Logo" width={40} height={40} className="h-10 w-auto object-contain md:h-12" />
                 Bergs & Mark
               </span>
             </h1>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-6 text-5xl font-black leading-tight">Our Story</h2>
               <p className="mb-4 text-foreground/70 flex items-center gap-2 flex-wrap">
-                <Image src="/brand-logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto inline-block" />
+                <Image src="/apple-icon.png" alt="Logo" width={24} height={24} className="h-6 w-auto inline-block" />
                 Bergs & Mark was founded to solve a common problem: fragmented marketing execution. Too many businesses work with disconnected vendors, resulting in inconsistent messaging and uneven performance.
               </p>
               <p className="mb-4 text-foreground/70">We built a model where strategy, creative, media, and optimization live in one coordinated system. The result is faster execution, clearer decision-making, and stronger growth outcomes.</p>

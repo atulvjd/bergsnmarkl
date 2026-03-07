@@ -32,9 +32,12 @@ export function generateMeta({
       canonical: finalUrl,
     },
     icons: {
-      icon: '/icon.png',
-      shortcut: '/icon.png',
-      apple: '/icon.png',
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/icon-dark-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      shortcut: '/favicon.ico', // In case you add one later, but for now we'll stick to icons
+      apple: '/apple-icon.png',
     },
     openGraph: {
       title: finalTitle,

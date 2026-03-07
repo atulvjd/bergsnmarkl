@@ -2,7 +2,7 @@ export const SEO_CONFIG = {
   brandName: "Bergs & Mark",
   alternateNames: ["Bergs & Mark", "Bergs and Mark", "bergsandmark", "berg sand mark"],
   siteUrl: "https://www.bergsandmark.in",
-  logoUrl: "https://www.bergsandmark.in/icon.png",
+  logoUrl: "https://www.bergsandmark.in/apple-icon.png",
   location: "Bengaluru",
   contactEmail: "bergsnmark@gmail.com",
   contactPhone: "+91 93017 03738",

@@ -10,10 +10,28 @@ import { Button } from "@/components/ui/button"
 
 const coreServices = [
   {
+    title: "Landing Pages",
+    overview: "High-converting, single-page experiences designed for specific campaigns and maximum ROI.",
+    image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
+    benefits: ["Conversion-optimized UX", "Lead capture integration", "Mobile-first performance", "15-day post-launch support"],
+  },
+  {
+    title: "E-Commerce Pages",
+    overview: "Scalable online storefronts built to showcase products and streamline the path to purchase.",
+    image: "/luxury-e-commerce-storefront.jpg",
+    benefits: ["Custom product layouts", "Secure payment setup", "Inventory management", "15-day post-launch support"],
+  },
+  {
+    title: "Instagram Marketing",
+    overview: "Targeted growth strategies to scale your Instagram presence and convert followers into customers.",
+    image: "/instagram-strategy-analytics-dashboard.jpg",
+    benefits: ["Profile optimization", "Reel & Story production", "Community management", "Growth analytics"],
+  },
+  {
     title: "Website Design",
     overview: "Build high-trust digital experiences that reflect your positioning and drive qualified inquiries.",
-    image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
-    benefits: ["Conversion-focused UX", "Mobile-first performance", "SEO-ready architecture", "CMS flexibility"],
+    image: "/beautiful-responsive-website-design-on-desktop-and.jpg",
+    benefits: ["Conversion-focused UX", "Mobile-first performance", "SEO-ready architecture", "15-day post-launch support"],
   },
   {
     title: "Social Media",
