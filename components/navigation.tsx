@@ -26,7 +26,7 @@ export default function Navigation() {
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
         <Link href="/" className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
-          <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={24} height={24} className="h-6 w-auto object-contain" />
+          <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={30} height={30} className="h-[30px] w-auto object-contain" />
           Bergs & Mark
         </Link>
 

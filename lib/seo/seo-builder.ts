@@ -33,11 +33,11 @@ export function generateMeta({
     },
     icons: {
       icon: [
-        { url: '/icon.svg', type: 'image/svg+xml' },
-        { url: '/icon-dark-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon.png', type: 'image/png' },
+        { url: '/brand-logo-new.png', sizes: '32x32', type: 'image/png' },
       ],
-      shortcut: '/favicon.ico', // In case you add one later, but for now we'll stick to icons
-      apple: '/apple-icon.png',
+      shortcut: '/favicon.png',
+      apple: '/brand-logo-new.png',
     },
     openGraph: {
       title: finalTitle,
