@@ -25,8 +25,8 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
-        <Link href="/" className="flex items-center gap-1.5 text-sm font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
-          <Image src="/icon-dark-32x32.png" alt="Bergs & Mark Logo" width={16} height={16} className="h-4 w-auto object-contain" />
+        <Link href="/" className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
+          <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={24} height={24} className="h-6 w-auto object-contain" />
           Bergs & Mark
         </Link>
 
@@ -58,7 +58,7 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent className="border-l border-border/50 bg-background">
               <SheetTitle className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige">
-                <Image src="/icon-dark-32x32.png" alt="Bergs & Mark Logo" width={10} height={10} className="h-4 w-auto object-contain" />
+                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={20} height={20} className="h-5 w-auto object-contain" />
                 Bergs & Mark
               </SheetTitle>
               <div className="mt-6 space-y-4">

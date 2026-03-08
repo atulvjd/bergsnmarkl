@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-1">
-                <Image src="/icon-dark-32x32.png" alt="Bergs & Mark Logo" width={16} height={16} className="h-4 w-auto object-contain" />
+                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={24} height={24} className="h-6 w-auto object-contain" />
                 <p className="text-sm font-black tracking-tight text-accent-beige">Bergs & Mark</p>
               </div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">A Bergs & Co Agency</p>
@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="mt-6 border-t border-border/50 pt-6 text-[10px] font-medium tracking-wide uppercase text-foreground/40">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-2">
-              <Image src="/icon-dark-32x32.png" alt="Logo" width={16} height={16} className="h-4 w-auto opacity-60" />
+              <Image src="/brand-logo-new.png" alt="Logo" width={24} height={24} className="h-6 w-auto opacity-60" />
               <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
             </div>
             <div className="flex gap-6">
