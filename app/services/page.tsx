@@ -349,32 +349,40 @@ export default function ServicesPage() {
             </div>
           </FadeInSection>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto">
+          <div className="grid auto-rows-[24rem] gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => {
-              // Bento grid span logic for 16 items
-              // We'll create a recurring pattern of spans to keep it interesting but balanced
+              // Pinterest/Bento span pattern logic
               const patternIndex = index % 8;
-              let spanClass = "col-span-1 row-span-1";
+              const isLarge = patternIndex === 5; // Extra Large (2x2)
+              const isWide = patternIndex === 0 || patternIndex === 7; // Wide (2x1)
+              const isTall = patternIndex === 3; // Tall (1x2)
               
-              if (patternIndex === 0) spanClass = "md:col-span-2 md:row-span-1"; // Wide
-              else if (patternIndex === 3) spanClass = "md:col-span-1 md:row-span-2"; // Tall
-              else if (patternIndex === 5) spanClass = "md:col-span-2 md:row-span-2"; // Large square
-              else if (patternIndex === 7) spanClass = "md:col-span-2 md:row-span-1"; // Another wide
+              const spanClass = 
+                isLarge ? "md:col-span-2 md:row-span-2" : 
+                isWide ? "md:col-span-2 md:row-span-1" : 
+                isTall ? "md:col-span-1 md:row-span-2" : 
+                "md:col-span-1 md:row-span-1";
 
               return (
                 <FadeInSection key={service.id} delay={index * 0.04} className={spanClass}>
                   <article 
                     id={service.id} 
-                    className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-md"
+                    className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg ${isWide ? "flex-row" : "flex-col"}`}
                   >
-                    <div className="relative h-48 w-full overflow-hidden">
+                    {/* Image Section */}
+                    <div className={`relative overflow-hidden shrink-0 ${
+                      isWide ? "w-2/5 border-r border-border/50" : 
+                      isLarge ? "h-1/2 border-b border-border/50" :
+                      isTall ? "h-2/5 border-b border-border/50" :
+                      "h-1/3 border-b border-border/50"
+                    }`}>
                       <Image 
                         src={service.image} 
                         alt={service.title} 
                         fill 
                         className="object-cover transition-transform duration-700 group-hover:scale-110" 
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/20" />
                       <div className="absolute top-4 left-4">
                         <span className="rounded-full bg-accent-beige/20 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-accent-beige border border-accent-beige/20">
                           {service.category}
@@ -382,25 +390,44 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     
-                    <div className="flex flex-1 flex-col p-6">
-                      <h3 className="mb-2 text-2xl font-bold tracking-tight">{service.title}</h3>
-                      <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.description}</p>
+                    {/* Content Section */}
+                    <div className={`flex flex-1 flex-col p-8 ${isWide ? "justify-center" : ""}`}>
+                      <h3 className={`font-black tracking-tight text-accent-beige mb-3 ${isLarge ? "text-4xl" : isWide || isTall ? "text-2xl" : "text-xl"}`}>
+                        {service.title}
+                      </h3>
+                      <p className={`mb-4 leading-relaxed text-foreground/70 ${isLarge || isWide ? "text-base" : "text-xs"}`}>
+                        {service.description}
+                      </p>
                       
-                      {/* Show context only on larger/wider cards or as a smaller detail */}
-                      <p className="mb-4 text-xs italic text-foreground/50 line-clamp-2">{service.context}</p>
-                      
-                      <ul className="mb-6 space-y-1.5 text-xs font-medium text-foreground/65">
-                        {service.features.slice(0, 4).map((feature) => (
-                          <li key={feature} className="flex items-start gap-2">
-                            <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
-                            <span className="line-clamp-1">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {/* Context & Features for Large/Wide cards */}
+                      {(isLarge || isWide || isTall) && (
+                        <div className="mb-6 space-y-4">
+                          <p className="text-xs italic text-foreground/50 border-l-2 border-accent-beige/30 pl-3">
+                            {service.context}
+                          </p>
+                          <ul className={`grid gap-2 ${isLarge ? "grid-cols-2" : "grid-cols-1"}`}>
+                            {service.features.slice(0, isLarge ? 6 : 4).map((feature) => (
+                              <li key={feature} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-foreground/60">
+                                <span className="h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
+                                <span className="line-clamp-1">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                       
                       <Button asChild size="sm" className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
                         <Link href="/contact">Enquire Now</Link>
                       </Button>
+                    </div>
+
+                    {/* Corner Accent for interaction hint */}
+                    <div className="absolute bottom-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-beige/20 backdrop-blur-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-beige">
+                          <path d="M7 17l9.2-9.2M17 17V7H7" />
+                        </svg>
+                      </div>
                     </div>
                   </article>
                 </FadeInSection>
