@@ -349,7 +349,7 @@ export default function ServicesPage() {
             </div>
           </FadeInSection>
 
-          <div className="grid auto-rows-[24rem] gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid auto-rows-[23rem] gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => {
               // Pinterest/Bento span pattern logic
               const patternIndex = index % 8;
@@ -399,30 +399,19 @@ export default function ServicesPage() {
                         {service.description}
                       </p>
                       
-                      {/* Context & Features for Large/Wide cards */}
-                      {(isLarge || isWide || isTall) && (
-                        <div className="mb-6 space-y-4">
-                          <p className="text-xs italic text-foreground/50 border-l-2 border-accent-beige/30 pl-3">
-                            {service.context}
-                          </p>
-                          <ul className={`grid gap-2 ${isLarge ? "grid-cols-2" : "grid-cols-1"}`}>
-                            {service.features.slice(0, isLarge ? 6 : 4).map((feature) => (
-                              <li key={feature} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-foreground/60">
-                                <span className="h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
-                                <span className="line-clamp-1">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Corner Accent for interaction hint */}
-                    <div className="absolute bottom-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-beige/20 backdrop-blur-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-beige">
-                          <path d="M7 17l9.2-9.2M17 17V7H7" />
-                        </svg>
+                      {/* Context & Features */}
+                      <div className="mb-6 space-y-4">
+                        <p className={`text-xs italic text-foreground/50 border-l-2 border-accent-beige/30 pl-3 ${!(isLarge || isWide || isTall) ? "line-clamp-2" : ""}`}>
+                          {service.context}
+                        </p>
+                        <ul className={`grid gap-2 ${isLarge ? "grid-cols-2" : "grid-cols-1"}`}>
+                          {service.features.slice(0, isLarge ? 6 : isWide || isTall ? 4 : 3).map((feature) => (
+                            <li key={feature} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-foreground/60">
+                              <span className="h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
+                              <span className="line-clamp-1">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </article>
