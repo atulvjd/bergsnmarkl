@@ -36,7 +36,7 @@ const team = [
     role: "Founder & Managing Director",
     bio: "Leads growth strategy, market positioning, and executive planning sessions.",
     specialty: "Owns commercial planning, market narrative clarity, and strategic prioritization.",
-    image: "/professional-headshot-man-business.jpg",
+    image: "/atul-sahu.jpg",
   },
   {
     name: "Utsav Doye",
@@ -64,7 +64,7 @@ const team = [
     role: "UI/UX Designer & Brand Specialist",
     bio: "Focuses on user experience design, website aesthetics, and brand consistency across digital touchpoints.",
     specialty: "Enhances user engagement and conversion rates through intuitive design and consistent brand messaging.",
-    image: "/professional-headshot-man-marketing-growth.jpg",
+    image: "/saurabh-kumar.jpg",
   },
 ]
 
