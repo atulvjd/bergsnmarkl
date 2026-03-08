@@ -47,38 +47,6 @@ const caseStudies = [
     url: "https://prime-ledger-2-t2cb.vercel.app/",
     image: "/saas-dashboard-design-interface.jpg",
   },
-  {
-    company: "NovaSuite",
-    industry: "SaaS",
-    description:
-      "A complete overhaul of NovaSuite's acquisition funnel, focusing on messaging architecture and landing UX updates to significantly improve trial-to-demo conversion rates.",
-    url: "#",
-    image: "/saas-dashboard-design-interface.jpg",
-  },
-  {
-    company: "Atelier Commerce",
-    industry: "E-commerce",
-    description:
-      "Strategic creative testing and product page optimization for Atelier Commerce, resulting in a dramatic increase in conversion rates and blended ROAS.",
-    url: "#",
-    image: "/fashion-ecommerce-website.png",
-  },
-  {
-    company: "HealthBridge Clinics",
-    industry: "Healthcare",
-    description:
-      "Implementing a local SEO foundation and intent-led paid search campaigns to establish HealthBridge Clinics as a leader in their regional market.",
-    url: "#",
-    image: "/consultation-meeting-planning.jpg",
-  },
-  {
-    company: "CloudAnchor",
-    industry: "B2B Infrastructure",
-    description:
-      "An integrated SEO-content system designed for CloudAnchor to capture market demand and increase organic non-brand traffic through strategic topic clusters.",
-    url: "#",
-    image: "/results-analytics-dashboard.jpg",
-  },
 ]
 
 const workPageSchema = {
