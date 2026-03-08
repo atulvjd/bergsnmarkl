@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="mt-6 border-t border-border/50 pt-6 text-[10px] font-medium tracking-wide uppercase text-foreground/40">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-2">
-              <Image src="/brand-logo-new.png" alt="Logo" width={24} height={24} className="h-6 w-auto opacity-60" />
+              <Image src="/brand-logo-new.png" alt="Logo" width={30} height={30} className="h-[30px] w-auto opacity-60" />
               <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
             </div>
             <div className="flex gap-6">
