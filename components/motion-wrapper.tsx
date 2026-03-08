@@ -6,15 +6,17 @@ import type { ReactNode } from "react"
 interface MotionWrapperProps {
   children: ReactNode
   delay?: number
+  className?: string
 }
 
-export function FadeInSection({ children, delay = 0 }: MotionWrapperProps) {
+export function FadeInSection({ children, delay = 0, className = "" }: MotionWrapperProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay }}
       viewport={{ once: true, margin: "-100px" }}
+      className={className}
     >
       {children}
     </motion.div>

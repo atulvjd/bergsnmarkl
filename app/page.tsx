@@ -176,26 +176,46 @@ export default function Home() {
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {coreServices.map((service, index) => (
-              <FadeInSection key={service.title} delay={index * 0.05}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 transition-colors hover:border-accent-beige/50">
-                  <div className="relative mb-6 h-44 overflow-hidden rounded-lg">
-                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+          <div className="grid gap-6 md:grid-cols-6 md:grid-rows-2">
+            {coreServices.map((service, index) => {
+              // Bento grid span logic for 6 items
+              const spanClass = 
+                index === 0 ? "md:col-span-4 md:row-span-1" : // First item wide
+                index === 1 ? "md:col-span-2 md:row-span-2" : // Second item tall
+                index === 2 ? "md:col-span-2 md:row-span-1" : // Third item small
+                index === 3 ? "md:col-span-2 md:row-span-1" : // Fourth item small
+                index === 4 ? "md:col-span-3 md:row-span-1" : // Fifth item medium
+                index === 5 ? "md:col-span-3 md:row-span-1" : // Sixth item medium
+                "md:col-span-2";
+
+              return (
+                <FadeInSection key={service.title} delay={index * 0.05} className={spanClass}>
+                  <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-accent-beige/50 hover:bg-card">
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image 
+                        src={service.image} 
+                        alt={service.title} 
+                        fill 
+                        className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-60" />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="mb-3 text-2xl font-bold tracking-tight">{service.title}</h3>
+                      <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.overview}</p>
+                      <ul className="mt-auto space-y-2 text-xs font-medium text-foreground/60">
+                        {service.benefits.slice(0, 3).map((benefit) => (
+                          <li key={benefit} className="flex items-center gap-2">
+                            <span className="h-1 w-1 rounded-full bg-accent-beige" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="mb-4 text-2xl font-bold">{service.title}</h3>
-                  <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.overview}</p>
-                  <ul className="space-y-2 text-sm text-foreground/75">
-                    {service.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-beige" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </FadeInSection>
-            ))}
+                </FadeInSection>
+              );
+            })}
           </div>
         </div>
       </section>
