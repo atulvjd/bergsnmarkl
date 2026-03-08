@@ -58,7 +58,7 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent className="border-l border-border/50 bg-background">
               <SheetTitle className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige">
-                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={25} height={25} className="h-[25px] w-auto object-contain" />
+                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={30} height={30} className="h-[30px] w-auto object-contain" />
                 Bergs & Mark
               </SheetTitle>
               <div className="mt-6 space-y-4">
