@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-1">
-                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={30} height={30} className="h-[30px] w-auto object-contain" />
+                <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={36} height={36} className="h-[36px] w-auto object-contain" />
                 <p className="text-sm font-black tracking-tight text-accent-beige">Bergs & Mark</p>
               </div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/40">A Bergs & Co Agency</p>
