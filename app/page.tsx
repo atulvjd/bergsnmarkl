@@ -45,24 +45,6 @@ const coreServices = [
     image: "/paid-ads-campaign-google-meta-optimization.jpg",
     benefits: ["Audience segmentation", "Channel-specific creative", "Bid and budget optimization", "ROAS tracking"],
   },
-  {
-    title: "Email Marketing",
-    overview: "Strengthen retention and customer value with lifecycle sequences built around buying behavior.",
-    image: "/marketing-funnel-visualization-with-conversion-opt.jpg",
-    benefits: ["Lifecycle automation", "List segmentation", "Revenue-driving campaigns", "A/B test framework"],
-  },
-  {
-    title: "SEO",
-    overview: "Capture long-term demand with technical SEO, structured content systems, and authority-building.",
-    image: "/growth-metrics-analytics.jpg",
-    benefits: ["Keyword strategy", "Technical improvements", "Content optimization", "Authority building"],
-  },
-  {
-    title: "Branding",
-    overview: "Clarify your message, visual identity, and category positioning across every customer touchpoint.",
-    image: "/abstract-brand-concept.jpg",
-    benefits: ["Positioning systems", "Visual identity design", "Messaging hierarchy", "Guidelines and rollout"],
-  },
 ]
 
 const process = [
