@@ -176,41 +176,76 @@ export default function Home() {
             </div>
           </FadeInSection>
 
-          <div className="grid gap-6 md:grid-cols-6 md:grid-rows-2">
+          <div className="grid auto-rows-[22rem] gap-6 md:grid-cols-6">
             {coreServices.map((service, index) => {
               // Bento grid span logic for 6 items
+              const isWide = index === 0; // Landing Pages
+              const isTall = index === 1; // E-commerce
+              const isMedium = index === 4 || index === 5; // Social Media & Paid Ads
+              
               const spanClass = 
-                index === 0 ? "md:col-span-4 md:row-span-1" : // First item wide
-                index === 1 ? "md:col-span-2 md:row-span-2" : // Second item tall
-                index === 2 ? "md:col-span-2 md:row-span-1" : // Third item small
-                index === 3 ? "md:col-span-2 md:row-span-1" : // Fourth item small
-                index === 4 ? "md:col-span-3 md:row-span-1" : // Fifth item medium
-                index === 5 ? "md:col-span-3 md:row-span-1" : // Sixth item medium
-                "md:col-span-2";
+                isWide ? "md:col-span-4 md:row-span-1" : 
+                isTall ? "md:col-span-2 md:row-span-2" : 
+                isMedium ? "md:col-span-3 md:row-span-1" :
+                "md:col-span-2 md:row-span-1";
 
               return (
                 <FadeInSection key={service.title} delay={index * 0.05} className={spanClass}>
-                  <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-accent-beige/50 hover:bg-card">
-                    <div className="relative h-48 w-full overflow-hidden">
+                  <div className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card ${isWide ? "flex-row" : "flex-col"}`}>
+                    
+                    {/* Image Section */}
+                    <div className={`relative overflow-hidden ${
+                      isWide ? "w-2/5 border-r border-border/50" : 
+                      isTall ? "h-3/5 border-b border-border/50" : 
+                      "h-1/3 border-b border-border/50"
+                    }`}>
                       <Image 
                         src={service.image} 
                         alt={service.title} 
                         fill 
                         className="object-cover transition-transform duration-700 group-hover:scale-110" 
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-background/20" />
                     </div>
-                    <div className="flex flex-1 flex-col p-6">
-                      <h3 className="mb-3 text-2xl font-bold tracking-tight">{service.title}</h3>
-                      <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.overview}</p>
-                      <ul className="mt-auto space-y-2 text-xs font-medium text-foreground/60">
-                        {service.benefits.slice(0, 3).map((benefit) => (
-                          <li key={benefit} className="flex items-center gap-2">
-                            <span className="h-1 w-1 rounded-full bg-accent-beige" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
+
+                    {/* Content Section */}
+                    <div className={`flex flex-1 flex-col p-8 ${isWide ? "justify-center" : ""}`}>
+                      <div className="mb-auto">
+                        <h3 className={`font-black tracking-tight text-accent-beige ${isWide || isTall ? "text-3xl mb-4" : "text-xl mb-2"}`}>
+                          {service.title}
+                        </h3>
+                        <p className={`leading-relaxed text-foreground/70 ${isWide ? "text-base max-w-md" : "text-sm"}`}>
+                          {service.overview}
+                        </p>
+                      </div>
+
+                      {/* Dynamic Content for Empty Space */}
+                      <div className={`mt-6 ${isTall ? "block" : isWide ? "grid grid-cols-2 gap-4" : "hidden md:block"}`}>
+                        <ul className="space-y-2">
+                          {service.benefits.slice(0, isWide || isTall ? 4 : 2).map((benefit) => (
+                            <li key={benefit} className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                              <span className="h-1.5 w-1.5 rounded-full bg-accent-beige/60" />
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        {isWide && (
+                          <div className="flex items-center justify-end">
+                             <div className="rounded-full bg-accent-beige/10 px-4 py-2 text-xs font-bold text-accent-beige border border-accent-beige/20">
+                               Featured Service
+                             </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Corner Accent */}
+                    <div className="absolute top-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-beige/20 backdrop-blur-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-beige">
+                          <path d="M7 17l9.2-9.2M17 17V7H7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </FadeInSection>

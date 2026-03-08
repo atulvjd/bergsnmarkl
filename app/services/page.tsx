@@ -349,35 +349,63 @@ export default function ServicesPage() {
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {services.map((service, index) => (
-              <FadeInSection key={service.id} delay={index * 0.04}>
-                <article id={service.id} className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-56 w-full">
-                    <Image src={service.image} alt={service.title} fill className="object-cover" />
-                  </div>
-                  <div className="flex flex-1 flex-col p-8">
-                    <span className="mb-4 inline-flex w-fit rounded-full bg-accent-beige/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-accent-beige">
-                      {service.category}
-                    </span>
-                    <h3 className="mb-3 text-3xl font-bold">{service.title}</h3>
-                    <p className="mb-6 text-foreground/70">{service.description}</p>
-                    <p className="mb-6 text-sm leading-relaxed text-foreground/60">{service.context}</p>
-                    <ul className="mb-8 space-y-2 text-sm text-foreground/75">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-beige" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
-                      <Link href="/contact">Book Consultation</Link>
-                    </Button>
-                  </div>
-                </article>
-              </FadeInSection>
-            ))}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto">
+            {services.map((service, index) => {
+              // Bento grid span logic for 16 items
+              // We'll create a recurring pattern of spans to keep it interesting but balanced
+              const patternIndex = index % 8;
+              let spanClass = "col-span-1 row-span-1";
+              
+              if (patternIndex === 0) spanClass = "md:col-span-2 md:row-span-1"; // Wide
+              else if (patternIndex === 3) spanClass = "md:col-span-1 md:row-span-2"; // Tall
+              else if (patternIndex === 5) spanClass = "md:col-span-2 md:row-span-2"; // Large square
+              else if (patternIndex === 7) spanClass = "md:col-span-2 md:row-span-1"; // Another wide
+
+              return (
+                <FadeInSection key={service.id} delay={index * 0.04} className={spanClass}>
+                  <article 
+                    id={service.id} 
+                    className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-md"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image 
+                        src={service.image} 
+                        alt={service.title} 
+                        fill 
+                        className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-60" />
+                      <div className="absolute top-4 left-4">
+                        <span className="rounded-full bg-accent-beige/20 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-accent-beige border border-accent-beige/20">
+                          {service.category}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="mb-2 text-2xl font-bold tracking-tight">{service.title}</h3>
+                      <p className="mb-4 text-sm leading-relaxed text-foreground/70">{service.description}</p>
+                      
+                      {/* Show context only on larger/wider cards or as a smaller detail */}
+                      <p className="mb-4 text-xs italic text-foreground/50 line-clamp-2">{service.context}</p>
+                      
+                      <ul className="mb-6 space-y-1.5 text-xs font-medium text-foreground/65">
+                        {service.features.slice(0, 4).map((feature) => (
+                          <li key={feature} className="flex items-start gap-2">
+                            <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
+                            <span className="line-clamp-1">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <Button asChild size="sm" className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
+                        <Link href="/contact">Enquire Now</Link>
+                      </Button>
+                    </div>
+                  </article>
+                </FadeInSection>
+              )
+            })}
           </div>
         </div>
       </section>
