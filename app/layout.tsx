@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import BackgroundAnimation from "@/components/background-animation"
 import SmoothScrollProvider from "@/components/smooth-scroll-provider"
 import { generateMeta } from "@/lib/seo/seo-builder"
 import { generateOrganizationSchema, generateWebSiteSchema, generateLocalBusinessSchema } from "@/lib/seo/structured-data"
@@ -45,6 +46,7 @@ export default function RootLayout({
           }}
         />
         <SmoothScrollProvider>
+          <BackgroundAnimation />
           <Navigation />
           {children}
           <Footer />
