@@ -321,35 +321,35 @@ export default function ServicesPage() {
           }}
         />
       ))}
-      <section className="border-b border-border/50 bg-background px-6 py-12">
+      <section className="border-b border-border/50 bg-background px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               Services Built for <span className="text-accent-beige">Structured Growth</span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">
+            <p className="mx-auto max-w-3xl text-base md:text-lg text-foreground/70">
               Every service is designed to plug into a centralized system so your brand, acquisition, and retention efforts stay aligned.
             </p>
-            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+            <p className="mx-auto mt-4 max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
               Instead of disconnected tactics, we plan execution around your business model, sales cycle, capacity, and commercial targets so each channel contributes to one shared growth objective.
             </p>
           </FadeInSection>
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Service Categories</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">Consistent delivery models across strategy, design, content, and performance.</p>
-              <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Service Categories</h2>
+              <p className="mx-auto max-w-3xl text-base md:text-lg text-foreground/70">Consistent delivery models across strategy, design, content, and performance.</p>
+              <p className="mx-auto mt-4 max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
                 Every engagement includes practical planning, transparent milestone tracking, and measurable reporting so you can see what was executed, why it was prioritized, and how it impacted outcomes.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid auto-rows-[23rem] gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:auto-rows-[23rem]">
             {services.map((service, index) => {
               // Pinterest/Bento span pattern logic
               const patternIndex = index % 8;
@@ -367,14 +367,14 @@ export default function ServicesPage() {
                 <FadeInSection key={service.id} delay={index * 0.04} className={spanClass}>
                   <article 
                     id={service.id} 
-                    className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg ${isWide ? "flex-row" : "flex-col"}`}
+                    className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg ${isWide ? "md:flex-row flex-col" : "flex-col"}`}
                   >
                     {/* Image Section */}
                     <div className={`relative overflow-hidden shrink-0 ${
-                      isWide ? "w-2/5 border-r border-border/50" : 
-                      isLarge ? "h-1/2 border-b border-border/50" :
-                      isTall ? "h-2/5 border-b border-border/50" :
-                      "h-1/3 border-b border-border/50"
+                      isWide ? "md:w-2/5 md:border-r border-b border-border/50 w-full h-48 md:h-full" : 
+                      isLarge ? "h-48 md:h-1/2 border-b border-border/50" :
+                      isTall ? "h-48 md:h-2/5 border-b border-border/50" :
+                      "h-48 md:h-1/3 border-b border-border/50"
                     }`}>
                       <Image 
                         src={service.image} 
@@ -391,11 +391,11 @@ export default function ServicesPage() {
                     </div>
                     
                     {/* Content Section */}
-                    <div className={`flex flex-1 flex-col p-8 ${isWide ? "justify-center" : ""}`}>
-                      <h3 className={`font-black tracking-tight text-accent-beige mb-3 ${isLarge ? "text-4xl" : isWide || isTall ? "text-2xl" : "text-xl"}`}>
+                    <div className={`flex flex-1 flex-col p-6 md:p-8 ${isWide ? "md:justify-center" : ""}`}>
+                      <h3 className={`font-black tracking-tight text-accent-beige mb-3 ${isLarge ? "text-3xl md:text-4xl" : isWide || isTall ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>
                         {service.title}
                       </h3>
-                      <p className={`mb-4 leading-relaxed text-foreground/70 ${isLarge || isWide ? "text-base" : "text-xs"}`}>
+                      <p className={`mb-4 leading-relaxed text-foreground/70 ${isLarge || isWide ? "text-sm md:text-base" : "text-xs"}`}>
                         {service.description}
                       </p>
                       
@@ -404,7 +404,7 @@ export default function ServicesPage() {
                         <p className={`text-xs italic text-foreground/50 border-l-2 border-accent-beige/30 pl-3 ${!(isLarge || isWide || isTall) ? "line-clamp-2" : ""}`}>
                           {service.context}
                         </p>
-                        <ul className={`grid gap-2 ${isLarge ? "grid-cols-2" : "grid-cols-1"}`}>
+                        <ul className={`grid gap-2 ${isLarge ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1"}`}>
                           {service.features.slice(0, isLarge ? 6 : isWide || isTall ? 4 : 3).map((feature) => (
                             <li key={feature} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-foreground/60">
                               <span className="h-1 w-1 shrink-0 rounded-full bg-accent-beige" />
@@ -422,15 +422,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-8">
+      <section className="border-y border-border/50 bg-background px-6 py-12 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Need a Tailored Service Mix?</h2>
-            <p className="mb-10 text-lg text-foreground/70">We’ll map the right service stack based on your goals, current capabilities, and growth stage.</p>
-            <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Need a Tailored Service Mix?</h2>
+            <p className="mb-10 text-base md:text-lg text-foreground/70">We’ll map the right service stack based on your goals, current capabilities, and growth stage.</p>
+            <p className="mx-auto mb-10 max-w-3xl text-xs md:text-sm leading-relaxed text-foreground/65">
               Our recommendations focus on delivery practicality, investment efficiency, and the fastest path to measurable progress in lead quality, conversion consistency, and retention strength.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-white px-10 py-5 text-lg font-bold text-black hover:bg-white/90">
+            <Button asChild size="lg" className="h-auto w-full sm:w-auto rounded-lg bg-white px-10 py-5 text-lg font-bold text-black hover:bg-white/90">
               <Link href="/contact">Schedule Strategy Session</Link>
             </Button>
           </FadeInSection>

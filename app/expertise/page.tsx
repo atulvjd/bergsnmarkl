@@ -86,41 +86,41 @@ export default function ExpertisePage() {
           __html: JSON.stringify(expertisePageSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-12">
+      <section className="border-b border-border/50 bg-background px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               Expertise Backed by <span className="text-accent-beige">Process and Discipline</span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">
+            <p className="mx-auto max-w-3xl text-base md:text-lg text-foreground/70">
               We combine strategic planning, specialized talent, and proven operating methods to deliver consistent growth outcomes.
             </p>
-            <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
+            <p className="mx-auto mt-4 max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
               Our expertise is built around repeatable systems that connect creative quality, channel execution, and commercial performance across complex service-oriented markets.
             </p>
           </FadeInSection>
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Our Process</h2>
-              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Our Process</h2>
+              <p className="mx-auto max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
                 A practical operating model that keeps strategy, execution, and optimization connected from kickoff through scaling.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
             {process.map((item, index) => (
               <FadeInSection key={item.title} delay={index * 0.05}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-7 transition-colors hover:border-accent-beige/50">
-                  <p className="mb-3 text-4xl font-black text-accent-beige/40">0{index + 1}</p>
-                  <h3 className="mb-2 text-2xl font-bold">{item.title}</h3>
-                  <p className="text-foreground/70">{item.detail}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">{item.outcome}</p>
+                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-6 md:p-7 transition-colors hover:border-accent-beige/50">
+                  <p className="mb-3 text-3xl md:text-4xl font-black text-accent-beige/40">0{index + 1}</p>
+                  <h3 className="mb-2 text-xl md:text-2xl font-bold">{item.title}</h3>
+                  <p className="text-sm md:text-base text-foreground/70">{item.detail}</p>
+                  <p className="mt-3 text-xs md:text-sm leading-relaxed text-foreground/60">{item.outcome}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -128,59 +128,75 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-12">
+      <section className="border-y border-border/50 bg-background px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Team</h2>
-              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Team</h2>
+              <p className="mx-auto max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
                 Senior specialists across strategy, creative, performance, and content working as one delivery unit.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, index) => (
-              <FadeInSection key={member.name} delay={index * 0.05}>
-                <article className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-60 w-full">
-                    <Image src={member.image} alt={member.name} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="mb-3 text-sm font-semibold text-accent-beige">{member.role}</p>
-                    <p className="mb-3 text-sm text-foreground/70">{member.bio}</p>
-                    <p className="text-sm leading-relaxed text-foreground/60">{member.specialty}</p>
-                  </div>
-                </article>
-              </FadeInSection>
-            ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:auto-rows-[20rem]">
+            {team.map((member, index) => {
+              // Bento span logic for 5 members
+              const spanClass = 
+                index === 0 ? "md:col-span-2 md:row-span-2" : 
+                index === 1 ? "md:col-span-2 md:row-span-1" :
+                index === 4 ? "md:col-span-2 md:row-span-1" :
+                "md:col-span-1 md:row-span-1";
+
+              return (
+                <FadeInSection key={member.name} delay={index * 0.05} className={spanClass}>
+                  <article className={`group relative flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg ${index === 1 || index === 4 ? "md:flex-row" : "flex-col"}`}>
+                    <div className={`relative shrink-0 ${
+                      index === 0 ? "h-64 md:h-1/2" : 
+                      index === 1 || index === 4 ? "h-64 md:h-full md:w-2/5" :
+                      "h-48 md:h-2/5"
+                    }`}>
+                      <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+                    </div>
+                    <div className={`flex flex-1 flex-col p-6 md:p-8 ${index === 1 || index === 4 ? "md:justify-center" : ""}`}>
+                      <h3 className={`font-black tracking-tight text-white mb-1 ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"}`}>{member.name}</h3>
+                      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-accent-beige">{member.role}</p>
+                      <div className="mt-auto space-y-4">
+                        <p className={`text-foreground/70 leading-relaxed ${index === 0 ? "text-sm md:text-base" : "text-xs"}`}>{member.bio}</p>
+                        <p className="border-l-2 border-accent-beige/30 pl-3 text-[10px] font-bold uppercase tracking-wider text-foreground/50">{member.specialty}</p>
+                      </div>
+                    </div>
+                  </article>
+                </FadeInSection>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
-              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Core Values</h2>
+              <p className="mx-auto max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
                 These values drive day-to-day decisions on prioritization, quality standards, and communication discipline.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {[
               { title: "Clarity", text: "Clear priorities, clear reporting, clear accountability.", icon: CheckCircle2 },
               { title: "Rigor", text: "Data-backed strategy and disciplined execution standards.", icon: ShieldCheck },
               { title: "Collaboration", text: "Integrated teams working as one system for your brand.", icon: Cog },
             ].map((value, index) => (
               <FadeInSection key={value.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-8 transition-colors hover:border-accent-beige/50">
+                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 md:p-8 transition-colors hover:border-accent-beige/50">
                   <value.icon className="mb-4 size-6 text-accent-beige" />
-                  <h3 className="mb-2 text-2xl font-bold">{value.title}</h3>
-                  <p className="text-foreground/70">{value.text}</p>
+                  <h3 className="mb-2 text-xl md:text-2xl font-bold">{value.title}</h3>
+                  <p className="text-sm md:text-base text-foreground/70">{value.text}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -188,18 +204,18 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Methodologies</h2>
-              <p className="mx-auto max-w-4xl text-base leading-relaxed text-foreground/65">
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Methodologies</h2>
+              <p className="mx-auto max-w-4xl text-sm md:text-base leading-relaxed text-foreground/65">
                 Structured frameworks that help us move quickly while maintaining consistency in planning, delivery, and optimization.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
             {[
               "Content-Led Authority Systems",
               "90-Day Performance Sprints",
@@ -209,22 +225,25 @@ export default function ExpertisePage() {
               "Centralized Reporting Cadence",
             ].map((method, index) => (
               <FadeInSection key={method} delay={index * 0.05}>
-                <div className="rounded-lg border border-border/50 bg-card p-6 text-center transition-colors hover:border-accent-beige/50">
-                  <p className="font-semibold text-foreground/80">{method}</p>
+                <div className="rounded-lg border border-border/50 bg-card p-5 md:p-6 text-center transition-colors hover:border-accent-beige/50">
+                  <p className="text-sm md:text-base font-semibold text-foreground/80">{method}</p>
                 </div>
               </FadeInSection>
             ))}
           </div>
 
           <FadeInSection delay={0.2}>
-            <div className="mt-16 text-center">
-              <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <div className="mt-12 md:mt-16 text-center">
+              <Button asChild size="lg" className="h-auto w-full sm:w-auto rounded-lg bg-white px-10 py-5 text-lg font-bold text-black hover:bg-white/90">
                 <Link href="/contact">Work With Our Team</Link>
               </Button>
             </div>
           </FadeInSection>
         </div>
       </section>
+    </main>
+  )
+}
     </main>
   )
 }
