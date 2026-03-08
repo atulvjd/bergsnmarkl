@@ -415,10 +415,6 @@ export default function ServicesPage() {
                           </ul>
                         </div>
                       )}
-                      
-                      <Button asChild size="sm" className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
-                        <Link href="/contact">Enquire Now</Link>
-                      </Button>
                     </div>
 
                     {/* Corner Accent for interaction hint */}
@@ -445,7 +441,7 @@ export default function ServicesPage() {
             <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
               Our recommendations focus on delivery practicality, investment efficiency, and the fastest path to measurable progress in lead quality, conversion consistency, and retention strength.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto rounded-lg bg-white px-10 py-5 text-lg font-bold text-black hover:bg-white/90">
               <Link href="/contact">Schedule Strategy Session</Link>
             </Button>
           </FadeInSection>
