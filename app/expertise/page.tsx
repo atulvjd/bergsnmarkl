@@ -139,38 +139,25 @@ export default function ExpertisePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:auto-rows-[20rem]">
-            {team.map((member, index) => {
-              // Bento span logic for 5 members
-              const spanClass = 
-                index === 0 ? "md:col-span-2 md:row-span-2" : 
-                index === 1 ? "md:col-span-2 md:row-span-1" :
-                index === 4 ? "md:col-span-2 md:row-span-1" :
-                "md:col-span-1 md:row-span-1";
-
-              return (
-                <FadeInSection key={member.name} delay={index * 0.05} className={spanClass}>
-                  <article className={`group relative flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg ${index === 1 || index === 4 ? "md:flex-row" : "flex-col"}`}>
-                    <div className={`relative shrink-0 ${
-                      index === 0 ? "h-64 md:h-1/2" : 
-                      index === 1 || index === 4 ? "h-64 md:h-full md:w-2/5" :
-                      "h-48 md:h-2/5"
-                    }`}>
-                      <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((member, index) => (
+              <FadeInSection key={member.name} delay={index * 0.05}>
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card shadow-sm hover:shadow-lg">
+                  <div className="relative h-64 w-full shrink-0">
+                    <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="mb-1 text-xl font-black tracking-tight text-white">{member.name}</h3>
+                    <p className="mb-4 text-xs font-bold uppercase tracking-widest text-accent-beige">{member.role}</p>
+                    <div className="mt-auto space-y-4">
+                      <p className="text-xs leading-relaxed text-foreground/70">{member.bio}</p>
+                      <p className="border-l-2 border-accent-beige/30 pl-3 text-[10px] font-bold uppercase tracking-wider text-foreground/50">{member.specialty}</p>
                     </div>
-                    <div className={`flex flex-1 flex-col p-6 md:p-8 ${index === 1 || index === 4 ? "md:justify-center" : ""}`}>
-                      <h3 className={`font-black tracking-tight text-white mb-1 ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"}`}>{member.name}</h3>
-                      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-accent-beige">{member.role}</p>
-                      <div className="mt-auto space-y-4">
-                        <p className={`text-foreground/70 leading-relaxed ${index === 0 ? "text-sm md:text-base" : "text-xs"}`}>{member.bio}</p>
-                        <p className="border-l-2 border-accent-beige/30 pl-3 text-[10px] font-bold uppercase tracking-wider text-foreground/50">{member.specialty}</p>
-                      </div>
-                    </div>
-                  </article>
-                </FadeInSection>
-              )
-            })}
+                  </div>
+                </article>
+              </FadeInSection>
+            ))}
           </div>
         </div>
       </section>
@@ -241,9 +228,6 @@ export default function ExpertisePage() {
           </FadeInSection>
         </div>
       </section>
-    </main>
-  )
-}
     </main>
   )
 }
