@@ -66,6 +66,13 @@ const team = [
     specialty: "Enhances user engagement and conversion rates through intuitive design and consistent brand messaging.",
     image: "/saurabh-kumar.jpg",
   },
+  {
+    name: "Asmitha M",
+    role: "Media Manager & Content Strategist",
+    bio: "Oversees social media strategy, content calendar management, and platform-specific growth tactics.",
+    specialty: "Drives audience engagement and brand authority through tailored content strategies and consistent social presence.",
+    image: "/asmitha-m.jpg",
+  },
 ]
 
 const expertisePageSchema = {
