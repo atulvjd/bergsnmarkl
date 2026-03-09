@@ -5,8 +5,6 @@ import { generateMeta } from "@/lib/seo/seo-builder"
 import { getAbsoluteUrl, SEO_CONFIG } from "@/lib/seo/seo-config"
 import { FadeInSection } from "@/components/motion-wrapper"
 
-const categories = ["All", "Strategy", "Website", "Paid Ads", "SEO", "Email", "Branding"]
-
 const articles = [
   {
     title: "How to Centralize Marketing Ops for Faster Execution",
@@ -108,16 +106,6 @@ export default function InsightsPage() {
       <section className="bg-secondary/50 px-6 py-8">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
-              {categories.map((category, index) => (
-                <span
-                  key={category}
-                  className={`rounded-full border px-4 py-2 text-sm font-semibold ${index === 0 ? "border-accent-beige/50 bg-accent-beige/10 text-accent-beige" : "border-border/50 text-foreground/70"}`}
-                >
-                  {category}
-                </span>
-              ))}
-            </div>
             <p className="mx-auto mb-12 max-w-4xl text-center text-sm leading-relaxed text-foreground/65">
               Every insight focuses on practical implementation so you can apply the recommendations to real campaigns, workflows, and reporting structures.
             </p>
