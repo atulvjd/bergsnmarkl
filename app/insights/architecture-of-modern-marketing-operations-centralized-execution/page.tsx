@@ -180,8 +180,8 @@ export default function ModernMarketingOperationsInsightPage() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "The Architecture of Modern Marketing Ope...", path: "/insights/architecture-of-modern-marketing-operations-centralized-execution" }]} />
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Strategy</p>
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{articleTitle}</h1>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed sm:text-base text-foreground/70">
             Full long-form reference guide on centralizing marketing operations for faster execution, clearer accountability, and stronger commercial outcomes.
           </p>
         </div>

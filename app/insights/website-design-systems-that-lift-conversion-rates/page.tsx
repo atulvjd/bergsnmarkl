@@ -341,8 +341,8 @@ export default function WebsiteDesignSystemsInsightPage() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "Website Design Systems That Lift Convers...", path: "/insights/website-design-systems-that-lift-conversion-rates" }]} />
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Website</p>
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{articleTitle}</h1>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed sm:text-base text-foreground/70">
             Full long-form reference guide on conversion-focused UX systems, architectural design decisions, credibility frameworks, and implementation strategy.
           </p>
         </div>

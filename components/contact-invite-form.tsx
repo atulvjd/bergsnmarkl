@@ -143,7 +143,7 @@ export function ContactInviteForm() {
       <Button
         type="submit"
         disabled={submitState === "sending"}
-        className="h-auto rounded-lg bg-white px-8 py-4 font-bold text-black hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
+        className="h-auto w-full rounded-lg bg-white px-8 py-4 font-bold text-black hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {submitState === "sending" ? "Sending..." : "Send Invite"}
       </Button>

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/50 bg-secondary/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-4 md:gap-10">
           <div>
             <div className="mb-4">
               <div className="flex items-center gap-2 mb-1">
@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-foreground/60">Contact</h3>
             <ul className="space-y-2 text-sm text-foreground/75">
-              <li>bergsnmark@gmail.com</li>
+              <li className="break-all">bergsnmark@gmail.com</li>
               <li>+91 93017 03738</li>
               <li>
                 <Link href="/contact#send-invite" className="transition-colors hover:text-accent-beige">
@@ -67,9 +67,9 @@ export default function Footer() {
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-2">
               <Image src="/brand-logo-new.png" alt="Logo" width={30} height={30} className="h-[30px] w-auto opacity-60" />
-              <p>© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
+              <p className="leading-relaxed">© 2024 Bergs & Mark. A Bergs & Co Company. All rights reserved.</p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4 sm:gap-6">
               <Link href="/privacy" className="transition-colors hover:text-accent-beige">Privacy Policy</Link>
               <Link href="/terms" className="transition-colors hover:text-accent-beige">Terms of Service</Link>
             </div>

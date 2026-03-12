@@ -90,10 +90,10 @@ export default function InsightsPage() {
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               Insights for <span className="text-accent-beige">Modern Growth Teams</span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">
+            <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">
               Practical articles and frameworks on strategy, execution, and performance optimization.
             </p>
             <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -111,11 +111,11 @@ export default function InsightsPage() {
             </p>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {articles.map((article, index) => (
               <FadeInSection key={article.title} delay={index * 0.05}>
                 <article className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-52 w-full">
+                  <div className="relative h-48 w-full sm:h-52">
                     <Image src={article.image} alt={article.title} fill className="object-cover" />
                   </div>
                   <div className="flex flex-1 flex-col p-6">

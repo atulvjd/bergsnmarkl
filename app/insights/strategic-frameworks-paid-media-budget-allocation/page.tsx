@@ -210,8 +210,8 @@ export default function PaidMediaBudgetAllocationInsightPage() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "Strategic Frameworks for Paid Media Budg...", path: "/insights/strategic-frameworks-paid-media-budget-allocation" }]} />
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Paid Ads</p>
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{articleTitle}</h1>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed sm:text-base text-foreground/70">
             Full long-form reference guide on paid media budget allocation across demand creation, intent capture, and lifecycle growth systems.
           </p>
         </div>

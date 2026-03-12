@@ -168,15 +168,15 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Core Services</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">Six focused service lines that work together as one centralized growth engine.</p>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Core Services</h2>
+              <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">Six focused service lines that work together as one centralized growth engine.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
                 Each service is planned to support the others, so your website, social presence, paid channels, and lifecycle programs move in one commercial direction instead of competing priorities.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid auto-rows-[22rem] gap-6 md:grid-cols-6">
+          <div className="grid auto-rows-auto gap-6 md:auto-rows-[22rem] md:grid-cols-6">
             {coreServices.map((service, index) => {
               // Bento grid span logic for 6 items
               const isWide = index === 0; // Landing Pages
@@ -191,11 +191,11 @@ export default function Home() {
 
               return (
                 <FadeInSection key={service.title} delay={index * 0.05} className={spanClass}>
-                  <div className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card ${isWide ? "flex-row" : "flex-col"}`}>
+                  <div className={`group relative flex h-full overflow-hidden rounded-2xl border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-accent-beige/50 hover:bg-card ${isWide ? "flex-col md:flex-row" : "flex-col"}`}>
                     
                     {/* Image Section */}
                     <div className={`relative overflow-hidden ${
-                      isWide ? "w-2/5 border-r border-border/50" : 
+                      isWide ? "h-48 w-full border-b border-border/50 md:h-full md:w-2/5 md:border-b-0 md:border-r" : 
                       isTall ? "h-3/5 border-b border-border/50" : 
                       "h-1/3 border-b border-border/50"
                     }`}>
@@ -209,18 +209,18 @@ export default function Home() {
                     </div>
 
                     {/* Content Section */}
-                    <div className={`flex flex-1 flex-col p-8 ${isWide ? "justify-center" : ""}`}>
+                    <div className={`flex flex-1 flex-col p-6 md:p-8 ${isWide ? "md:justify-center" : ""}`}>
                       <div className="mb-auto">
-                        <h3 className={`font-black tracking-tight text-accent-beige ${isWide || isTall ? "text-3xl mb-4" : "text-xl mb-2"}`}>
+                        <h3 className={`font-black tracking-tight text-accent-beige ${isWide || isTall ? "mb-4 text-2xl md:text-3xl" : "mb-2 text-xl"}`}>
                           {service.title}
                         </h3>
-                        <p className={`leading-relaxed text-foreground/70 ${isWide ? "text-base max-w-md" : "text-sm"}`}>
+                        <p className={`leading-relaxed text-foreground/70 ${isWide ? "max-w-md text-sm md:text-base" : "text-sm"}`}>
                           {service.overview}
                         </p>
                       </div>
 
                       {/* Dynamic Content for Empty Space */}
-                      <div className={`mt-6 ${isTall ? "block" : isWide ? "grid grid-cols-2 gap-4" : "hidden md:block"}`}>
+                      <div className={`mt-6 ${isTall ? "block" : isWide ? "grid gap-4 sm:grid-cols-2" : "hidden md:block"}`}>
                         <ul className="space-y-2">
                           {service.benefits.slice(0, isWide || isTall ? 4 : 2).map((benefit) => (
                             <li key={benefit} className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">
@@ -259,15 +259,15 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">How We Work</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">A structured six-step methodology designed for clarity, speed, and measurable business impact.</p>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">How We Work</h2>
+              <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">A structured six-step methodology designed for clarity, speed, and measurable business impact.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
                 Our operating model minimizes communication gaps and keeps teams aligned on weekly priorities, launch readiness, and measurable outcomes across every channel.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {process.map((step, index) => (
               <FadeInSection key={step.title} delay={index * 0.05}>
                 <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-6 transition-colors hover:border-accent-beige/50">
@@ -289,12 +289,12 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Featured Case Studies</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">Representative engagements showing how we solve specific growth challenges.</p>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Featured Case Studies</h2>
+              <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">Representative engagements showing how we solve specific growth challenges.</p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Elite Core Gym",
@@ -323,12 +323,12 @@ export default function Home() {
             ].map((study, index) => (
               <FadeInSection key={study.title} delay={index * 0.08}>
                 <div className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-64">
+                  <div className="relative h-56 sm:h-64">
                     <Image src={study.image} alt={study.title} fill className="object-cover" />
                   </div>
-                  <div className="flex flex-1 flex-col p-8">
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">{study.result}</p>
-                    <h3 className="mb-3 text-3xl font-bold">{study.title}</h3>
+                    <h3 className="mb-3 text-2xl font-bold sm:text-3xl">{study.title}</h3>
                     <p className="mb-6 text-foreground/70">{study.description}</p>
                     <p className="mb-6 text-sm leading-relaxed text-foreground/65">{study.detail}</p>
                     <Link
@@ -369,15 +369,15 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">Three principles that keep work centralized, accountable, and commercially focused.</p>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Why Choose Us</h2>
+              <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">Three principles that keep work centralized, accountable, and commercially focused.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
                 We are structured for long-term operating reliability, not one-off campaign bursts. That means stronger process control, cleaner reporting, and better performance continuity.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Centralized Delivery",
@@ -396,7 +396,7 @@ export default function Home() {
               },
             ].map((item, index) => (
               <FadeInSection key={item.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-8 transition-colors hover:border-accent-beige/50">
+                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 sm:p-8 transition-colors hover:border-accent-beige/50">
                   <h3 className="mb-3 text-2xl font-bold">{item.title}</h3>
                   <p className="text-foreground/70">{item.description}</p>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/60">{item.detail}</p>
@@ -411,15 +411,15 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
-              <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Industries We Serve</h2>
-              <p className="mx-auto max-w-3xl text-lg text-foreground/70">Sector expertise built around repeatable growth systems tailored to your market dynamics.</p>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Industries We Serve</h2>
+              <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">Sector expertise built around repeatable growth systems tailored to your market dynamics.</p>
               <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
                 We focus on service-driven categories where trust, authority, and consistent lead generation matter as much as channel-level performance.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry, index) => (
               <FadeInSection key={industry.title} delay={index * 0.05}>
                 <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-7 transition-colors hover:border-accent-beige/50">
@@ -437,12 +437,12 @@ export default function Home() {
       <section className="border-t border-border/50 bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Centralize Your Growth?</h2>
-            <p className="mb-10 text-lg text-foreground/70">Let’s align your website, content, media, and lifecycle marketing into one professional system.</p>
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Ready to Centralize Your Growth?</h2>
+            <p className="mb-10 text-base text-foreground/70 sm:text-lg">Let’s align your website, content, media, and lifecycle marketing into one professional system.</p>
             <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
               We’ll review your current positioning, channel mix, and operational constraints, then recommend the most practical path to stronger lead quality and revenue consistency.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto w-full rounded-lg bg-accent-beige px-6 py-4 text-base font-bold text-background hover:bg-accent-beige/90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg">
               <Link href="/contact">Book Your Strategy Call</Link>
             </Button>
           </FadeInSection>

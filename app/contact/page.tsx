@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { CalendarDays, Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react"
+import { CalendarDays, Instagram, Linkedin, Mail, Phone } from "lucide-react"
 import { generateMeta } from "@/lib/seo/seo-builder"
 import { getAbsoluteUrl, SEO_CONFIG } from "@/lib/seo/seo-config"
 import { FadeInSection } from "@/components/motion-wrapper"
@@ -67,10 +67,10 @@ export default function ContactPage() {
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               Contact Our <span className="text-accent-beige">Growth Team</span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">Tell us your goals and we’ll design a clear, professional path to measurable outcomes.</p>
+            <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">Tell us your goals and we’ll design a clear, professional path to measurable outcomes.</p>
             <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
               Share your market context, current channel mix, and delivery constraints so we can recommend the most practical next steps for your stage of growth.
             </p>
@@ -81,8 +81,8 @@ export default function ContactPage() {
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <FadeInSection>
-            <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-8">
-              <h2 className="mb-4 text-4xl font-black">Consultation Planning</h2>
+            <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-6 sm:p-8">
+              <h2 className="mb-4 text-3xl font-black sm:text-4xl">Consultation Planning</h2>
               <p className="mb-6 text-foreground/70">Share your project brief first, and we will schedule the right consultation format based on your goals.</p>
               <p className="mb-6 text-sm leading-relaxed text-foreground/60">
                 This session is focused on commercial priorities, implementation gaps, and a practical service sequence that can be executed without unnecessary complexity.
@@ -100,14 +100,14 @@ export default function ContactPage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild className="mt-auto w-fit rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90">
+              <Button asChild className="mt-auto w-full rounded-lg bg-accent-beige font-bold text-background hover:bg-accent-beige/90 sm:w-fit">
                 <Link href="#send-invite">Send Project Invite</Link>
               </Button>
             </div>
           </FadeInSection>
 
           <FadeInSection delay={0.1}>
-            <div className="relative h-[420px] overflow-hidden rounded-lg border border-border/50">
+            <div className="relative h-[280px] overflow-hidden rounded-lg border border-border/50 sm:h-[360px] md:h-[420px]">
               <Image src="/consultation-meeting-planning.jpg" alt="Consultation planning session" fill className="object-cover" />
             </div>
           </FadeInSection>
@@ -117,8 +117,8 @@ export default function ContactPage() {
       <section id="send-invite" className="border-y border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <FadeInSection>
-            <div className="rounded-lg border border-border/50 bg-card p-8">
-              <h2 className="mb-4 text-4xl font-black">Send an Invite</h2>
+            <div className="rounded-lg border border-border/50 bg-card p-6 sm:p-8">
+              <h2 className="mb-4 text-3xl font-black sm:text-4xl">Send an Invite</h2>
               <p className="mb-8 text-foreground/70">Invite us into your project with key details and we will reply with a structured next-step plan.</p>
               <p className="mb-8 text-sm leading-relaxed text-foreground/60">
                 Include your business goals, current marketing setup, expected timelines, and decision process so our recommendations can be specific and implementation-ready.
@@ -128,8 +128,8 @@ export default function ContactPage() {
           </FadeInSection>
 
           <FadeInSection delay={0.1}>
-            <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-8">
-              <h3 className="mb-4 text-3xl font-black">Connect on Social Media</h3>
+            <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 sm:p-8">
+              <h3 className="mb-4 text-2xl font-black sm:text-3xl">Connect on Social Media</h3>
               <p className="mb-8 text-foreground/70">Follow and message us directly on social channels.</p>
               <p className="mb-8 text-sm leading-relaxed text-foreground/60">
                 Use social messaging for quick introductions, collaboration ideas, and updates on current campaigns, frameworks, and growth insights.
@@ -185,13 +185,13 @@ export default function ContactPage() {
       <section className="bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Contact Methods</h2>
+            <h2 className="mb-10 text-center text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Contact Methods</h2>
             <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               Choose the channel that fits your urgency and context. We respond with clear next actions and required inputs.
             </p>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Email",
@@ -216,10 +216,10 @@ export default function ContactPage() {
               },
             ].map((method, index) => (
               <FadeInSection key={method.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-8 text-center transition-colors hover:border-accent-beige/50">
+                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 text-center transition-colors hover:border-accent-beige/50 sm:p-8">
                   <method.icon className="mx-auto mb-4 size-6 text-accent-beige" />
                   <h3 className="mb-2 text-2xl font-bold">{method.title}</h3>
-                  <p className="mb-1 font-semibold text-accent-beige">{method.detail}</p>
+                  <p className="mb-1 break-all font-semibold text-accent-beige">{method.detail}</p>
                   <p className="text-sm text-foreground/60">{method.note}</p>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/60">{method.support}</p>
                 </div>
@@ -232,7 +232,7 @@ export default function ContactPage() {
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Quick FAQ</h2>
+            <h2 className="mb-10 text-center text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Quick FAQ</h2>
             <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               Common onboarding and working-model questions from teams preparing to centralize their growth execution.
             </p>
@@ -254,12 +254,12 @@ export default function ContactPage() {
       <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Start?</h2>
-            <p className="mb-10 text-lg text-foreground/70">We’ll help you prioritize the right next move for your growth stage.</p>
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Ready to Start?</h2>
+            <p className="mb-10 text-base text-foreground/70 sm:text-lg">We’ll help you prioritize the right next move for your growth stage.</p>
             <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
               You will receive actionable recommendations focused on clarity, execution speed, and measurable business outcomes.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto w-full rounded-lg bg-accent-beige px-6 py-4 text-base font-bold text-background hover:bg-accent-beige/90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg">
               <Link href="#send-invite">Send an Invite</Link>
             </Button>
           </FadeInSection>

@@ -263,8 +263,8 @@ export default function SeoContentClustersInsightPage() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "The Architecture of Authority: Leveragin...", path: "/insights/architecture-of-authority-seo-content-clusters" }]} />
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / SEO</p>
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{articleTitle}</h1>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed sm:text-base text-foreground/70">
             Full long-form reference guide on SEO content clusters, topical authority systems, internal linking architecture, and GEO-ready growth strategy.
           </p>
         </div>

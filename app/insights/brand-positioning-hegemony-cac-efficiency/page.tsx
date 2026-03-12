@@ -217,8 +217,8 @@ export default function BrandPositioningHegemonyInsightPage() {
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "The Brand Positioning Hegemony: Leveragi...", path: "/insights/brand-positioning-hegemony-cac-efficiency" }]} />
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent-beige">Insights / Branding</p>
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">{articleTitle}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/70">
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{articleTitle}</h1>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed sm:text-base text-foreground/70">
             Full long-form reference guide on brand positioning strategy, CAC efficiency signals, and narrative-led acquisition systems.
           </p>
         </div>

@@ -9,7 +9,7 @@ export default function TermsPage() {
           <h1 className="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl">
             Terms and Conditions
           </h1>
-          <p className="text-lg text-foreground/70">
+          <p className="text-base text-foreground/70 sm:text-lg">
             Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the Bergs & Mark website or engaging our services.
           </p>
           <p className="mt-4 text-sm text-foreground/50">

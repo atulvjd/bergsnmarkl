@@ -47,10 +47,10 @@ const privacySections = [
 export default function PrivacyPage() {
   return (
     <main className="pt-20">
-      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-28">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Privacy Policy</h1>
-          <p className="mb-4 text-lg text-foreground/70">
+          <h1 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Privacy Policy</h1>
+          <p className="mb-4 text-base text-foreground/70 sm:text-lg">
             Bergs & Mark is committed to responsible data practices across website usage, inquiry handling, and service delivery.
           </p>
           <p className="text-base leading-relaxed text-foreground/65">
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-4xl space-y-10">
           {privacySections.map((section) => (
-            <article key={section.title} className="rounded-lg border border-border/50 bg-background p-8">
+            <article key={section.title} className="rounded-lg border border-border/50 bg-background p-6 sm:p-8">
               <h2 className="mb-4 text-2xl font-bold">{section.title}</h2>
               <ul className="space-y-3 text-sm leading-relaxed text-foreground/75">
                 {section.points.map((point) => (
@@ -75,10 +75,10 @@ export default function PrivacyPage() {
             </article>
           ))}
 
-          <article className="rounded-lg border border-border/50 bg-background p-8">
+          <article className="rounded-lg border border-border/50 bg-background p-6 sm:p-8">
             <h2 className="mb-4 text-2xl font-bold">Contact for Privacy Requests</h2>
             <p className="text-sm leading-relaxed text-foreground/75">
-              For access, correction, deletion, or privacy-related questions, contact us at <span className="font-semibold text-accent-beige">bergsnmark@gmail.com</span>.
+              For access, correction, deletion, or privacy-related questions, contact us at <span className="break-all font-semibold text-accent-beige">bergsnmark@gmail.com</span>.
             </p>
           </article>
         </div>

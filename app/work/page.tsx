@@ -93,10 +93,10 @@ export default function WorkPage() {
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               Case Studies That Show <span className="text-accent-beige">Measured Outcomes</span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">
+            <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">
               A portfolio of engagements across industries where centralized execution produced consistent, trackable growth.
             </p>
             <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
@@ -108,15 +108,15 @@ export default function WorkPage() {
 
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study, index) => (
               <FadeInSection key={study.company} delay={index * 0.05}>
                 <article className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-52 w-full">
+                  <div className="relative h-48 w-full sm:h-52">
                     <Image src={study.image} alt={study.company} fill className="object-cover" />
                   </div>
 
-                  <div className="flex flex-1 flex-col p-7">
+                  <div className="flex flex-1 flex-col p-6 sm:p-7">
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent-beige">{study.industry}</p>
                     <h2 className="mb-4 text-2xl font-bold">{study.company}</h2>
 
@@ -159,12 +159,12 @@ export default function WorkPage() {
       <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Want Similar Results?</h2>
-            <p className="mb-10 text-lg text-foreground/70">We can assess your current funnel and identify the highest-impact growth opportunities.</p>
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Want Similar Results?</h2>
+            <p className="mb-10 text-base text-foreground/70 sm:text-lg">We can assess your current funnel and identify the highest-impact growth opportunities.</p>
             <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
               You will receive a practical recommendation set focused on positioning clarity, channel priorities, implementation order, and the metrics that matter most to your growth stage.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto w-full rounded-lg bg-accent-beige px-6 py-4 text-base font-bold text-background hover:bg-accent-beige/90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg">
               <Link href="/contact">Discuss Your Project</Link>
             </Button>
           </FadeInSection>

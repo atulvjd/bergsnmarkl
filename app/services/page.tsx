@@ -349,7 +349,7 @@ export default function ServicesPage() {
             </div>
           </FadeInSection>
 
-          <div className="grid auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:auto-rows-[23rem]">
+          <div className="grid auto-rows-auto grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:auto-rows-[23rem]">
             {services.map((service, index) => {
               // Pinterest/Bento span pattern logic
               const patternIndex = index % 8;

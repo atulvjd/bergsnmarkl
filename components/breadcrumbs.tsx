@@ -20,22 +20,22 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <nav aria-label="Breadcrumb" className="mb-6 flex items-center text-sm text-foreground/60">
-        <ol className="flex items-center space-x-2">
+      <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center text-sm text-foreground/60">
+        <ol className="flex flex-wrap items-center gap-y-2">
           {items.map((item, index) => {
             const isLast = index === items.length - 1
 
             return (
               <li key={item.path} className="flex items-center">
                 {isLast ? (
-                  <span className="text-foreground/90 font-medium" aria-current="page">
+                  <span className="font-medium text-foreground/90 break-words" aria-current="page">
                     {item.name}
                   </span>
                 ) : (
                   <>
                     <Link
                       href={item.path}
-                      className="hover:text-accent-beige transition-colors"
+                      className="transition-colors hover:text-accent-beige"
                     >
                       {item.name}
                     </Link>

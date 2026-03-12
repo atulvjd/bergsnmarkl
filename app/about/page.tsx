@@ -76,13 +76,13 @@ export default function AboutPage() {
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
-            <h1 className="mb-6 flex items-center justify-center gap-4 text-6xl font-black leading-tight md:text-7xl">
+            <h1 className="mb-6 flex flex-wrap items-center justify-center gap-3 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
               About <span className="flex items-center gap-2 text-accent-beige">
-                <Image src="/apple-icon.png" alt="Logo" width={40} height={40} className="h-10 w-auto object-contain md:h-12" />
+                <Image src="/apple-icon.png" alt="Logo" width={40} height={40} className="h-8 w-auto object-contain sm:h-10 md:h-12" />
                 Bergs & Mark
               </span>
             </h1>
-            <p className="mx-auto max-w-3xl text-lg text-foreground/70">We help ambitious brands centralize their marketing and scale through structured, integrated execution.</p>
+            <p className="mx-auto max-w-3xl text-base text-foreground/70 sm:text-lg">We help ambitious brands centralize their marketing and scale through structured, integrated execution.</p>
             <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed text-foreground/65">
               Our work is built for service-focused businesses that need stronger demand generation, clearer positioning, and reliable operational momentum across every channel.
             </p>
@@ -94,7 +94,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <FadeInSection>
             <div>
-              <h2 className="mb-6 text-5xl font-black leading-tight">Our Story</h2>
+              <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">Our Story</h2>
               <p className="mb-4 text-foreground/70 flex items-center gap-2 flex-wrap">
                 <Image src="/apple-icon.png" alt="Logo" width={24} height={24} className="h-6 w-auto inline-block" />
                 Bergs & Mark was founded to solve a common problem: fragmented marketing execution. Too many businesses work with disconnected vendors, resulting in inconsistent messaging and uneven performance.
@@ -107,7 +107,7 @@ export default function AboutPage() {
           </FadeInSection>
 
           <FadeInSection delay={0.1}>
-            <div className="relative h-[420px] overflow-hidden rounded-lg border border-border/50">
+            <div className="relative h-[280px] overflow-hidden rounded-lg border border-border/50 sm:h-[360px] md:h-[420px]">
               <Image src="/team-collaboration.jpg" alt="Bergs and Mark team collaboration" fill className="object-cover" />
             </div>
           </FadeInSection>
@@ -117,11 +117,11 @@ export default function AboutPage() {
       <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Mission & Vision</h2>
-            <p className="mb-4 text-lg text-foreground/70">
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Mission & Vision</h2>
+            <p className="mb-4 text-base text-foreground/70 sm:text-lg">
               Mission: Build centralized growth systems that help brands scale with confidence.
             </p>
-            <p className="mb-4 text-lg text-foreground/70">
+            <p className="mb-4 text-base text-foreground/70 sm:text-lg">
               Vision: Be the strategic partner known for combining operational rigor with creative quality.
             </p>
             <p className="text-base leading-relaxed text-foreground/65">
@@ -134,16 +134,16 @@ export default function AboutPage() {
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
+            <h2 className="mb-10 text-center text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Core Values</h2>
             <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               Our values directly shape planning priorities, communication cadence, and delivery standards across every engagement.
             </p>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <FadeInSection key={value.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-8 transition-colors hover:border-accent-beige/50">
+                <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-6 sm:p-8 transition-colors hover:border-accent-beige/50">
                   <h3 className="mb-3 text-2xl font-bold">{value.title}</h3>
                   <p className="text-foreground/70">{value.description}</p>
                   <p className="mt-3 text-sm leading-relaxed text-foreground/60">{value.impact}</p>
@@ -157,20 +157,20 @@ export default function AboutPage() {
       <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Team</h2>
+            <h2 className="mb-10 text-center text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Team</h2>
             <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               A cross-functional team built around strategic planning, creative execution, performance optimization, and transparent reporting.
             </p>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-2">
             {team.map((member, index) => (
               <FadeInSection key={member.name} delay={index * 0.06}>
                 <article className="flex h-full flex-col overflow-hidden rounded-lg border border-border/50 bg-card transition-colors hover:border-accent-beige/50">
-                  <div className="relative h-64 w-full">
+                  <div className="relative h-56 w-full sm:h-64">
                     <Image src={member.image} alt={member.name} fill className="object-cover" />
                   </div>
-                  <div className="p-7">
+                  <div className="p-6 sm:p-7">
                     <h3 className="text-2xl font-bold">{member.name}</h3>
                     <p className="mb-3 text-sm font-semibold text-accent-beige">{member.role}</p>
                     <p className="mb-3 text-foreground/70">{member.bio}</p>
@@ -186,21 +186,21 @@ export default function AboutPage() {
       <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
-            <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
+            <h2 className="mb-10 text-center text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Why Choose Us</h2>
             <p className="mx-auto mb-10 max-w-4xl text-center text-base leading-relaxed text-foreground/65">
               We are designed to function like an extension of your core team, with clear ownership, proactive communication, and measurable delivery.
             </p>
           </FadeInSection>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               "Unified strategy and delivery across channels",
               "Senior-led planning with practical execution detail",
               "Transparent reporting and measurable outcomes",
             ].map((item, index) => (
               <FadeInSection key={item} delay={index * 0.08}>
-                <div className="flex h-full items-center rounded-lg border border-border/50 bg-background p-8 text-center transition-colors hover:border-accent-beige/50">
-                  <p className="text-lg font-semibold text-foreground/80">{item}</p>
+                <div className="flex h-full items-center rounded-lg border border-border/50 bg-background p-6 text-center transition-colors hover:border-accent-beige/50 sm:p-8">
+                  <p className="text-base font-semibold text-foreground/80 sm:text-lg">{item}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -211,12 +211,12 @@ export default function AboutPage() {
       <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Let’s Build What’s Next</h2>
-            <p className="mb-10 text-lg text-foreground/70">Partner with a team that combines strategic structure with execution excellence.</p>
+            <h2 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Let’s Build What’s Next</h2>
+            <p className="mb-10 text-base text-foreground/70 sm:text-lg">Partner with a team that combines strategic structure with execution excellence.</p>
             <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-foreground/65">
               We will assess your current setup, identify the biggest growth constraints, and map a practical implementation plan built around your priorities.
             </p>
-            <Button asChild size="lg" className="h-auto rounded-lg bg-accent-beige px-10 py-5 text-lg font-bold text-background hover:bg-accent-beige/90">
+            <Button asChild size="lg" className="h-auto w-full rounded-lg bg-accent-beige px-6 py-4 text-base font-bold text-background hover:bg-accent-beige/90 sm:w-auto sm:px-10 sm:py-5 sm:text-lg">
               <Link href="/contact">Book a Consultation</Link>
             </Button>
           </FadeInSection>
