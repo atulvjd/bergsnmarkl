@@ -205,7 +205,7 @@ export default function PaidMediaBudgetAllocationInsightPage() {
         }}
       />
 
-      <section className="border-b border-border/50 bg-background px-6 py-8">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "Strategic Frameworks for Paid Media Budg...", path: "/insights/strategic-frameworks-paid-media-budget-allocation" }]} />
 
@@ -217,7 +217,7 @@ export default function PaidMediaBudgetAllocationInsightPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
             <InsightArticleContent content={articleBody} />

@@ -87,7 +87,7 @@ export default function InsightsPage() {
           __html: JSON.stringify(insightsPageSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-12">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
@@ -103,7 +103,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <p className="mx-auto mb-12 max-w-4xl text-center text-sm leading-relaxed text-foreground/65">

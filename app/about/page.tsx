@@ -73,7 +73,7 @@ export default function AboutPage() {
           __html: JSON.stringify(aboutPageSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-12">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 flex items-center justify-center gap-4 text-6xl font-black leading-tight md:text-7xl">
@@ -90,7 +90,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <FadeInSection>
             <div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-8">
+      <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Mission & Vision</h2>
@@ -131,7 +131,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Core Values</h2>
@@ -154,7 +154,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-12">
+      <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Team</h2>
@@ -183,7 +183,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Why Choose Us</h2>
@@ -208,7 +208,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-8">
+      <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Let’s Build What’s Next</h2>

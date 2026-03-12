@@ -179,7 +179,7 @@ export default function LifecycleEmailAutomationInsightPage() {
         }}
       />
 
-      <section className="border-b border-border/50 bg-background px-6 py-8">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "Architectural Frameworks for Maximizing ...", path: "/insights/architectural-frameworks-ltv-lifecycle-email-automation" }]} />
 
@@ -191,7 +191,7 @@ export default function LifecycleEmailAutomationInsightPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
             <InsightArticleContent content={articleBody} />

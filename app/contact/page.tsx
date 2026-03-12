@@ -64,7 +64,7 @@ export default function ContactPage() {
           __html: JSON.stringify(contactFaqSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-12">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-6xl font-black leading-tight md:text-7xl">
@@ -78,7 +78,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <FadeInSection>
             <div className="flex h-full flex-col rounded-lg border border-border/50 bg-background p-8">
@@ -114,7 +114,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section id="send-invite" className="border-y border-border/50 bg-background px-6 py-12">
+      <section id="send-invite" className="border-y border-border/50 bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
           <FadeInSection>
             <div className="rounded-lg border border-border/50 bg-card p-8">
@@ -182,7 +182,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-12">
+      <section className="bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Contact Methods</h2>
@@ -229,7 +229,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <h2 className="mb-10 text-center text-5xl font-black leading-tight md:text-6xl">Quick FAQ</h2>
@@ -251,7 +251,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-8">
+      <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Start?</h2>

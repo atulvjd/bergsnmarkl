@@ -258,7 +258,7 @@ export default function SeoContentClustersInsightPage() {
         }}
       />
 
-      <section className="border-b border-border/50 bg-background px-6 py-8">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: "The Architecture of Authority: Leveragin...", path: "/insights/architecture-of-authority-seo-content-clusters" }]} />
 
@@ -270,7 +270,7 @@ export default function SeoContentClustersInsightPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-8">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-5xl">
           <article className="rounded-lg border border-border/50 bg-background p-7 md:p-10">
             <InsightArticleContent content={articleBody} />

@@ -164,7 +164,7 @@ export default function Home() {
       />
       <NewHeroSection />
 
-      <section className="bg-background px-6 pb-12 pt-4">
+      <section className="bg-background px-4 sm:px-6 pb-12 pt-4">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -255,7 +255,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
+      <section className="border-y border-border/50 bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -285,7 +285,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
+      <section className="border-y border-border/50 bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -365,7 +365,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-12">
+      <section className="bg-background px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -407,7 +407,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-secondary/50 px-6 py-12">
+      <section className="border-y border-border/50 bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -434,7 +434,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-border/50 bg-secondary/50 px-6 py-8">
+      <section className="border-t border-border/50 bg-secondary/50 px-4 sm:px-6 py-8">
         <div className="mx-auto max-w-4xl text-center">
           <FadeInSection>
             <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Ready to Centralize Your Growth?</h2>

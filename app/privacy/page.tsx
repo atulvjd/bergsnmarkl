@@ -47,7 +47,7 @@ const privacySections = [
 export default function PrivacyPage() {
   return (
     <main className="pt-20">
-      <section className="border-b border-border/50 bg-background px-6 py-28">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-28">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-6 text-5xl font-black leading-tight md:text-6xl">Privacy Policy</h1>
           <p className="mb-4 text-lg text-foreground/70">
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12">
         <div className="mx-auto max-w-4xl space-y-10">
           {privacySections.map((section) => (
             <article key={section.title} className="rounded-lg border border-border/50 bg-background p-8">

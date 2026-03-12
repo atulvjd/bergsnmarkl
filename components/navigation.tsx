@@ -24,13 +24,13 @@ const topLinks = [
 export default function Navigation() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
-        <Link href="/" className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80">
-          <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={50} height={50} className="h-[36px] w-auto object-contain" />
-          Bergs & Mark
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-2">
+        <Link href="/" className="flex items-center gap-2 text-xs font-black tracking-tight text-accent-beige transition-opacity hover:opacity-80 sm:text-sm">
+          <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={50} height={50} className="h-[32px] w-auto object-contain sm:h-[36px]" />
+          <span className="truncate">Bergs & Mark</span>
         </Link>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {topLinks.map((link) => (
             <Link
               key={link.href}
@@ -51,12 +51,12 @@ export default function Navigation() {
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="size-8 border-border/50 bg-transparent hover:border-accent-beige/50 hover:bg-accent-beige/10">
+              <Button variant="outline" size="icon" className="size-9 border-border/50 bg-transparent hover:border-accent-beige/50 hover:bg-accent-beige/10">
                 <Menu className="size-4" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent className="border-l border-border/50 bg-background">
+            <SheetContent className="w-[85vw] border-l border-border/50 bg-background sm:max-w-sm">
               <SheetTitle className="flex items-center gap-2 text-sm font-black tracking-tight text-accent-beige">
                 <Image src="/brand-logo-new.png" alt="Bergs & Mark Logo" width={30} height={30} className="h-[30px] w-auto object-contain" />
                 Bergs & Mark

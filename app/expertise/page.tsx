@@ -93,7 +93,7 @@ export default function ExpertisePage() {
           __html: JSON.stringify(expertisePageSchema),
         }}
       />
-      <section className="border-b border-border/50 bg-background px-6 py-12 md:py-20">
+      <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl text-center">
           <FadeInSection>
             <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
@@ -109,7 +109,7 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12 md:py-20">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -135,7 +135,7 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="border-y border-border/50 bg-background px-6 py-12 md:py-20">
+      <section className="border-y border-border/50 bg-background px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -169,7 +169,7 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12 md:py-20">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
@@ -198,7 +198,7 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-12 md:py-20">
+      <section className="bg-secondary/50 px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <FadeInSection>
             <div className="mb-10 text-center">
