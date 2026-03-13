@@ -60,13 +60,6 @@ const team = [
     image: "/professional-headshot-man-designer-creative-direct.jpg",
   },
   {
-    name: "Saurabh Kumar",
-    role: "UI/UX Designer & Brand Specialist",
-    bio: "Focuses on user experience design, website aesthetics, and brand consistency across digital touchpoints.",
-    specialty: "Enhances user engagement and conversion rates through intuitive design and consistent brand messaging.",
-    image: "/saurabh-kumar.jpg",
-  },
-  {
     name: "Asmitha M",
     role: "Media Manager & Content Strategist",
     bio: "Oversees social media strategy, content calendar management, and platform-specific growth tactics.",
