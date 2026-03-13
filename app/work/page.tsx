@@ -47,6 +47,14 @@ const caseStudies = [
     url: "https://prime-ledger-2-t2cb.vercel.app/",
     image: "/saas-dashboard-design-interface.jpg",
   },
+  {
+    company: "CanAssociate",
+    industry: "Project Management & Collaboration",
+    description:
+      "A streamlined project management web application for CanAssociate, enabling teams to collaborate efficiently, track progress clearly, and stay aligned on deadlines through a focused, intuitive interface.",
+    url: "https://gap-micro-42820517.figma.site/",
+    image: "/tech-startup-dashboard.jpg",
+  },
 ]
 
 const workPageSchema = {
