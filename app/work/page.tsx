@@ -68,7 +68,7 @@ const caseStudies = [
     industry: "Yoga & Mindfulness",
     description:
       "A serene and intuitive digital platform for Serene Flow, a wellness studio. The site features integrated class booking, teacher profiles, and a calming aesthetic designed to enhance the student's journey from discovery to practice.",
-    url: "https://sereneflow11.my.canva.site/",
+    url: "https://sereneflow.vercel.app/",
     image: "/abstract-brand-concept.jpg",
   },
 ]
