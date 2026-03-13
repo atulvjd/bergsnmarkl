@@ -55,6 +55,14 @@ const caseStudies = [
     url: "https://gap-micro-42820517.figma.site/",
     image: "/tech-startup-dashboard.jpg",
   },
+  {
+    company: "Alex Chen",
+    industry: "Software Development & AI Systems",
+    description:
+      "A full-stack development portfolio showcasing expertise in building modern web applications, mobile experiences, and scalable backend architectures, with a focus on AI-powered analytics platforms.",
+    url: "https://clientportfolio-orpin.vercel.app/",
+    image: "/cloud-storage-product.jpg",
+  },
 ]
 
 const workPageSchema = {
