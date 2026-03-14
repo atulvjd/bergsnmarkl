@@ -119,6 +119,14 @@ const caseStudies = [
     url: "https://bugle-tiger-77252945.figma.site/",
     image: "/team-collaboration-meeting-professional-environmen.jpg",
   },
+  {
+    company: "SkillForge",
+    industry: "Education Technology & Professional Learning",
+    description:
+      "A modern learning platform for SkillForge, featuring expert-led courses, structured learning paths, certifications, instructor discovery, blog content, and conversion-focused enrollment flows.",
+    url: "https://skillforge-navy-one.vercel.app/",
+    image: "/professional-team-working-on-laptop-in-modern-offi.jpg",
+  },
 ]
 
 const workPageSchema = {
