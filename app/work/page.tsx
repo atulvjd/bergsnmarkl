@@ -71,6 +71,14 @@ const caseStudies = [
     url: "https://sereneflow.vercel.app/",
     image: "/abstract-brand-concept.jpg",
   },
+  {
+    company: "Homepath",
+    industry: "Real Estate & Property Marketplace",
+    description:
+      "A modern property discovery platform for Homepath, helping users explore verified homes for buying and renting across India with clear search flows, featured listings, and trust-building service touchpoints.",
+    url: "https://real-estate-advance.vercel.app/",
+    image: "/beautiful-responsive-website-design-on-desktop-and.jpg",
+  },
 ]
 
 const workPageSchema = {
