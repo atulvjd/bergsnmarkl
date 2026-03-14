@@ -87,6 +87,14 @@ const caseStudies = [
     url: "https://gitential.vercel.app/",
     image: "/results-analytics-dashboard.jpg",
   },
+  {
+    company: "Explorer",
+    industry: "Travel Planning & AI Concierge",
+    description:
+      "A smart travel planner that helps users generate complete trips with destination selection, INR-based budget breakdowns, transport and stay suggestions, restaurant picks, destination visuals, and downloadable day-wise itineraries.",
+    url: "https://explorer-ochre.vercel.app/",
+    image: "/online-course-dashboard.png",
+  },
 ]
 
 const workPageSchema = {
