@@ -103,6 +103,14 @@ const caseStudies = [
     url: "https://farmtora-ntwf.vercel.app/",
     image: "/growth-metrics-analytics.jpg",
   },
+  {
+    company: "InkFlow",
+    industry: "Editorial Publishing",
+    description:
+      "An editorial publishing platform with article discovery, topic navigation, trending stories, bookmarking, profile views, search, and an in-browser writing experience.",
+    url: "https://inkflow-three.vercel.app/",
+    image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
+  },
 ]
 
 const workPageSchema = {
