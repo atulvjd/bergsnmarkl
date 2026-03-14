@@ -48,7 +48,7 @@ const caseStudies = [
     image: "/saas-dashboard-design-interface.jpg",
   },
   {
-    company: "CanAssociate",
+    company: "CA & Associate",
     industry: "Project Management & Collaboration",
     description:
       "A streamlined project management web application for CanAssociate, enabling teams to collaborate efficiently, track progress clearly, and stay aligned on deadlines through a focused, intuitive interface.",
