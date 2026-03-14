@@ -95,6 +95,14 @@ const caseStudies = [
     url: "https://explorer-ochre.vercel.app/",
     image: "/online-course-dashboard.png",
   },
+  {
+    company: "Agrivent",
+    industry: "Agricultural Technology & Farm Intelligence",
+    description:
+      "An AI assistant for modern farming that brings together weather insights, crop support, cattle guidance, soil information, multilingual access, and a centralized dashboard to help farmers make faster, more informed decisions.",
+    url: "https://farmtora-ntwf.vercel.app/",
+    image: "/growth-metrics-analytics.jpg",
+  },
 ]
 
 const workPageSchema = {
