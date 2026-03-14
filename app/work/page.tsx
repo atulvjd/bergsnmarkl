@@ -16,6 +16,14 @@ const caseStudies = [
     image: "/professional-service-provider-website.jpg",
   },
   {
+    company: "PrimeForm",
+    industry: "Fitness Coaching & Personal Training",
+    description:
+      "A premium fitness coaching website for PrimeForm, featuring program overviews, transformation results, pricing, testimonials, and a streamlined consultation booking flow built to convert motivated prospects.",
+    url: "https://primeform.vercel.app/",
+    image: "/professional-service-provider-website.jpg",
+  },
+  {
     company: "Vellora",
     industry: "E-commerce & Fashion",
     description:
