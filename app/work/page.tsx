@@ -111,6 +111,14 @@ const caseStudies = [
     url: "https://inkflow-three.vercel.app/",
     image: "/modern-website-design-mockup-on-desktop-and-mobile.jpg",
   },
+  {
+    company: "EventSphere",
+    industry: "Conference & Events",
+    description:
+      "A modern conference website for EventSphere, featuring speaker profiles, multi-day schedules, ticket registration, venue details, and a polished experience for its Innovation Summit 2026 event.",
+    url: "https://bugle-tiger-77252945.figma.site/",
+    image: "/team-collaboration-meeting-professional-environmen.jpg",
+  },
 ]
 
 const workPageSchema = {
