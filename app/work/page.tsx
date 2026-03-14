@@ -79,6 +79,14 @@ const caseStudies = [
     url: "https://real-estate-advance.vercel.app/",
     image: "/beautiful-responsive-website-design-on-desktop-and.jpg",
   },
+  {
+    company: "Gitential",
+    industry: "Developer Analytics & Open Source Intelligence",
+    description:
+      "An AI-powered developer growth cockpit for Gitential, enabling users to analyze and compare GitHub profiles, uncover technical strengths, and discover personalized opportunities to grow their open-source impact.",
+    url: "https://gitential.vercel.app/",
+    image: "/results-analytics-dashboard.jpg",
+  },
 ]
 
 const workPageSchema = {
