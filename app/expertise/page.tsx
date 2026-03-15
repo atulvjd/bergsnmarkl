@@ -59,13 +59,6 @@ const team = [
     specialty: "Ensures cohesive brand identity and high-quality creative output that resonates with target audiences and supports campaign objectives.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
   },
-  {
-    name: "Asmitha M",
-    role: "Media Manager & Content Strategist",
-    bio: "Oversees social media strategy, content calendar management, and platform-specific growth tactics.",
-    specialty: "Drives audience engagement and brand authority through tailored content strategies and consistent social presence.",
-    image: "/asmitha-m.jpg",
-  },
 ]
 
 const expertisePageSchema = {
