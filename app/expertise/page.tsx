@@ -61,7 +61,7 @@ const team = [
     bio: "Leads creative direction, visual branding, and design execution across all marketing channels.",
     specialty: "Ensures cohesive brand identity and high-quality creative output that resonates with target audiences and supports campaign objectives.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
-    linkedin: "https://www.linkedin.com/search/results/all/?keywords=sahitya%20singh&origin=GLOBAL_SEARCH_HEADER",
+    linkedin: "https://www.linkedin.com/in/sahitya-singh-7012b137b/",
   },
   {
     name: "Vikas Sharma",
