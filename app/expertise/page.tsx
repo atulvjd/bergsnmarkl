@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { CheckCircle2, Cog, ShieldCheck } from "lucide-react"
+import { CheckCircle2, Cog, Linkedin, ShieldCheck } from "lucide-react"
 import { generateMeta } from "@/lib/seo/seo-builder"
 import { getAbsoluteUrl, SEO_CONFIG } from "@/lib/seo/seo-config"
 import { FadeInSection } from "@/components/motion-wrapper"
@@ -37,6 +37,7 @@ const team = [
     bio: "Leads growth strategy, market positioning, and executive planning sessions.",
     specialty: "Owns commercial planning, market narrative clarity, and strategic prioritization.",
     image: "/atul-sahu.jpg",
+    linkedin: "https://www.linkedin.com/in/atulwn/",
   },
   {
     name: "Utsav Doye",
@@ -44,6 +45,7 @@ const team = [
     bio: "Manages financial planning, budget allocation, and performance reporting systems.",
     specialty: "Ensures financial discipline, transparent reporting, and data-backed budget decisions.",
     image: "/professional-headshot-man-marketing-growth.jpg",
+    linkedin: "https://www.linkedin.com/in/utsav-doye/",
   },
   {
     name: "Sidharth Mishra",
@@ -51,6 +53,7 @@ const team = [
     bio: "Oversees social media strategy, content calendar management, and platform-specific growth tactics.",
     specialty: "Drives audience engagement and brand authority through tailored content strategies and consistent social presence.",
     image: "/sidharth-mishra.png",
+    linkedin: "https://www.linkedin.com/in/sidharth-mishra-3a9a84372/",
   },
   {
     name: "Sahitya Singh",
@@ -58,6 +61,7 @@ const team = [
     bio: "Leads creative direction, visual branding, and design execution across all marketing channels.",
     specialty: "Ensures cohesive brand identity and high-quality creative output that resonates with target audiences and supports campaign objectives.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
+    linkedin: "https://www.linkedin.com/search/results/all/?keywords=sahitya%20singh&origin=GLOBAL_SEARCH_HEADER",
   },
   {
     name: "Vikas Sharma",
@@ -65,6 +69,7 @@ const team = [
     bio: "Manages project timelines, cross-functional coordination, and strategic execution frameworks.",
     specialty: "Maintains operational efficiency, ensures on-time delivery, and supports strategic alignment across teams.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
+    linkedin: "https://www.linkedin.com/in/sharmavikas18/",
   },
 ]
 
