@@ -153,7 +153,12 @@ export default function ExpertisePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="mb-1 text-xl font-black tracking-tight text-white">{member.name}</h3>
+                    <div className="mb-1 flex items-center justify-between">
+                      <h3 className="text-xl font-black tracking-tight text-white">{member.name}</h3>
+                      <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-accent-beige transition-colors hover:text-white">
+                        <Linkedin className="size-4" />
+                      </Link>
+                    </div>
                     <p className="mb-4 text-xs font-bold uppercase tracking-widest text-accent-beige">{member.role}</p>
                     <div className="mt-auto space-y-4">
                       <p className="text-xs leading-relaxed text-foreground/70">{member.bio}</p>
