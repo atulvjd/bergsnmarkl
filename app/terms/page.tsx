@@ -3,7 +3,7 @@ import { generateMeta } from "@/lib/seo/seo-builder"
 
 export default function TermsPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-28 sm:pt-36">
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-12 md:py-20">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl">

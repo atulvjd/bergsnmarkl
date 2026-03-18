@@ -46,7 +46,7 @@ const privacySections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-28 sm:pt-36">
       <section className="border-b border-border/50 bg-background px-4 sm:px-6 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-6 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Privacy Policy</h1>

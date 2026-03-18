@@ -250,7 +250,7 @@ const articleSchema = {
 
 export default function SeoContentClustersInsightPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-28 sm:pt-36">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
