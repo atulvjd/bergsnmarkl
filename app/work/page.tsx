@@ -135,6 +135,14 @@ const caseStudies = [
     url: "https://skillforge-navy-one.vercel.app/",
     image: "/professional-team-working-on-laptop-in-modern-offi.jpg",
   },
+  {
+    company: "Meenakshi Marketing",
+    industry: "Digital Marketing & Advertising",
+    description:
+      "A conversion-focused marketing website for Meenakshi Marketing, featuring clear service positioning, proof-oriented messaging, and streamlined enquiry paths designed to turn interest into qualified leads.",
+    url: "https://meenakshi-marketing.vercel.app/",
+    image: "/digital-marketing-analytics-dashboard-with-convers.jpg",
+  },
 ]
 
 const workPageSchema = {
