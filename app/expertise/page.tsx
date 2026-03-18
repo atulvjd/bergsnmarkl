@@ -59,6 +59,13 @@ const team = [
     specialty: "Ensures cohesive brand identity and high-quality creative output that resonates with target audiences and supports campaign objectives.",
     image: "/professional-headshot-man-designer-creative-direct.jpg",
   },
+  {
+    name: "Vikas Sharma",
+    role: "Operations Manager & Strategist",
+    bio: "Manages project timelines, cross-functional coordination, and strategic execution frameworks.",
+    specialty: "Maintains operational efficiency, ensures on-time delivery, and supports strategic alignment across teams.",
+    image: "/professional-headshot-man-designer-creative-direct.jpg",
+  },
 ]
 
 const expertisePageSchema = {
